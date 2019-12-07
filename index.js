@@ -5,8 +5,17 @@ var Color = require('color');
 var data = fs.readFileSync('caco-ingredients.json').toString();
 
 
-var data = JSON.parse(data)
+var originalDataSet = JSON.parse(data)
+Array.prototype.unique = function() { return [...new Set(this)] }
+Array.prototype.average = function() { return this.reduce((p, c) => p + c, 0) / this.length }
 
+
+var options = {
+    minimumCommonEffects: 2,
+    // complexityBooster: 1
+    maxComponents: 4,
+
+}
 
 
 
@@ -148,22 +157,22 @@ String.prototype.capitalize = function() {
 
 var effects = [{
         "name": "Explosive",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Fortify Destruction"
     },
     {
         "name": "Berserk for x period",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Fortify Restoration"
     },
     {
         "name": "Madness",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Fortify Illusion"
     },
     {
         "name": "Obsession for x period",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Fortify Unarmed"
     },
     {
@@ -178,12 +187,12 @@ var effects = [{
     },
     {
         "name": "Queasiness",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Health"
     },
     {
         "name": "Sadness for x period",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Magicka"
     },
     {
@@ -203,7 +212,7 @@ var effects = [{
     },
     {
         "name": "Diarrhea",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Magicka Regeneration"
     },
     {
@@ -212,12 +221,12 @@ var effects = [{
         "originalName": "Ravage Health"
     },
     {
-        "name": "Chance to gain corruption",
-        "complexity": 0,
+        "name": "Corruption",
+        "complexity": 1,
         "originalName": "Damage Magicka"
     },
     {
-        "name": "Chance to gain sin",
+        "name": "Gain Sin",
         "complexity": 3,
         "originalName": "Damage Magicka Regen"
     },
@@ -233,7 +242,7 @@ var effects = [{
     },
     {
         "name": "Grow",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Drain Intelligence"
     },
     {
@@ -283,7 +292,7 @@ var effects = [{
     },
     {
         "name": "Filling",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Frost Damage"
     },
     {
@@ -293,7 +302,7 @@ var effects = [{
     },
     {
         "name": "Prevents sleep",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Poison Aversion"
     },
     {
@@ -328,72 +337,72 @@ var effects = [{
     },
     {
         "name": "Increase stealth",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Prowling"
     },
     {
         "name": "See real or fake visions of future",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Thrill"
     },
     {
         "name": "Cause hunger",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Consumption"
     },
     {
         "name": "Nothing",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Exploit Weakness"
     },
     {
         "name": "Increase Strength",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Fortify One-Handed"
     },
     {
         "name": "Increase Weapon Skill",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Fortify Two-Handed"
     },
     {
         "name": "Increase Ballistic Skill",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Fortify Marksman"
     },
     {
         "name": "Increase Resilience",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Fortify Block"
     },
     {
         "name": "Increase Toughness",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Fortify Heavy Armor"
     },
     {
         "name": "Increase Dexterity",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Fortify Sneak"
     },
     {
         "name": "Increase Initiative",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Fortify Lockpicking"
     },
     {
         "name": "Increase Agility",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Fortify Pickpocket"
     },
     {
         "name": "Increase Fellowship",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Fortify Speech"
     },
     {
-        "name": "Increase Dexterity",
-        "complexity": 0,
+        "name": "Powerful stimulent",
+        "complexity": 1,
         "originalName": "Fortify Light Armor"
     },
     {
@@ -403,7 +412,7 @@ var effects = [{
     },
     {
         "name": "Increase Willpower",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Fortify Conjuration"
     },
     {
@@ -413,7 +422,7 @@ var effects = [{
     },
     {
         "name": "Increase Intelligence",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Fortify Enchanting"
     },
     {
@@ -423,7 +432,7 @@ var effects = [{
     },
     {
         "name": "Restore vigor",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Stamina"
     },
     {
@@ -433,42 +442,42 @@ var effects = [{
     },
     {
         "name": "Stamina Regeneration",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Stamina Regeneration"
     },
     {
         "name": "Cause wound",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Damage Health"
     },
     {
         "name": "Cause infection",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Damage Health Regen"
     },
     {
         "name": "Disfigure",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Lingering Damage Health"
     },
     {
         "name": "Exhaust",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Damage Stamina"
     },
     {
         "name": "Cripple",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Damage Stamina Regen"
     },
     {
         "name": "Fatigue",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Fatigue"
     },
     {
         "name": "Silence",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Silence"
     },
     {
@@ -483,12 +492,12 @@ var effects = [{
     },
     {
         "name": "Resist Disease",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Cure Disease"
     },
     {
         "name": "Resist Infection",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Resist Disease"
     },
     {
@@ -513,7 +522,7 @@ var effects = [{
     },
     {
         "name": "Slow",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Slow"
     },
     {
@@ -538,17 +547,17 @@ var effects = [{
     },
     {
         "name": "Fear",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Fear"
     },
     {
         "name": "Frenzy",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Frenzy"
     },
     {
         "name": "Waterbreathing",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Waterbreathing"
     },
     {
@@ -568,41 +577,42 @@ var effects = [{
     },
     {
         "name": "Vomiting",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Pathfinding"
     },
     {
         "name": "Ineptitude",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Ineptitude"
     },
     {
         "name": "Confuse",
-        "complexity": 0,
+        "complexity": 1,
         "originalName": "Muddle"
     }
 ].map(i => ({ colour: Color(randomColor({ format: 'rgba' })), ...i }))
 
 
 var substanceProperties = [
-    "acidic",
-    "basic",
-    "damaged by acid",
-    "damaged by base",
-    "removes effect X",
-    "exothermic",
-    "endothermic",
-    "exomagic, never stops reacting",
-    "endomagic, stops weaker effects from working",
-    "chaotic/mutative",
-    "oxadising/rust making",
-    "expires quickly",
-    "thickens potion",
-    "thins potion",
-    "ferromagnetic liquid",
-    "flamible",
-    "vulnrable to light or fire",
-]
+        'Acidic',
+        'Basic',
+        'Damaged by acid',
+        'Damaged by base',
+        'Removes effect X',
+        'Exothermic',
+        'Endothermic',
+        'Exomagic, never stops reacting',
+        'Endomagic, stops weaker effects from working',
+        'Chaotic/mutative',
+        'Oxadising',
+        'Expires quickly',
+        'Thick potion',
+        'Thin potion',
+        'Magnetic',
+        'Flamible',
+        'Vulnrable to light or fire'
+    ]
+    .map(e => e.capitalize())
 
 
 
@@ -616,8 +626,8 @@ var productionRequirements = [
     "stew for 3 nights",
     "disolve in oil",
     "disolve in acid",
-    "ferment for 3 weeks",
-    "melt",
+    "ferment for 1 session",
+    "boil",
     "evaporating",
     "freeze",
     "requires the presence of chaos",
@@ -724,12 +734,19 @@ Array.prototype.randomElement = function() {
 
 effectLookup = (effect) => effects.find(e => e.originalName == effect)
 
+class Component {
+    constructor(name, effects, colour, properties) {
+        this._effects = effects.map(e => ({
+            ingredientName: name,
+            active: false,
 
-
-class Ingredient {
-    constructor(name, effects) {
-        this._effects = effects.map(e => ({ ingredientName: name, active: false, ...e }))
+            ...e
+        }))
         this._name = name
+        this._complexity = 1
+        this._colour = colour
+        this._properties = properties
+        // this._complexity
     }
     effectsAdvanced() {
         return this._effects
@@ -739,82 +756,376 @@ class Ingredient {
         return this._effects.map(e => e.name)
         // .map(e => ({ active: false, ...e }))
     }
+
+    complexity(add) {
+        if (add) this._complexity += add
+        return this._complexity
+    }
 }
 
 
-data.effects = effects
-data.substanceProperties = substanceProperties
-data.productionRequirements = productionRequirements
 
-data.ingredients = data.ingredients
-    // .slice(0, 10)
-    .map(ingredient => {
+function generateDataSet(data, effects, substanceProperties, productionRequirements) {
 
-        ingredient.effects.forEach((effect, i) => {
-            var newEffect = effectLookup(effect.name)
-            ingredient.effects[i].name = newEffect.name
+    var generationMemory = {}
 
-            ingredient.effects[i].level = newEffect.complexity
-            ingredient.effects[i].colour = newEffect.colour
+    data.effects = effects
+    data.substanceProperties = substanceProperties
+    data.productionRequirements = productionRequirements
+    data.ingredients = data.ingredients
+        // .slice(0, 10)
+        .map(ingredient => {
 
-            if ((newEffect.complexity >= 2) && (newEffect.complexity < 4)) {
-                ingredient.effects[i].production = data.productionRequirements.slice(0, 3 + newEffect.complexity).randomElement()
+            ingredient.effects.forEach((effect, i) => {
 
-            }
-            if (newEffect.complexity >= 3) {
-                ingredient.effects[i].substanceProperty = data.substanceProperties.randomElement()
-            }
 
-            if (newEffect.complexity >= 4) {
-                ingredient.effects[i].productionRequirement = data.productionRequirements.slice(2, data.productionRequirements.length).randomElement()
-            }
+                // console.log(effect.name, data.effects.filter(e => e.name == effect.name))
+
+                //update the average magnitude for later
+                // if (!effectLookup(effect.name).averageMagnitude) data.effects.find(e => e.name == effect.name).averageMagnitude = effect.magnitude
+                // data.effects.find(e => e.name == effect.name).averageMagnitude = [effect.magnitude, data.effects.find(e => e.name == effect.name).averageMagnitude].average()
+                // data.effects.find(e => e.name == effect.name).max = 0
+                // if (effect.magnitude > data.effects.find(e => e.name == effect.name).max) data.effects.find(e => e.name == effect.name).max = effect.magnitude
+                // data.effects.find(e => e.name == effect.name).total = 0
+                // if (effect.magnitude > data.effects.find(e => e.name == effect.name).total) data.effects.find(e => e.name == effect.name).total += effect.magnitude
+                // console.log()
+
+
+
+                var newEffect = effectLookup(effect.name)
+                ingredient.effects[i].name = newEffect.name
+
+                ingredient.effects[i].level = newEffect.complexity
+                ingredient.effects[i].colour = newEffect.colour
+                // console.log(newEffect.name, ingredient.effects[i].magnitude)
+                if (newEffect.name == "Explosive") console.log(ingredient.effects[i].magnitude)
+
+                if (!generationMemory[newEffect.name]) {
+                    generationMemory[effect.name] = [ingredient.effects[i].magnitude]
+
+                } else {
+                    generationMemory[newEffect.name].push(ingredient.effects[i].magnitude)
+                }
+
+                // console.log(generationMemory[effect.name])
+
+                if ((newEffect.complexity >= 2) && (newEffect.complexity < 4)) {
+                    ingredient.effects[i].production = data.productionRequirements.slice(0, 3 + newEffect.complexity).randomElement()
+
+                }
+                if (newEffect.complexity >= 3) {
+                    ingredient.effects[i].substanceProperty = data.substanceProperties.randomElement()
+                }
+
+                if (newEffect.complexity >= 4) {
+                    ingredient.effects[i].productionRequirement = data.productionRequirements.slice(2, data.productionRequirements.length).randomElement()
+                }
+
+
+
+            })
+
+
+
+            return ingredient
+
         })
-        // console.log(ingredient)
+        //calculate maximum strength
+        .map((ingredient, i, a) => ({ ...ingredient,
+            effects: ingredient.effects.map(e => ({ ...e,
+                maxMagnitude: generationMemory[e.name]
+                    .sort()
+                    .reverse()
+                    .slice(0, options.maxComponents)
+                    .reduce((a, b) => a + b, 0)
+            }))
+        }))
+        .map(i => new Component(i.name, i.effects))
 
-        return ingredient
-
-    })
-    .map(i => new Ingredient(i.name, i.effects))
-
-
-ingredientFinder = (ingredient) => data.ingredients.find(i => i._name == ingredient)
-
-
-function findCommonEffects(...ingredientNames) {
-
-    var ingredients = ingredientNames
-        .map(ingredient => ingredientFinder(ingredient))
-        .filter(i => i)
-
-    var effectArray = ingredients.map(i => i.effectsAdvanced()).flat()
-
-    effectArray.forEach((effect, i, array) => array[i].count = array.filter(e => e.name == effect.name).length)
-
-    return Object.assign({}, ...effectArray
-        .filter(e => e.count > 1)
-        .map((s, i, a) => ({
-            [s.name]: [...a
-                .filter(e => e.name == s.name)
-                // .map(e => e.ingredientName)
-            ]
-        })));
+    return data
 }
 
-var m = findCommonEffects(false,
-    "Moon Sugar",
-    "Silverside",
-    // "dog food",
-    "Charred Hawk Beak",
-    "Dyed Hawk Feathers",
-    "Tundra Cotton",
-    "Lavender",
-    "Wheat",
-    "Hagraven Claw",
-    "Mudcrab Chitin",
+//define dataset
+var data = generateDataSet(originalDataSet, effects, substanceProperties, productionRequirements)
 
 
-)
-// console.log()
+
+
+function ingredientFinder(...ingredientNames) {
+    console.log("running ingredientFinder")
+    // if (ingredientNames.length > 5) throw "perhaps you should try making a soup"
+    return ingredientNames
+        .map(ingredient => data.ingredients
+            .find(i => i._name == ingredient))
+        .filter(i => i)
+}
+
+
+function findCommonEffects(...ingredientObjects) {
+    console.log("running findCommonEffects", ingredientObjects.length)
+
+    // console.log(Math.max(...ingredientObjects.map(i => i.complexity())))
+    // console.log(ingredientObjects.map(i => i.complexity()))
+    var complexity = Math.max(...ingredientObjects.map(i => i.complexity()))
+
+    var effectArray = ingredientObjects
+        .map(i => i.effectsAdvanced())
+        .flat()
+
+    effectArray
+        .forEach((s, i, a) => a[i].active = false)
+
+    // effectArray
+    // .forEach((s, i, a) => a[i].active = false)
+
+    effectArray
+        .forEach((effect, i, array) => array[i].count = array
+            .filter(e => e.name == effect.name).length)
+
+
+    // console.log("effectArray", effectArray)
+    //activate effects
+    effectArray
+        .filter(e => e.count >= options.minimumCommonEffects)
+        .filter(e => e.level <= complexity)
+        .forEach((s, i, a) => a[i].active = true)
+
+    return effectArray
+    // return Object.assign({}, ...effectArray
+    //     .filter(e => e.count >= options.minimumCommonEffects)
+    // .map((s, i, a) => ({
+    //     [s.name]: [...a
+    //         .filter(e => e.name == s.name)
+    //         // .map(e => e.ingredientName)
+    //     ]
+    // })));
+}
+
+
+function validateEffects(productionModifiers = [], effectArray) {
+    console.log("running validateEffects",
+        "productionModifiers",
+        productionModifiers.length,
+        "effectArray",
+        effectArray.length)
+    // console.log(effectArray)
+    var conditions = {
+        hasNoProductionRequirements: (e) => !e.production,
+        includesProduction: (e) => productionModifiers.includes(e.production),
+        usingPhilosophersStone: (e) => productionModifiers.includes("philosophers stone"),
+
+    }
+    //vlidate prodction
+    // remove junk
+    //keep high level
+    return effectArray
+        //filter production mods
+        .filter((e, i, a) => Object.keys(conditions).some(b => conditions[b](e)))
+        // console.log(t)
+        .filter(e => e.active || e.level >= 3)
+
+}
+
+
+function calculateEffectPotency(effectArray) {
+    console.log("running calculateEffectPotency", effectArray.length)
+    effectArray.forEach((item) => {
+        delete item.ingredientName
+    })
+
+    // console.log({ ...effectArray[0], ...effectArray[2], magnitude: effectArray[0].magnitude * effectArray[2].magnitude })
+
+    var presentEffects = [...new Set(effectArray.map(e => e.name))]
+    // console.log(presentEffects)
+
+    presentEffects = presentEffects.map(effect => {
+        var thisEffectCollection = effectArray
+            .filter(e => e.name == effect)
+        return Object.assign({}, ...thisEffectCollection, {
+            magnitude: thisEffectCollection
+                .map(e => e.magnitude)
+                //this is voodoo
+                .reduce((a, b) => a + b, 0)
+        })
+    })
+
+    //trim potion to remove excess effects
+    // if (presentEffects.length > 4) presentEffects = presentEffects.slice(0, 4)
+    return presentEffects
+
+    // console.log(presentEffects)
+    // return Object.assign({}, ...effectArray
+    //     .filter(e => e.count > 1)
+    //     // .filter(e => e.count >= options.minimumCommonEffects)
+    //     .map((s, i, a) => ({
+    //         [s.name]: ({ ...Object.assign(s) })
+    //         // .filter(e => e.name == s.name)
+    //         // .map(e => e.ingredientName)
+
+    //     })));
+
+    // map(e => ({ ...e }))
+}
+
+
+function finalisePotion(presentEffects, customJunkName = "Junk") {
+    console.log("running finalisePotion", presentEffects.length)
+    var potionName = "Precursor Liquid"
+    // var colour = Color("purple")
+
+
+    var activeEffects = presentEffects.filter(e => e.active).slice(0, 3)
+    var inactiveEffects = presentEffects.filter(e => !e.active).slice(0, 3)
+
+
+
+    if ((activeEffects.length + inactiveEffects.length) < 1) return new Component(customJunkName,
+        [], Color(randomColor({
+            format: 'rgba',
+            seed: customJunkName
+        })), ["Smells terrible"])
+
+
+    // console.log(inactiveEffects.length)
+    // console.log(activeEffects.length)
+
+
+    var strongestEffect = activeEffects
+        .filter(e => e.active)
+        .reduce((prev, current) => (prev.magnitude > current.magnitude) ? prev : current, 0);
+
+    if (strongestEffect) potionName = strongestEffect.name + " Potion"
+
+    if (activeEffects.length > 1) potionName = "Mixed " + potionName
+
+
+
+    //find colours
+    var colour = activeEffects
+        .map(e => e.colour)
+        .filter(e => e)
+        .reduce((a, b) => Color(a).mix(Color(b)), 0)
+
+    if (!colour) colour = inactiveEffects
+        .map(e => e.colour)
+        .filter(e => e)
+        .reduce((a, b) => Color(a).mix(Color(b)), 0)
+
+
+
+    // console.log("colour", colour)
+
+    var properties = activeEffects.concat(inactiveEffects)
+        .map(e => e.substanceProperty)
+        .filter(e => e)
+        .sort()
+        .slice(0, 3)
+        .unique()
+
+    var newPotion = new Component(potionName,
+        activeEffects.concat(inactiveEffects),
+        colour,
+        properties
+
+    )
+    newPotion.complexity(Math.min.apply(Math, presentEffects.map(e => e.level)))
+    return newPotion
+}
+// ingredientFinder()
+
+
+
+function createPotion(productionModifiers, ingredientNames, t) {
+    console.log("running createPotion")
+
+    // if (t) {
+    //     console.log("potion mixing", ingredientNames)
+    //     // console.log( ingredientNames.map(e => e.effectsBasic()))
+    // }
+    // console.log(productionModifiers)
+    if (ingredientNames
+        .find(e => typeof e == "string") &&
+        ingredientNames
+        .find(e => typeof e == "object")) return finalisePotion([], "Unstable junk")
+
+
+    // console.log()
+    // console.log(ingredientNames[]typeof "string")
+
+
+    if (ingredientNames.every(e => typeof e == "string")) {
+
+        // var rawIngredientNames = ingredientNames.filter(e => typeof e == 'string')
+        var m = ingredientFinder(...ingredientNames)
+    } else {
+        var m = ingredientNames
+    }
+
+    // console.log(m)
+    m = findCommonEffects(...m)
+    // console.log(m)
+    m = validateEffects(productionModifiers, m)
+    // console.log(m)
+    m = calculateEffectPotency(m)
+    // console.log(m)
+    return finalisePotion(m)
+}
+
+
+// var everything = [
+//     // "Beehive Husk",
+//     // "Ash Creep Cluster",
+//     "Moon Sugar",
+//     "Silverside",
+//     // "dog food",
+//     // "Charred Hawk Beak",
+//     "Dyed Hawk Feathers",
+//     "Tundra Cotton",
+//     "Lavender",
+//     "Wheat",
+//     "Hagraven Claw",
+//     // "Mudcrab Chitin",
+//     // "Daedroth Teeth",
+// ]
+
+
+var explosivePotion = [
+    "Beehive Husk",
+    "Ash Creep Cluster",
+]
+
+var corruptionPotion = [
+    "Nordic Barnacle",
+    "Tinder Polypore Cap"
+]
+
+
+
+var productionEffects = [
+    "Crushing",
+    "Disolve in water",
+    "philosophers stone"
+]
+
+
+var components = [
+    createPotion(productionEffects, explosivePotion),
+    createPotion(productionEffects, corruptionPotion)
+]
+
+
+// // console.log(createPotion([], [])._colour)
+// // console.log(potion1,potion2)
+console.log(components[0]._effects)
+
+
+
+// var invisPotion = createPotion(productionEffects, components, true)
+// console.log(createPotion(productionEffects, [invisPotion,invisPotion]))
+
+
+
+// console.log(m)
 // var t =Object.keys(m).map(e=>)
 // console.log(t)
 
@@ -828,10 +1139,15 @@ run conditions
 */
 
 
+function effectFinder(effectName) {
+    return data.ingredients
+        .filter(ingredient => ingredient.effectsBasic().includes(effectName))
+        .map(ingredient => "ok")
+}
 
 
 
-
+console.log(effectFinder("Explosive"))
 
 // var m = [
 //     ["Sadness for x period", "Increased cold resistance", "Diarrhea", "Gain mass"],
@@ -847,7 +1163,8 @@ run conditions
 // var c1 = Color(randomColor({ format: 'rgba' }))
 // var c2 = Color(randomColor({ format: 'rgba' }))
 
+// console.log(data.effects[0])
+
+
 
 // console.log(c1.mix(c2))
-
-//
