@@ -212,6 +212,8 @@ class Component {
 
 function generateDataSet(data, effects, substanceProperties, productionRequirements) {
 
+    var generationMemory = {}
+
     data.effects = effects
     data.substanceProperties = substanceProperties
     data.productionRequirements = productionRequirements
@@ -221,16 +223,23 @@ function generateDataSet(data, effects, substanceProperties, productionRequireme
 
             ingredient.effects.forEach((effect, i) => {
 
-            	//update the average magnitude for later
-            	if(!effectLookup(effect.name).averageMagnitude ) !effectLookup(effect.name).averageMagnitude
-
-
 
                 var newEffect = effectLookup(effect.name)
                 ingredient.effects[i].name = newEffect.name
 
                 ingredient.effects[i].level = newEffect.complexity
                 ingredient.effects[i].colour = newEffect.colour
+                // console.log(newEffect.name, ingredient.effects[i].magnitude)
+                if (newEffect.name == "Explosive") console.log(ingredient.effects[i].magnitude)
+
+                if (!generationMemory[newEffect.name]) {
+                    generationMemory[effect.name] = [ingredient.effects[i].magnitude]
+
+                } else {
+                    generationMemory[newEffect.name].push(ingredient.effects[i].magnitude)
+                }
+
+                // console.log(generationMemory[effect.name])
 
                 if ((newEffect.complexity >= 2) && (newEffect.complexity < 4)) {
                     ingredient.effects[i].production = data.productionRequirements.slice(0, 3 + newEffect.complexity).randomElement()
@@ -243,12 +252,25 @@ function generateDataSet(data, effects, substanceProperties, productionRequireme
                 if (newEffect.complexity >= 4) {
                     ingredient.effects[i].productionRequirement = data.productionRequirements.slice(2, data.productionRequirements.length).randomElement()
                 }
+
+
+
             })
-            
-// console.log(ingredient)
+
+
+
             return ingredient
 
         })
+        //calculate maximum strength
+        .map((ingredient, i, a) => ({ ...ingredient,
+            effects: ingredient.effects.map(e => ({ ...e,
+                maxMagnitude: generationMemory[e.name]
+                    .sort((a, b) => b - a, 0)
+                    .slice(0, options.maxComponents)
+                    .reduce((a, b) => a + b, 0))
+
+        }))
         .map(i => new Component(i.name, i.effects))
 
     return data
@@ -257,6 +279,29 @@ function generateDataSet(data, effects, substanceProperties, productionRequireme
 //define dataset
 var data = generateDataSet(originalDataSet, effects, substanceProperties, productionRequirements)
 
+
+function strengthFinder(percent) {
+    var ratings = ["very weak",
+        "weak",
+        "mid-strength",
+        "strong",
+        "very strong",
+        "perfect"
+    ]
+
+    return ratings[Math.round(percent * ratings.length) - 1].capitalize()
+}
+
+function effectFinder(effectName) {
+    return data.ingredients
+        .filter(ingredient => ingredient.effectsBasic().includes(effectName))
+        .map(ingredient => ingredient.effectsAdvanced())
+        .flat()
+        .filter(e => e.ingredientName)
+        .filter(e => e.name == effectName)
+        .sort((a, b) => b.magnitude - a.magnitude)
+        .map(e=>e.ingredientName)
+}
 
 
 
@@ -521,7 +566,7 @@ var productionEffects = [
 // console.log('%c Oh my heavens! ', `background: #222; color: ${chroma.random().css()}`);
 
 
-console.log(data.effects[0])
+console.log( effectFinder("Explosive"))
 
 
 

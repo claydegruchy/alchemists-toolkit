@@ -19,6 +19,7 @@ var options = {
 
 
 
+
 // var t = [
 //     ['Fortify Destruction', 'Explosive'],
 //     ['Fortify Restoration', 'berserk for x period'],
@@ -301,7 +302,7 @@ var effects = [{
         "originalName": "Shock Damage"
     },
     {
-        "name": "Prevents sleep",
+        "name": "Sleepless rest",
         "complexity": 1,
         "originalName": "Poison Aversion"
     },
@@ -446,7 +447,7 @@ var effects = [{
         "originalName": "Stamina Regeneration"
     },
     {
-        "name": "Cause wound",
+        "name": "Wound",
         "complexity": 1,
         "originalName": "Damage Health"
     },
@@ -732,39 +733,6 @@ Array.prototype.randomElement = function() {
 }
 
 
-effectLookup = (effect) => effects.find(e => e.originalName == effect)
-
-class Component {
-    constructor(name, effects, colour, properties) {
-        this._effects = effects.map(e => ({
-            ingredientName: name,
-            active: false,
-
-            ...e
-        }))
-        this._name = name
-        this._complexity = 1
-        this._colour = colour
-        this._properties = properties
-        // this._complexity
-    }
-    effectsAdvanced() {
-        return this._effects
-        // .map(e => )
-    }
-    effectsBasic() {
-        return this._effects.map(e => e.name)
-        // .map(e => ({ active: false, ...e }))
-    }
-
-    complexity(add) {
-        if (add) this._complexity += add
-        return this._complexity
-    }
-}
-
-
-
 function generateDataSet(data, effects, substanceProperties, productionRequirements) {
 
     var generationMemory = {}
@@ -777,19 +745,6 @@ function generateDataSet(data, effects, substanceProperties, productionRequireme
         .map(ingredient => {
 
             ingredient.effects.forEach((effect, i) => {
-
-
-                // console.log(effect.name, data.effects.filter(e => e.name == effect.name))
-
-                //update the average magnitude for later
-                // if (!effectLookup(effect.name).averageMagnitude) data.effects.find(e => e.name == effect.name).averageMagnitude = effect.magnitude
-                // data.effects.find(e => e.name == effect.name).averageMagnitude = [effect.magnitude, data.effects.find(e => e.name == effect.name).averageMagnitude].average()
-                // data.effects.find(e => e.name == effect.name).max = 0
-                // if (effect.magnitude > data.effects.find(e => e.name == effect.name).max) data.effects.find(e => e.name == effect.name).max = effect.magnitude
-                // data.effects.find(e => e.name == effect.name).total = 0
-                // if (effect.magnitude > data.effects.find(e => e.name == effect.name).total) data.effects.find(e => e.name == effect.name).total += effect.magnitude
-                // console.log()
-
 
 
                 var newEffect = effectLookup(effect.name)
@@ -834,10 +789,10 @@ function generateDataSet(data, effects, substanceProperties, productionRequireme
         .map((ingredient, i, a) => ({ ...ingredient,
             effects: ingredient.effects.map(e => ({ ...e,
                 maxMagnitude: generationMemory[e.name]
-                    .sort()
-                    .reverse()
+                    .sort((a, b) => b - a, 0)
                     .slice(0, options.maxComponents)
                     .reduce((a, b) => a + b, 0)
+
             }))
         }))
         .map(i => new Component(i.name, i.effects))
@@ -845,9 +800,69 @@ function generateDataSet(data, effects, substanceProperties, productionRequireme
     return data
 }
 
+
+effectLookup = (effect) => effects.find(e => e.originalName == effect)
+
+class Component {
+    constructor(name, effects, colour, properties) {
+        this.effects = effects.map(e => ({
+            ingredientName: name,
+            active: false,
+
+            ...e
+        }))
+        this.name = name
+        this.complexity = 1
+        this.colour = colour
+        this.properties = properties
+        // this.complexity
+    }
+    effectsAdvanced() {
+        return this.effects
+        // .map(e => )
+    }
+    effectsBasic() {
+        return this.effects.map(e => e.name)
+        // .map(e => ({ active: false, ...e }))
+    }
+
+    complexity(add) {
+        if (add) this.complexity += add
+        return this.complexity
+    }
+}
+
+
+
+
 //define dataset
 var data = generateDataSet(originalDataSet, effects, substanceProperties, productionRequirements)
 
+function strengthFinder(percent) {
+    var ratings = ["very weak",
+        "weak",
+        "mid-strength",
+        "strong",
+        "very strong",
+        "perfect"
+    ]
+    console.log("LMAO", ratings[Math.round(percent * ratings.length) - 1], Math.round(percent * ratings.length) - 1)
+    var index = Math.round(percent * ratings.length) - 1
+    if (index < 0) index = 0
+    return ratings[index].capitalize()
+}
+
+
+function effectFinder(effectName) {
+    return data.ingredients
+        .filter(ingredient => ingredient.effectsBasic().includes(effectName))
+        .map(ingredient => ingredient.effectsAdvanced())
+        .flat()
+        .filter(e => e.ingredientName)
+        .filter(e => e.name == effectName)
+        .sort((a, b) => b.magnitude - a.magnitude)
+        .map(e => e.ingredientName)
+}
 
 
 
@@ -939,15 +954,17 @@ function calculateEffectPotency(effectArray) {
     // console.log(presentEffects)
 
     presentEffects = presentEffects.map(effect => {
-        var thisEffectCollection = effectArray
-            .filter(e => e.name == effect)
-        return Object.assign({}, ...thisEffectCollection, {
-            magnitude: thisEffectCollection
-                .map(e => e.magnitude)
-                //this is voodoo
-                .reduce((a, b) => a + b, 0)
+            var thisEffectCollection = effectArray
+                .filter(e => e.name == effect)
+            return Object.assign({}, ...thisEffectCollection, {
+                magnitude: thisEffectCollection
+                    .map(e => e.magnitude)
+                    //this is voodoo
+                    .reduce((a, b) => a + b, 0)
+            })
         })
-    })
+        // .map(e => ({ ...e, strength: strengthFinder(e.magnitude / e.maxMagnitude) }))
+        .map(e => ({ ...e, strength: strengthFinder(e.magnitude / e.maxMagnitude) }))
 
     //trim potion to remove excess effects
     // if (presentEffects.length > 4) presentEffects = presentEffects.slice(0, 4)
@@ -1107,16 +1124,129 @@ var productionEffects = [
     "philosophers stone"
 ]
 
+console.log(data.ingredients)
 
-var components = [
-    createPotion(productionEffects, explosivePotion),
-    createPotion(productionEffects, corruptionPotion)
-]
+// var components = [
+//     createPotion(productionEffects, explosivePotion),
+//     createPotion(productionEffects, corruptionPotion)
+// ]
 
+
+// console.log(components[0])
+// console.log(ingredientFinder("Beehive Husk"))
+
+
+// class potionMaster {
+//     constructor(baseData, effects, substanceProperties, productionRequirements, options = {}, seed = Math.random(), ) {
+//         // console.log(baseData, effects, substanceProperties, productionRequirements)
+//         this.data = baseData
+//         this.seed = seed
+//         this.options = options
+//         this.data.effects = effects
+//         this.data.substanceProperties = substanceProperties
+//         this.data.productionRequirements = productionRequirements
+//         return this.makeDataSet()
+
+
+//     }
+//     makeDataSet() {
+//         var generationMemory = {}
+
+
+//         var conditions = {
+//             a: (e) => {
+//                 if ((effect.complexity >= 2) && (effect.complexity < 4)) {
+//                     ingredient.effects[i].production = data.productionRequirements.slice(0, 3 + effect.complexity).randomElement()
+//                 }
+//             },
+
+//             two: (e) => {
+//                 if ((effect.complexity >= 2) && (effect.complexity < 4)) {
+//                     ingredient.effects[i].production = data.productionRequirements.slice(0, 3 + effect.complexity).randomElement()
+//                 }
+//             },
+
+//             three: (e) => {
+//                 if (effect.complexity >= 3) {
+//                     ingredient.effects[i].substanceProperty = data.substanceProperties.randomElement()
+//                 }
+//             },
+
+//             four: (e) => {
+//                 if (effect.complexity >= 4) {
+//                     ingredient.effects[i].productionRequirement = data.productionRequirements.slice(2, data.productionRequirements.length).randomElement()
+//                 }
+//             },
+
+
+
+
+//         }
+
+
+//         //update ingrediants 
+//         this.data.ingredients = this.data.ingredients
+//             // .slice(0, 1)
+//             .map(ingredient => {
+//                 console.log(ingredient)
+
+//                 ingredient.effects.map((effect, i, a) => {
+
+
+
+
+//                     var newEffect = this.data.effects
+//                         .find(e => e.originalName == effect.name)
+//                     console.log(newEffect,"newEffectnewEffectnewEffectnewEffectnewEffectnewEffect", effect.name)
+//                     ingredient.effects[i].name = newEffect.name
+
+//                     ingredient.effects[i].level = newEffect.complexity
+//                     ingredient.effects[i].colour = newEffect.colour
+//                     // console.log(newEffect.name, ingredient.effects[i].magnitude)
+
+//                     if (!generationMemory[newEffect.name]) {
+//                         generationMemory[effect.name] = [ingredient.effects[i].magnitude]
+
+//                     } else {
+//                         generationMemory[newEffect.name].push(ingredient.effects[i].magnitude)
+//                     }
+
+
+
+//                 })
+
+
+
+//                 return ingredient
+
+//             })
+//         //calculate maximum strength
+//         // .map((ingredient, i, a) => ({ ...ingredient,
+//         //     effects: ingredient.effects.map(e => ({ ...e,
+//         //         maxMagnitude: generationMemory[e.name]
+//         //             .sort((a, b) => b - a, 0)
+//         //             .slice(0, options.maxComponents)
+//         //             .reduce((a, b) => a + b, 0)
+
+//         //     }))
+//         // }))
+//         // .map(i => new Component(i.name, i.effects))
+
+
+//         return this
+//     }
+
+
+
+// }
+
+// var t1 = new potionMaster(originalDataSet, effects, substanceProperties, productionRequirements)
+
+// console.log(t1)
+// console.log(strengthFinder(0.10))
 
 // // console.log(createPotion([], [])._colour)
-// // console.log(potion1,potion2)
-console.log(components[0]._effects)
+// console.log(potion1,potion2)
 
 
 
@@ -1125,46 +1255,4 @@ console.log(components[0]._effects)
 
 
 
-// console.log(m)
-// var t =Object.keys(m).map(e=>)
-// console.log(t)
-
-
-/*
-run with input of potion method, production requirements, "is this already a potion"
-add all compoents
-run conditions
-  check duplicates
-  check conditions on duplicates
-*/
-
-
-function effectFinder(effectName) {
-    return data.ingredients
-        .filter(ingredient => ingredient.effectsBasic().includes(effectName))
-        .map(ingredient => "ok")
-}
-
-
-
-console.log(effectFinder("Explosive"))
-
-// var m = [
-//     ["Sadness for x period", "Increased cold resistance", "Diarrhea", "Gain mass"],
-//     ["Cripple", "Increased cold resistance", "Restore vigor", "Great Wound"],
-//     ["Vomiting", "Resist Stat changes", "Chance to gain corruption", "Stamina Regeneration"],
-//     ["Madness", "Increase Willpower", "See real or fake visions of future", "Resist Stat changes"]
-// ].reduce((a, b) => a.filter(c => b.includes(c)));
-
-
-// console.log(data.ingredients.length)
-
-// console.log(data)
-// var c1 = Color(randomColor({ format: 'rgba' }))
-// var c2 = Color(randomColor({ format: 'rgba' }))
-
-// console.log(data.effects[0])
-
-
-
-// console.log(c1.mix(c2))
+// console.log(effectFinder("Explosive"))
