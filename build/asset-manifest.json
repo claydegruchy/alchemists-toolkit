@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/alchemists-toolkit/static/css/main.d1b05096.chunk.css",
-    "main.js": "/alchemists-toolkit/static/js/main.6667db6e.chunk.js",
-    "main.js.map": "/alchemists-toolkit/static/js/main.6667db6e.chunk.js.map",
+    "main.js": "/alchemists-toolkit/static/js/main.8e9d915d.chunk.js",
+    "main.js.map": "/alchemists-toolkit/static/js/main.8e9d915d.chunk.js.map",
     "runtime-main.js": "/alchemists-toolkit/static/js/runtime-main.0a6be03a.js",
     "runtime-main.js.map": "/alchemists-toolkit/static/js/runtime-main.0a6be03a.js.map",
-    "static/js/2.58fe29c1.chunk.js": "/alchemists-toolkit/static/js/2.58fe29c1.chunk.js",
-    "static/js/2.58fe29c1.chunk.js.map": "/alchemists-toolkit/static/js/2.58fe29c1.chunk.js.map",
+    "static/js/2.ec2147fc.chunk.js": "/alchemists-toolkit/static/js/2.ec2147fc.chunk.js",
+    "static/js/2.ec2147fc.chunk.js.map": "/alchemists-toolkit/static/js/2.ec2147fc.chunk.js.map",
     "index.html": "/alchemists-toolkit/index.html",
-    "precache-manifest.c9be6930d370440dee385ec965314f1d.js": "/alchemists-toolkit/precache-manifest.c9be6930d370440dee385ec965314f1d.js",
+    "precache-manifest.fc8e93ac232b3ad3cd9d7de6f1f3a798.js": "/alchemists-toolkit/precache-manifest.fc8e93ac232b3ad3cd9d7de6f1f3a798.js",
     "service-worker.js": "/alchemists-toolkit/service-worker.js",
     "static/css/main.d1b05096.chunk.css.map": "/alchemists-toolkit/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.58fe29c1.chunk.js.LICENSE": "/alchemists-toolkit/static/js/2.58fe29c1.chunk.js.LICENSE",
-    "static/media/logo.svg": "/alchemists-toolkit/static/media/logo.5d5d9eef.svg"
+    "static/js/2.ec2147fc.chunk.js.LICENSE": "/alchemists-toolkit/static/js/2.ec2147fc.chunk.js.LICENSE",
+    "static/media/logo.svg": "/alchemists-toolkit/static/media/logo.23ab35d7.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.0a6be03a.js",
-    "static/js/2.58fe29c1.chunk.js",
+    "static/js/2.ec2147fc.chunk.js",
     "static/css/main.d1b05096.chunk.css",
-    "static/js/main.6667db6e.chunk.js"
+    "static/js/main.8e9d915d.chunk.js"
   ]
 }
