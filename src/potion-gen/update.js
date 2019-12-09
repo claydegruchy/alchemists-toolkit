@@ -12,7 +12,7 @@ console.log(data)
 
 
 // var originalDataSet = JSON.parse(data)
-var originalDataSet =  data;
+var originalDataSet = data;
 // eslint-disable-next-line
 Array.prototype.unique = function() { return [...new Set(this)] }
 // eslint-disable-next-line
@@ -583,7 +583,7 @@ class Component {
 
 
 class PotionMaster {
-    constructor(seed=Math.random(), args = defaults) {
+    constructor(seed = Math.random(), args = defaults) {
         faker.seed(seed)
         this.data = args.baseData
         this.options = args.options
@@ -594,6 +594,11 @@ class PotionMaster {
         this.data.productionRequirements = args.productionRequirements
             .map(i => i.capitalize())
         return this.makeDataSet()
+    }
+
+
+    components() {
+        return this.data.components
     }
 
     findComponent(searchQuery) {
