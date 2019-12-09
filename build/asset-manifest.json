@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/alchemists-toolkit/static/css/main.d1b05096.chunk.css",
+    "main.js": "/alchemists-toolkit/static/js/main.6667db6e.chunk.js",
+    "main.js.map": "/alchemists-toolkit/static/js/main.6667db6e.chunk.js.map",
+    "runtime-main.js": "/alchemists-toolkit/static/js/runtime-main.0a6be03a.js",
+    "runtime-main.js.map": "/alchemists-toolkit/static/js/runtime-main.0a6be03a.js.map",
+    "static/js/2.58fe29c1.chunk.js": "/alchemists-toolkit/static/js/2.58fe29c1.chunk.js",
+    "static/js/2.58fe29c1.chunk.js.map": "/alchemists-toolkit/static/js/2.58fe29c1.chunk.js.map",
+    "index.html": "/alchemists-toolkit/index.html",
+    "precache-manifest.c9be6930d370440dee385ec965314f1d.js": "/alchemists-toolkit/precache-manifest.c9be6930d370440dee385ec965314f1d.js",
+    "service-worker.js": "/alchemists-toolkit/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/alchemists-toolkit/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.58fe29c1.chunk.js.LICENSE": "/alchemists-toolkit/static/js/2.58fe29c1.chunk.js.LICENSE",
+    "static/media/logo.svg": "/alchemists-toolkit/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0a6be03a.js",
+    "static/js/2.58fe29c1.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.6667db6e.chunk.js"
+  ]
+}
