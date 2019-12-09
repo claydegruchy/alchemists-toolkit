@@ -36,8 +36,12 @@ export default class ComponentPicker extends React.Component {
         // this.state.selections.
         console.log("The link was clicked.", event, id, this.conditions);
 
-        if (this.state.selections.includes(id)) this.handleDelete(id);
-        if (!this.state.selections.includes(id)) this.handleAddition(id);
+
+
+        if (id && this.state.selections.includes(id)) this.handleDelete(id);
+        // Object.keys(this.conditions).map(fn => this.conditions[fn](this.state.selections, id))
+
+        if (id && !this.state.selections.includes(id)) this.handleAddition(id);
     }
 
     handleAddition(selection) {

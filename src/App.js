@@ -11,8 +11,10 @@ import Layout from "./Sidebar.js";
 const pm = new PotionMaster(1);
 const options = pm.components();
 
+
+///this isnt working
 const conditions = {
-    // maxAdditives: (list)=>
+    maxAdditives: (list, id) => {return []}
 }
 
 function App() {
@@ -25,7 +27,7 @@ function App() {
           <div name="picker">
             <ComponentPicker 
             options={options} 
-            conditions={["a","b"]} />
+            conditions={conditions} />
           </div>
         </Layout>
         <div
