@@ -51,8 +51,7 @@ export default function PermanentDrawerLeft(props) {
         }}
         anchor="left"
       >
-        <Divider />  lmao
-  <Divider />
+
         <AppBar position="fixed" className={classes.appBar}>
           <Toolbar>
             <Typography variant="h6" noWrap>
@@ -60,7 +59,6 @@ export default function PermanentDrawerLeft(props) {
             </Typography>
           </Toolbar>
         </AppBar>
-
         <main>{props.children}</main>
       </Drawer>
     </div>

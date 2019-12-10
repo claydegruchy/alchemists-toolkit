@@ -20,6 +20,9 @@ export default class ComponentPicker extends React.Component {
         this.options = props.options;
         this.conditions = props.conditions;
         this.callbackFunction = props.callbackFunction;
+        this.conditions = props.conditions;
+
+        // console.log()
 
         this.state = {
             selections: []
@@ -29,31 +32,41 @@ export default class ComponentPicker extends React.Component {
 
     handleClick(event, id) {
         // console.log("The link was clicked.", event, id, this.conditions);
-        console.log(this.state.selections);
 
-        if (id && this.state.selections.includes(id)) this.handleDelete(id);
-        if (id && !this.state.selections.includes(id)) this.handleAddition(id);
+        if (this.state.selections.includes(id)) {
+            return this.handleDelete(id);
+        } else if (!this.state.selections.includes(id)) {
+            return this.handleAddition(id);
+        }
         // Object.keys(this.conditions).map(fn => this.conditions[fn](this.state.selections, id))
     }
 
     handleAddition(selection) {
         const { selections } = this.state;
-        console.log(this.state)
-        selections.push(selection)
-        console.log("adding", selection, selections)
 
-        this.setState(state => ({
-            selections: selections
-        }))
+        selections.push(selection);
+
+        this.setState(
+            state => ({
+                selections: selections
+            }),
+            () => {
+                this.conditions.getSelections(this.state)
+            }
+        );
 
     }
 
     handleDelete(id) {
-        const { selections } = this.state;
+        var { selections } = this.state;
 
         this.setState({
-            selections: selections.filter(i => i !== id)
-        });
+                selections: selections.filter(i => i !== id)
+            },
+            () => {
+                this.conditions.getSelections(this.state)
+            }
+        );
 
     }
 

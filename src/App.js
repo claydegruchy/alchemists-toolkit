@@ -12,13 +12,34 @@ const pm = new PotionMaster(1);
 const options = pm.components();
 
 
-var selectionList = []
+var selectionState = { selections: [] }
 
 ///this isnt working
-// const conditions = {
-//     isWorking: (list, id) => console.log("this function has been run"),
-//     getSelections: (list, id) => { selectionList = list }
-// }
+const conditions = {
+    isWorking: (list, id) => console.log("this function has been run"),
+    getSelections: (list, id) => { selectionState = list }
+}
+
+var output = () => {
+    return (
+        <h1>
+    out
+    </h1>
+    )
+}
+
+var generatePotion = (e) => {
+    var productionEffects = [
+        "Crushing",
+        "Disolve in water",
+        "philosophers stone"
+    ]
+
+
+
+    console.log(pm.createPotion(productionEffects, selectionState.selections))
+
+}
 
 function App() {
     return (
@@ -30,15 +51,17 @@ function App() {
           <div name="picker">
             <ComponentPicker 
             options={options} 
-            callbackFunction={(selections)=>selectionList = selections}
-
-
+            callbackFunction={(selections)=>selectionState = selections}
+            conditions={conditions}
              />
           </div>
         </Layout>
+        <div>
+        {output()}
+        </div>
         <div
           key="nglkivcdfufejkuejcferefjvhlvgcjt"
-          onClick={e => console.log("selectionList",selectionList)}
+          onClick={e => generatePotion(e)}
           className=""
         >
           Submit
