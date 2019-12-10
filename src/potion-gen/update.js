@@ -584,7 +584,8 @@ class Component {
 
 class PotionMaster {
     constructor(seed = Math.random(), args = defaults) {
-        faker.seed(seed)
+        this.seed = seed
+        faker.seed(this.seed)
         this.data = args.baseData
         this.options = args.options
         this.data.effects = args.effects
