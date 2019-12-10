@@ -1,13 +1,8 @@
-/* eslint react/prop-types: 0 */
-
-
 var hash = require('object-hash');
 var faker = require('faker');
+var colour = require('./ColorGeneratorModule.js');
 
 var data = require('./caco-ingredients.json');
-
-console.log(data)
-
 
 
 
@@ -537,6 +532,7 @@ var productionRequirements = [
     "requires the presence of chaos",
     "stir under a full moon",
     'Distil',
+    "philosophers stone",
 
 ]
 
@@ -594,12 +590,23 @@ class PotionMaster {
             .map(e => e.capitalize())
         this.data.productionRequirements = args.productionRequirements
             .map(i => i.capitalize())
+
+
         return this.makeDataSet()
+
+
+
+
+
     }
 
 
     components() {
         return this.data.components
+    }
+
+    productionEffects() {
+        return this.data.productionRequirements
     }
 
     findComponent(searchQuery) {
@@ -655,11 +662,17 @@ class PotionMaster {
         // console.log(effectArray)
         var conditions = {
             hasNoProductionRequirements: (e) => !e.production,
-            includesProduction: (e) => productionModifiers.includes(e.production),
-            usingPhilosophersStone: (e) => productionModifiers.includes("philosophers stone"),
+            includesProduction: (e) => productionModifiers
+                .map(e => e.toLowerCase())
+                .includes(e.production),
+            usingPhilosophersStone: (e) => productionModifiers
+                .map(e => e.toLowerCase())
+                .includes("philosophers stone"),
 
         }
         // console.log(effectArray)
+
+        console.log("effectArray", effectArray)
 
         //vlidate prodction
         // remove junk
@@ -682,16 +695,13 @@ class PotionMaster {
     calculateEffectPotency(effectArray) {
         console.log("running calculateEffectPotency", effectArray.length)
 
-
-
-
-
         effectArray.forEach((item) => {
             delete item.ingredientName
         })
 
 
         var presentEffects = [...new Set(effectArray.map(e => e.name))]
+        console.log("presentEffect1s", presentEffects)
 
         presentEffects = presentEffects.map(effect => {
                 var thisEffectCollection = effectArray
@@ -704,6 +714,8 @@ class PotionMaster {
                 })
             })
             .map(e => ({ ...e, strength: this.strengthFinder(e.magnitude / e.maxMagnitude) }))
+
+        console.log("presentEffect2s", presentEffects)
 
         //trim potion to remove excess effects
         // if (presentEffects.length > 4) presentEffects = presentEffects.slice(0, 4)
@@ -719,10 +731,10 @@ class PotionMaster {
         var activeEffects = presentEffects.filter(e => e.active).slice(0, 3)
         var inactiveEffects = presentEffects.filter(e => !e.active).slice(0, 3)
 
-
+        console.log("presentEffects", presentEffects)
 
         if ((activeEffects.length + inactiveEffects.length) < 1) return new Component(customJunkName,
-            [], generateColour, ["Smells terrible"])
+            [], generateColour(), ["Smells terrible"])
 
 
         // console.log(inactiveEffects.length)
@@ -863,15 +875,8 @@ class PotionMaster {
 
 
 
-function tests(seed) {
-    var pm = new PotionMaster({
-        baseData: originalDataSet,
-        effects: effects,
-        substanceProperties: substanceProperties,
-        productionRequirements: productionRequirements,
-        options: options,
-        seed: seed,
-    })
+function tests(seed = 1) {
+    var pm = new PotionMaster()
 
 
 
@@ -912,6 +917,6 @@ function tests(seed) {
 
 
 
-export default PotionMaster
-
+// export default PotionMaster
+module.exports = { PotionMaster: PotionMaster }
 //
