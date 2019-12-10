@@ -1,102 +1,78 @@
 import React from "react";
 
-// export function SmartButton(props) {
-//     const classes = useStyles();
+import Select from "react-select";
 
-//     return (
-//         <div
-//                             key={props.key}
-//                             value={props.value}
-//                             onClick={props.onClick}
-//                             className={props.className}>
+import Store from './Store.js'
 
-//                         </div>
-//     );
-// }
+import CreatableSelect from 'react-select/creatable';
 
-export default class ComponentPicker extends React.Component {
-    constructor(props) {
-        super(props);
-        this.options = props.options;
-        // this.conditions = props.conditions;
-        this.callbackFunction = props.callbackFunction;
-        // this.selected = props.selected;
-        // this.conditions = props.conditions;
+import Layout from "./Sidebar.js";
 
-        // console.log()
-
-        this.state = props.state;
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    handleClick(event, id) {
-        console.log("The link was clicked.", event, id, this.props.selected);
-
-        this.callbackFunction(id, this.update);
-
-        // this.callbackFunction()
-        // if (this.state.selections.includes(id)) {
-        //     return this.handleDelete(id);
-        // } else if (!this.state.selections.includes(id)) {
-        //     return this.handleAddition(id);
-        // }
-        // Object.keys(this.conditions).map(fn => this.conditions[fn](this.state.selections, id))
-    }
-    updateState(state) {
-        console.log(state)
-        this.setState(state)
-    }
+ class Selector extends React.Component {
 
 
-    // handleAddition(selection) {
-    //     const { selections } = this.state;
+    state = {
+        selectedOption: null
+    };
 
-    //     selections.push(selection);
 
-    //     this.setState(
-    //         state => ({
-    //             selections: selections
-    //         }),
-    //         () => {
-    //             this.callbackFunction(this.state.selections);
-    //         }
-    //     );
-    // }
 
-    // handleDelete(id) {
-    //     var { selections } = this.state;
+    handleChange = selectedOption => {
+        if (selectedOption && selectedOption.length > this.props.maxChoices) {
+            selectedOption = this.state.selectedOption;
+        }
 
-    //     this.setState(
-    //         {
-    //             selections: selections.filter(i => i !== id)
-    //         },
-    //         () => {
-    //             this.callbackFunction(this.state.selections);
-    //         }
-    //     );
-    // }
-
+        this.setState({ selectedOption }, () =>
+            console.log(`Option selected:`, this.state.selectedOption)
+        );
+    };
     render() {
+
+        let store = this.props.store
+
+        const { selectedOption } = this.state;
         return (
-            <div>
-                {this.options.map((option, i) => {
-                    // var className = this.state.selected.includes(option.id)
-                    //     ? "[Selected]"
-                    //     : "";
-                    return (
-                        <div
-                            key={option.id}
-                            value={option.id}
-                            onClick={e => this.handleClick(e, option.name)}
-                            // className={className}
-                        >
-                            {
-                                // className + 
-                                " " + option.name}
-                        </div>
-                    );
-                })}
-            </div>
+
+            <Layout>
+            <CreatableSelect
+        value={selectedOption}
+        onChange={this.handleChange}
+        options={this.props.options}
+        isMulti={true}
+        isClearable={true}
+        isOpen={true}
+        menuIsOpen={true}
+        isSearchable={true}
+        closeMenuOnSelect={false}
+        styles={{
+          // ...customStyles,
+          option: base => ({
+            ...base,
+            border: `1px dotted black`
+
+            // height: 350,
+            // minHeight: 350
+          }),
+          multiValue: base => ({
+            ...base,
+            border: `2px dotted red`
+          })
+        }}
+        ref={el => (this.selectRef = el)}
+        onBlur={() => {
+          setTimeout(
+            () =>
+              this.selectRef.setState({
+                menuIsOpen: true
+              }),
+            5
+          );
+        }}
+      />
+      </Layout>
         );
     }
-}
+};
+
+
+export default Store.withStore(Selector)
