@@ -1,35 +1,40 @@
-var fs = require('fs');
+/* eslint react/prop-types: 0 */
+
+
 var hash = require('object-hash');
 var faker = require('faker');
 
-var data = fs.readFileSync('caco-ingredients.json').toString();
+var data = require('./caco-ingredients.json');
 
+console.log(data)
 
-
-function mulberry32(a) {
-    return function() {
-        var t = a += 0x6D2B79F5;
-        t = Math.imul(t ^ t >>> 15, t | 1);
-        t ^= t + Math.imul(t ^ t >>> 7, t | 61);
-        return ((t ^ t >>> 14) >>> 0) / 4294967296;
-    }
-}
 
 
 
 // var originalDataSet = JSON.parse(data)
-var originalDataSet2 = JSON.parse(data)
+var originalDataSet = data;
+// eslint-disable-next-line
 Array.prototype.unique = function() { return [...new Set(this)] }
+// eslint-disable-next-line
 Array.prototype.average = function() { return this.reduce((p, c) => p + c, 0) / this.length }
+// eslint-disable-next-line
+String.prototype.capitalize = function() { return this.charAt(0).toUpperCase() + this.slice(1) }
+// eslint-disable-next-line
+Array.prototype.randomElement = function() { return this[Math.floor(random() * this.length)] }
 
 var random = () => faker.random.number() / 100000
 
-var generateColour = (seed = 0.5) => ({
+var generateColour = () => ({
     r: Math.floor(random() * Math.floor(255)),
     g: Math.floor(random() * Math.floor(255)),
     b: Math.floor(random() * Math.floor(255)),
     a: +random().toFixed(2)
 })
+
+
+
+
+
 
 
 var options = {
@@ -51,13 +56,8 @@ var options = {
 
 
 
-String.prototype.capitalize = function() {
-    return this.charAt(0).toUpperCase() + this.slice(1)
-}
 
-Array.prototype.randomElement = function() {
-    return this[Math.floor(random() * this.length)]
-}
+
 
 var effects = [{
         "name": "Explosive",
@@ -540,6 +540,14 @@ var productionRequirements = [
 
 ]
 
+var defaults = {
+    baseData: originalDataSet,
+    effects: effects,
+    substanceProperties: substanceProperties,
+    productionRequirements: productionRequirements,
+    options: options,
+}
+
 
 
 class Component {
@@ -575,12 +583,10 @@ class Component {
 
 
 class PotionMaster {
-
-    constructor(args) {
-        faker.seed(args.seed)
+    constructor(seed = Math.random(), args = defaults) {
+        faker.seed(seed)
         this.data = args.baseData
         this.options = args.options
-        console.log(this.options)
         this.data.effects = args.effects
         this.data.components = []
         this.data.substanceProperties = args.substanceProperties
@@ -590,8 +596,13 @@ class PotionMaster {
         return this.makeDataSet()
     }
 
+
+    components() {
+        return this.data.components
+    }
+
     findComponent(searchQuery) {
-        return this.data.components.find(c => c == searchQuery || c.id == searchQuery || c.name == searchQuery)
+        return this.data.components.find(c => c === searchQuery || c.id === searchQuery || c.name === searchQuery)
     }
 
     registerComponent(componentObject) {
@@ -622,7 +633,7 @@ class PotionMaster {
 
         effectArray
             .forEach((effect, i, array) => array[i].count = array
-                .filter(e => e.name == effect.name).length)
+                .filter(e => e.name === effect.name).length)
 
 
         //activate effects
@@ -683,7 +694,7 @@ class PotionMaster {
 
         presentEffects = presentEffects.map(effect => {
                 var thisEffectCollection = effectArray
-                    .filter(e => e.name == effect)
+                    .filter(e => e.name === effect)
                 return Object.assign({}, ...thisEffectCollection, {
                     magnitude: thisEffectCollection
                         .map(e => e.magnitude)
@@ -710,10 +721,7 @@ class PotionMaster {
 
 
         if ((activeEffects.length + inactiveEffects.length) < 1) return new Component(customJunkName,
-            [], Color(randomColor({
-                format: 'rgba',
-                seed: customJunkName
-            })), ["Smells terrible"])
+            [], generateColour, ["Smells terrible"])
 
 
         // console.log(inactiveEffects.length)
@@ -815,9 +823,9 @@ class PotionMaster {
                 ingredient.effects = ingredient.effects.map((effect, i, a) => {
 
                     //merge objects
-                    var effect = {
+                    effect = {
                         ...effect,
-                        ...this.data.effects.find(e => e.originalName == effect.name),
+                        ...this.data.effects.find(e => e.originalName === effect.name),
 
                         //add colours
 
@@ -853,12 +861,10 @@ class PotionMaster {
 }
 
 
-module.exports = PotionMaster
-
 
 function tests(seed) {
     var pm = new PotionMaster({
-        baseData: originalDataSet2,
+        baseData: originalDataSet,
         effects: effects,
         substanceProperties: substanceProperties,
         productionRequirements: productionRequirements,
@@ -903,6 +909,8 @@ function tests(seed) {
     return pm.createPotion(productionEffects, [invis, invis])
 }
 
-console.log(tests(1))
+
+
+export default PotionMaster
 
 //
