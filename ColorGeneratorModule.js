@@ -25,6 +25,8 @@ let colorMixOutput = []
 
 //takes two strings: e.g. 'let firstcolor = '255, 0, 102,0.5' let secondcolor = '204,102,51,0.5'
 function colorMixerForTwoStrings(first, second) {
+
+
     let AArray = first.split(',').map(Number)
     let BArray = second.split(',').map(Number)
     let alphalong = (AArray[3] + BArray[3] * (1 - AArray[3])).toFixed(1)
@@ -41,16 +43,28 @@ function colorMixerForTwoStrings(first, second) {
 
 //takes two objects which have r g b a values
 function colorMixerForTwoObjects(first, second) {
+    console.log("MIXING A COLOR",first, second)
+    if (!first && !second) throw "FUCK"
+    if (!first) first = second
+    if (!second) second = first
     let alphalong = (first.a + second.a * (1 - first.a)).toFixed(1)
     let alpha = parseFloat(alphalong, 10)
     let Red = Math.round(first.r * first.a * (1 - second.a) + second.r * second.a)
     let Green = Math.round(first.g * first.a * (1 - second.a) + second.g * second.a)
     let Blue = Math.round(first.b * first.a * (1 - second.a) + second.b * second.a)
-    colorMixOutput.push(Red);
-    colorMixOutput.push(Green)
-    colorMixOutput.push(Blue)
-    colorMixOutput.push(alpha)
-    return colorMixOutput
+    let out = {
+        a: alpha,
+        r: Red,
+        g: Green,
+        b: Blue,
+    }
+    console.log("DONE WITH COLOUR", out)
+    return  out
+    // colorMixOutput.push(Red);
+    // colorMixOutput.push(Green)
+    // colorMixOutput.push(Blue)
+    // colorMixOutput.push(alpha)
+    // return colorMixOutput
 }
 
 let hexstring = ''
@@ -65,11 +79,23 @@ function hexToRGBString(hex) {
     return hexstring
 }
 
+function componentToHex(c) {
+    var hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
+}
+
+function rgbToHex(o) {
+    return "#" + componentToHex(o.r) + componentToHex(o.g) + componentToHex(o.b);
+}
+
+
+
 let randomHexColor = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
 
 module.exports =
 
     {
+        rgbToHex: rgbToHex,
         Make1Dig: Make1Dig,
         Make3Dig: Make3Dig,
         randomHexColor: randomHexColor,
