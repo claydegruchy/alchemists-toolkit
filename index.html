@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.23.0/slimselect.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@latest/dist/svg.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.23.0/slimselect.min.css" rel="stylesheet">
+    </link>
+    <title>PM</title>
+
+    <style type="text/css">
+    	
+
+.list {
+  display: list-item;
+  margin-left: 1.3em;
+  list-style-type: circle;   
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <div id="selectionContainer">
+            <select class="multiple ingredients-selector" multiple>
+            </select>
+            <select class="multiple production-selector" multiple>
+            </select>
+        </div>
+  <div class="image-container" id="image-container"></div>
+        <div id="output"></div>
+        <button id="start">start</button>
+        <button id="clear">clear</button>
+        <button id="testfill">testfill</button>
+        <pre id="json"></pre>
+<script src="bundle.js"></script>
+
+    </body>
+</body>
+<!--  -->
+</html>
