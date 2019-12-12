@@ -6,6 +6,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.23.0/slimselect.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@latest/dist/svg.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.23.0/slimselect.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+
     </link>
     <title>PM</title>
     <style type="text/css">
@@ -61,7 +63,14 @@
         text-align: center;
     }
 
-    @media (min-width: 700px) {
+
+    /*
+@media  and (min-device-width: 480px){
+
+}
+*/
+
+    @media (min-width: 900px) {
 
         .side {
             grid-column: col-start / span 4;
@@ -115,13 +124,16 @@
         </nav>
         <!-- </div> -->
         <div class="content">
-            <button id="start">start</button>
-            <button id="clear">clear</button>
-            <button id="testfill">testfill</button>
+            <button class="pure-button" id="start">start</button>
+            <button class="pure-button" id="clear">clear</button>
+            <button class="pure-button" id="explosive-test">explosive-test</button>
+            <button class="pure-button" id="corruption-test">corruption-test</button>
             <div class="image-container" id="image-container"></div>
             <div id="output"></div>
         </div>
         <footer class="main-footer">
+            <button class="pure-button" id="export">export</button>
+            <button class="pure-button" id="import">import</button>
             Made by CCMD</footer>
     </div>
     <pre id="json"></pre>

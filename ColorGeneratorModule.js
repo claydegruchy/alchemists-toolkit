@@ -43,7 +43,6 @@ function colorMixerForTwoStrings(first, second) {
 
 //takes two objects which have r g b a values
 function colorMixerForTwoObjects(first, second) {
-    console.log("MIXING A COLOR",first, second)
     if (!first && !second) throw "FUCK"
     if (!first) first = second
     if (!second) second = first
@@ -58,13 +57,8 @@ function colorMixerForTwoObjects(first, second) {
         g: Green,
         b: Blue,
     }
-    console.log("DONE WITH COLOUR", out)
     return  out
-    // colorMixOutput.push(Red);
-    // colorMixOutput.push(Green)
-    // colorMixOutput.push(Blue)
-    // colorMixOutput.push(alpha)
-    // return colorMixOutput
+
 }
 
 let hexstring = ''

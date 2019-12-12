@@ -586,6 +586,7 @@ class Component {
 class PotionMaster {
     constructor(seed = Math.random(), args = defaults) {
         this.seed = seed;
+        this.dataHash = null
         faker.seed(this.seed);
         this.data = args.baseData;
         this.options = args.options;
@@ -599,6 +600,57 @@ class PotionMaster {
         );
 
         return this.makeDataSet();
+    }
+
+
+    memory(input) {
+
+// eyJkYXRhSGFzaCI6ImYyZmI0NTAxNGU5ZmM0MjQ4NWY2ZmRjNzBhMDU0OTBhMjI4YzRiYzgiLCJzZWVkIjoxLCJwb3Rpb25zIjpbXX0=
+
+        var newDataState = input && JSON.parse(atob(input))
+
+        if (newDataState) {
+            console.log("starting data import")
+            console.log("dataHash", newDataState.dataHash, "current dataHash", this.dataHash)
+            console.log("seed", newDataState.seed, "current seed", this.seed)
+
+            if (newDataState.dataHash != this.dataHash) {
+                throw "mismatch in data set, perhaps you used different options/effects/components?"
+            }
+            if (newDataState.seed != this.seed) {
+                throw "you are using a different seed than the export, cannot import"
+            }
+
+            newDataState.potions.forEach(p => {
+                // registerComponent
+                console.log(p.colour)
+                var newPotion = new Component(p.name,
+                    p.effects,
+                    p.colour,
+                    p.properties,
+                    p.type)
+
+                newPotion.image = p.image
+                newPotion.complexity = p.complexity
+                // console.log(JSON.stringify(newPotion, null, 2))
+                // console.log(JSON.stringify(p, null, 2))
+                this.registerComponent(newPotion)
+            })
+
+            return 'success'
+        }
+
+
+        var dataState = {
+            dataHash: this.dataHash,
+            seed: this.seed,
+            potions: this.data.components
+                .filter(c => c.type != 'basic')
+                .map(c => ({ ...c, image: null }))
+        }
+
+        return btoa(JSON.stringify(dataState))
+
     }
 
     components() {
@@ -923,6 +975,7 @@ class PotionMaster {
             }))
             .map(i => this.registerComponent(new Component(i.name, i.effects)));
         delete this.data.ingredients;
+        this.dataHash = hash(this.data)
         // console.log("makeDataSet complete", this.data.components.length);
         return this;
     }
