@@ -15,66 +15,116 @@
         list-style-type: square;
     }
 
-    /*.container {}*/
 
-
-
-
-    .container-selector-left {
-        height: 100%;
-        width: 20vw;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        /*background-color: #191919;*/
-
-        /*width: 40%;*/
-        /*background: pink;*/
-
-
+    * {
+        box-sizing: border-box;
     }
 
-    .container-display-right {
-        /*background: cornflowerblue;*/
-        position: relative;
-        height: 102vh;
-        width: 60vw;
-        left: 20vw;
-        padding: 15px;
-        bottom: 20px;
-        padding-left: 20px;
-        /*        grid-column-start: 2;
-        grid-column-end: 3;*/
-
+    .wrapper {
+        /*max-width: 90vw;*/
+        margin: 0 auto;
+        font: 1.2em Helvetica, arial, sans-serif;
     }
 
-    .page-container {
-        /*height: 90vh;*/
-        /*width: 90vw;*/
+    .wrapper>* {
+        border: 0.5px solid #f08c00;
+        /*background-color: #ffec99;*/
+        border-radius: 5px;
+        padding: 10px;
+    }
 
-        /*background: lightblue;*/
+    nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .content {
+        min-height: auto;
+    }
+
+    .wrapper {
+        height: 95vh;
+        display: grid;
+        grid-template-columns: repeat(12, [col-start] 1fr);
+        grid-template-rows: repeat(12, [row-start] 1fr);
+        grid-gap: 10px;
+    }
+
+    .wrapper>* {
+        grid-column: col-start / span 12;
+    }
+
+    .title {
+        /*margin: 10px;*/
+        text-align: center;
+    }
+
+    @media (min-width: 700px) {
+
+        .side {
+            grid-column: col-start / span 4;
+        }
+
+        .ingredients {
+            grid-row: 2/span 5;
+        }
+
+        .production {
+            grid-row: 7/span 5;
+        }
+
+        .content {
+            grid-column: auto / span 8;
+            grid-row: 2 / span 10;
+        }
+
+        .main-head {
+            height: 10vh;
+
+        }
+
+        .main-footer {
+            /*height: 10vh;*/
+            grid-column: col-start / span auto;
+            grid-row: 12;
+        }
+
+        nav ul {
+            flex-direction: column;
+        }
     }
     </style>
 </head>
 
 <body>
-    <div class="page-container">
-        <div class="container-selector-left">
+    <div class="wrapper">
+        <div class="main-head">
+            <h1 class="title">Potion Master</h1>
+        </div>
+        <nav class="ingredients side ">
+            <div class="title">Ingredients</div>
             <select class="multiple ingredients-selector" multiple>
             </select>
+        </nav>
+        <nav class="production side title">
+            <div class="title">Production steps</div>
             <select class="multiple production-selector" multiple>
             </select>
-        </div>
-        <div class="container-display-right">
-            <div class="image-container" id="image-container"></div>
-            <div id="output"></div>
+        </nav>
+        <!-- </div> -->
+        <div class="content">
             <button id="start">start</button>
             <button id="clear">clear</button>
             <button id="testfill">testfill</button>
+            <div class="image-container" id="image-container"></div>
+            <div id="output"></div>
         </div>
-        <pre id="json"></pre>
+        <footer class="main-footer">
+            Made by CCMD</footer>
     </div>
+    <pre id="json"></pre>
     <script src="bundle.js"></script>
 </body>
 <!--  -->
