@@ -8507,7 +8507,6 @@ window.addEventListener('load', (e) => {
 
 
 
-
     console.log("seed", pm.seed);
 
     var ingredientSelectorTemplate = `
@@ -8600,9 +8599,17 @@ window.addEventListener('load', (e) => {
             placeholder: "What will you add to this potion?",
             limit: pm.options.maxComponents,
             data: generateComponentOptions(),
+            // afterClose: function(t) {
+            //     this.open();
+            //     console.log('beforeClose' )
+            // },
+            // beforeClose: function(t) {
+            //     this.open();
+            //     console.log('beforeClose' )
+            // },
             closeOnSelect: false,
             onChange: info => {
-                console.log(info);
+                console.log("info",info);
             }
         });
         productionSelector = new SlimSelect({
@@ -79381,6 +79388,7 @@ var mixColour = (a, b) => {
         a: (a.a + b.a) / 2
     }
 };
+
 
 
 var logColour = (colour, message = "{}{}{Colour message}{}{}") => console.log(`%c ${message} `, `background: ${colourMod.rgbToHex(colour)}; color: #fff`);

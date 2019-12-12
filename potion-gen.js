@@ -43,6 +43,7 @@ var mixColour = (a, b) => {
 };
 
 
+
 var logColour = (colour, message = "{}{}{Colour message}{}{}") => console.log(`%c ${message} `, `background: ${colourMod.rgbToHex(colour)}; color: #fff`);
 
 var options = {
