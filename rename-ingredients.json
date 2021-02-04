@@ -1,95 +1,95 @@
 [
   {
     "name": "Thistle Branch",
-    "description": "No desc needed"
+    "description": "A green-brown branch with spiked purple blooms."
   },
   {
     "name": "Snowberries",
-    "description": "No desc needed"
+    "description": "A small shrub berry that primarily grows in Kislev and the Northern Wastes."
   },
   {
-    "name": "Jarrin Root",
-    "description": "No desc needed"
+    "name": "Gorbon's Root",
+    "description": "The root of a rare, poisonous plant found only on the island of Sartosa. Ingesting the root may lead to nearly instantaneous death."
   },
   {
     "name": "Pine Thrush Egg",
-    "description": "No desc needed"
+    "description": "The Pine Thrush is notoriously shy. Though its eggs may be found often in the forests of Nordland and Middenland, the bird itself is rarely seen or heard."
   },
   {
     "name": "Chicken Egg",
-    "description": "No desc needed"
+    "description": "An egg that came from a chicken or will create a chicken, depending on your point of view."
   },
   {
     "name": "Nightshade",
-    "description": "No desc needed"
+    "description": "An attractive but deadly relative of the common tomato."
   },
   {
     "name": "Bone Meal",
-    "description": "No desc needed"
+    "description": "We found the hag at her millstone appearing for all the world like a housewife preparing flour for her family's bread. But her grain of choice was neither corn nor wheat but the bones of the young and the old. The millstone we tied about her neck and flung into the sea. - From an account by Mattias Thulmann on the witch purge of Wissenland."
   },
   {
     "name": "Salt Pile",
-    "description": "No desc needed"
+    "description": "More than a pinch, less than a casket."
   },
   {
     "name": "Garlic",
-    "description": "No desc needed"
+    "description": "A potent, edible bulb popular in Bretonnian cooking."
   },
   {
     "name": "Elves Ear",
-    "description": "No desc needed"
+    "description": "A common, fragrant, herb that can be dried and kept for long periods."
   },
   {
     "name": "Frost Mirriam",
-    "description": "No desc needed"
+    "description": "A hardy herb that grows late into the winter."
   },
   {
-    "name": "Chaurus Eggs",
-    "description": "No desc needed"
+    "name": "Minotaur Beetle Eggs",
+    "description": "A large insect egg with a thick shell."
   },
   {
-    "name": "Daedra Heart",
-    "description": "No desc needed"
+    "name": "Troll Heart",
+    "description": "A thick heart the size of a man's head. Best not to ask where it was acquired."
   },
   {
-    "name": "Falmer Ear",
-    "description": "No desc needed"
+    "name": "Medusae Ear",
+    "description": "The Medusea are said to be hideous servants of Morathi. Half woman, half snake, they are usually only found on the coasts of Naggaroth."
   },
   {
     "name": "Fire Salts",
-    "description": "No desc needed"
+    "description": "Residue left behind by concentrated elemental fire."
   },
   {
     "name": "Frost Salts",
-    "description": "No desc needed"
+    "description": "Residue left behind by concentrated elemental frost."
   },
   {
-    "name": "Void Salts",
-    "description": "No desc needed"
+    "name": "Shadow Salts",
+    "description": "residue left behind by concentrated elemental shadows."
   },
   {
-    "name": "Briar Heart",
-    "description": "No desc needed"
+    "name": "Blood Vulture Heart",
+    "description": "Blood Vultures are large scavengers found high in the Mountains of Mourn. In times of hardship, they will take live prey."
   },
   {
     "name": "Ectoplasm",
-    "description": "No desc needed"
+    "description": "A thick, translucent goo, similar to snail slime. It is found in areas of high ghost activity."
   },
   {
     "name": "Giant's Toe",
-    "description": "No desc needed"
+    "description": "Now rare, Giants are the terrestrial descendants of the ancient Skytitans."
   },
   {
-    "name": "Hagraven Feathers",
-    "description": "No desc needed"
+    "name": "Harpy Leather",
+    "description": "The finest Harpy Leather is produced from the thin wing membranes of elder Harpies."
   },
   {
-    "name": "Ice Wraith Teeth",
-    "description": "No desc needed"
+    "name": "Ice Tiger Teeth",
+    "description": "We noticed the Ice Tiger only when it was practically upon us. No sooner had it darted from the shadows of the forest's edge than it took down the first of the horses. It was only thanks to the speed and strength of our guides that we survived. - Smosskeirn Loth's Travels in Norsca"
   },
   {
-    "name": "Skeever Tail",
-    "description": "No desc needed"
+    "name": "Wolfrat Tail",
+    "description": "An unholy bastard of Skaven and Kislev wolves, the Wolfrat is a vicious and cunning beast."
   },
   {
     "name": "Slaughterfish Scales",
@@ -1028,7 +1028,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Direnni's Dartwing",
+    "name": "Dartwing Moth",
     "description": "No desc needed"
   },
   {
@@ -1080,7 +1080,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Redwort Flower",
+    "name": "Dreadbloom Flower",
     "description": "No desc needed"
   },
   {
@@ -1132,15 +1132,15 @@
     "description": "No desc needed"
   },
   {
-    "name": "Kwama Cuttle",
+    "name": "Bloodwasp Larvae",
     "description": "No desc needed"
   },
   {
-    "name": "Kwama Egg",
+    "name": "Bloodwasp Egg",
     "description": "No desc needed"
   },
   {
-    "name": "Scamp Skin",
+    "name": "Squig Skin",
     "description": "No desc needed"
   },
   {
@@ -1165,7 +1165,7 @@
   },
   {
     "name": "Cairn Bolete",
-    "description": "No desc needed"
+    "description": "A type of mushroom that grows in damp soil around rotted flesh."
   },
   {
     "name": "Red Cinnabar Polypore",
@@ -1176,12 +1176,12 @@
     "description": "No desc needed"
   },
   {
-    "name": "Land Dreugh Wax",
+    "name": "Tomb Wasp Wax",
     "description": "No desc needed"
   },
   {
     "name": "Dryad Saddle Polypore",
-    "description": "No desc needed"
+    "description": "A shelf mushroom cultivated by wood elves."
   },
   {
     "name": "Cold Fire Salts",
@@ -1193,7 +1193,7 @@
   },
   {
     "name": "Emetic Russula",
-    "description": "No desc needed"
+    "description": "A red and white mushroom that causes severe vomiting and diarrhea."
   },
   {
     "name": "Elf Cup",
@@ -1217,7 +1217,7 @@
   },
   {
     "name": "Stinkhorn",
-    "description": "No desc needed"
+    "description": "A large grey mushroom whose delicate flavours are overshadowed by their stench"
   },
   {
     "name": "Somnalius Frond",
@@ -1241,7 +1241,7 @@
   },
   {
     "name": "Goblin Wax",
-    "description": "No desc needed"
+    "description": "Despite it's name, Goblin wax is actually derived from beetle secretions."
   },
   {
     "name": "Rice",
@@ -1253,18 +1253,18 @@
   },
   {
     "name": "Bog Beacon",
-    "description": "No desc needed"
+    "description": "A tall, thin, bioluminescent mushroom that is found in marshy or swampy land. More than one unlucky traveller has been drawn to their death by its comforting light."
   },
   {
     "name": "Blue Entoloma",
-    "description": "No desc needed"
+    "description": "A stunningly blue, pointed mushroom."
   },
   {
-    "name": "Eltheric Grouper",
-    "description": "No desc needed"
+    "name": "Nordland Grouper",
+    "description": "A small, common fish."
   },
   {
-    "name": "Bjoulsae Hake",
+    "name": "Bretonnian Banded Hake",
     "description": "No desc needed"
   },
   {
@@ -1272,11 +1272,11 @@
     "description": "No desc needed"
   },
   {
-    "name": "Yellow Amanita",
+    "name": "Madcap Mushroom",
     "description": "No desc needed"
   },
   {
-    "name": "Mort Flesh",
+    "name": "Morbid Flesh",
     "description": "No desc needed"
   },
   {
@@ -1296,8 +1296,8 @@
     "description": "No desc needed"
   },
   {
-    "name": "Heartland Highfin",
-    "description": "No desc needed"
+    "name": "Talabec Highfin",
+    "description": "A small, silvery fish with a large dorsal fin."
   },
   {
     "name": "Black Eagle Feathers",
@@ -1316,7 +1316,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Nibenese Silverbird Egg",
+    "name": "Silverbird Egg",
     "description": "No desc needed"
   },
   {
@@ -1328,7 +1328,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Colovian Nuthatch Egg",
+    "name": "Stirland Nuthatch Egg",
     "description": "No desc needed"
   },
   {
@@ -1336,7 +1336,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Nibenay Snapper",
+    "name": "Stir  Snapper",
     "description": "No desc needed"
   },
   {
@@ -1352,7 +1352,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Magus Mint",
+    "name": "Mages' Mint",
     "description": "No desc needed"
   },
   {
