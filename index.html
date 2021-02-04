@@ -7,7 +7,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@latest/dist/svg.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.23.0/slimselect.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
-
     </link>
     <title>PM</title>
     <style type="text/css">
@@ -100,6 +99,39 @@
             grid-row: 12;
         }
 
+
+
+        .vertical-buttons {
+            width: 850px !important;
+            height: 90% !important;
+            flex-direction: column;
+        }
+
+        .small {
+            font-size: x-small;
+        }
+
+        /*.ss-main .ss-content .ss-list {
+            max-height: 60vh;
+        }*/
+
+        .ingredients-selector  .ss-main {
+            max-height: 60vh !important;
+        }
+
+        .ingredients-selector  .ss-content {
+            max-height: 60vh !important;
+        }
+
+        .ingredients-selector  .ss-list {
+            max-height: 60vh !important;
+        }
+
+
+
+
+
+
         nav ul {
             flex-direction: column;
         }
@@ -128,6 +160,7 @@
             <button class="pure-button" id="clear">clear</button>
             <button class="pure-button" id="explosive-test">explosive-test</button>
             <button class="pure-button" id="corruption-test">corruption-test</button>
+            <button class="pure-button" id="findEffect">&#x1F50D; Find Effect</button>
             <div class="image-container" id="image-container"></div>
             <div id="output"></div>
         </div>

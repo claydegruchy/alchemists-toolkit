@@ -76,9 +76,17 @@ window.addEventListener("load", e => {
   </p>
 </div>
 {{else}}
-{{name}}
+<div>
+    {{name}}
+    <div class="small">
+        {{#each effects}}
+        {{this.name}},
+        {{/each}}
+    </div>
+</div>
 {{/ifEquals}}
 `;
+        console.log(pm.types())
 
     Handlebars.registerHelper("ifEquals", function(arg1, arg2, options) {
         return arg1 == arg2 ? options.fn(this) : options.inverse(this);
@@ -94,8 +102,10 @@ window.addEventListener("load", e => {
 {{component.name}}
 {{#if isPotion}}
 - {{strongestEffect.strength}} {{strongestEffect.name}} effect
+{{else}}
 {{/if}}
 `);
+
         return Object.keys(pm.types())
             .map(o => ({
                 label: o,
@@ -114,6 +124,7 @@ window.addEventListener("load", e => {
             placeholder: "What will you add to this potion?",
             limit: pm.options.maxComponents,
             data: generateComponentOptions(),
+            showOptionTooltips: true,
             // afterClose: function(t) {
             //     this.open();
             //     console.log('beforeClose' )
@@ -155,6 +166,57 @@ window.addEventListener("load", e => {
     //     )
     // );
 
+
+    // var w = pm.findIngredientsWithEffect("Grow")
+    // console.log(w)
+
+    document.getElementById("findEffect").onclick = e => {
+
+
+
+
+
+        Swal.fire({
+                title: 'My Title',
+                text: 'Please select an option',
+                input: 'select',
+                inputOptions: Object.assign({}, ...pm.effects().map(effect => ({
+                    [effect.name]: effect.name
+                }))),
+                showCancelButton: true,
+                inputPlaceholder: 'Please select'
+            })
+            .then((choice) => [pm.findIngredientsWithEffect(choice.value), choice.value])
+            .then(components => {
+                var componentSelector
+                Swal.fire({
+                        title: 'Ingredients containing ' + components[1],
+                        // '<input type="select" class="fuck">' + components[0].map(c => `<p>${c.name}</p>`).join("") + '</input>'
+                        html: '<select class="multiple ingredients-options" multiple>',
+                        customClass: {
+                            actions: 'vertical-buttons',
+                            cancelButton: 'top-margin'
+                        }
+                    })
+                    .then(result => {
+
+                    })
+                componentSelector = new SlimSelect({
+                    select: ".ingredients-options",
+                    placeholder: "What will you add to this potion?",
+                    limit: pm.options.maxComponents,
+                    data: components[0].map(c => ({ text: c.name, innerHTML: c.name })),
+                    closeOnSelect: false,
+                })
+
+
+            })
+
+        // prefil(["Nordic Barnacle", "Tinder Polypore Cap"], ["Philosophers stone"]);
+
+    };
+    // document.getElementById("findEffect").onclick()
+
     document.getElementById("export").onclick = e => {
 
 
@@ -172,14 +234,12 @@ window.addEventListener("load", e => {
             .disableInput()
         // .then(console.log)
 
-
-        // if (text) {
-        //     Swal.fire(text)
-        // }
-
-
-
     };
+
+
+
+
+
     document.getElementById("import").onclick = e => {
 
 

@@ -2,10 +2,11 @@ var hash = require("object-hash");
 var faker = require("faker");
 var colourMod = require("./ColorGeneratorModule.js");
 
-var data = require("./caco-ingredients.json");
+var originalDataSet = require("./caco-ingredients.json");
+
+var effects = require("./effects.json")
 
 // var originalDataSet = JSON.parse(data)
-var originalDataSet = data;
 // eslint-disable-next-line
 Array.prototype.unique = function() {
     return [...new Set(this)];
@@ -67,442 +68,7 @@ var options = {
     }
 };
 
-var effects = [{
-        name: "Explosive",
-        complexity: 1,
-        originalName: "Fortify Destruction"
-    },
-    {
-        name: "Berserk for x period",
-        complexity: 1,
-        originalName: "Fortify Restoration"
-    },
-    {
-        name: "Madness",
-        complexity: 1,
-        originalName: "Fortify Illusion"
-    },
-    {
-        name: "Obsession for x period",
-        complexity: 1,
-        originalName: "Fortify Unarmed"
-    },
-    {
-        name: "Charm target x for y period",
-        complexity: 2,
-        originalName: "Fortify Barter"
-    },
-    {
-        name: "Teleport/move location to x",
-        complexity: 4,
-        originalName: "Fortify Shouts"
-    },
-    {
-        name: "Queasiness",
-        complexity: 1,
-        originalName: "Health"
-    },
-    {
-        name: "Sadness for x period",
-        complexity: 1,
-        originalName: "Magicka"
-    },
-    {
-        name: "Multiply duration of other effects of potion",
-        complexity: 3,
-        originalName: "Health Fortification"
-    },
-    {
-        name: "Multiply magnitude of other effects of potion",
-        complexity: 3,
-        originalName: "Stamina Fortification"
-    },
-    {
-        name: "Flip other effects of potion",
-        complexity: 3,
-        originalName: "Magicka Fortification"
-    },
-    {
-        name: "Diarrhea",
-        complexity: 1,
-        originalName: "Magicka Regeneration"
-    },
-    {
-        name: "Great Wound",
-        complexity: 3,
-        originalName: "Ravage Health"
-    },
-    {
-        name: "Corruption",
-        complexity: 1,
-        originalName: "Damage Magicka"
-    },
-    {
-        name: "Gain Sin",
-        complexity: 3,
-        originalName: "Damage Magicka Regen"
-    },
-    {
-        name: "Damage chaos and demons",
-        complexity: 3,
-        originalName: "Lingering Damage Undead"
-    },
-    {
-        name: "Reduce mass",
-        complexity: 2,
-        originalName: "Drain Strength"
-    },
-    {
-        name: "Grow",
-        complexity: 1,
-        originalName: "Drain Intelligence"
-    },
-    {
-        name: "Increased magic resistance",
-        complexity: 2,
-        originalName: "Resist Magic"
-    },
-    {
-        name: "Increased heat resistance",
-        complexity: 2,
-        originalName: "Resist Fire"
-    },
-    {
-        name: "Increased cold resistance",
-        complexity: 2,
-        originalName: "Resist Frost"
-    },
-    {
-        name: "Increased chaos resistance",
-        complexity: 2,
-        originalName: "Resist Shock"
-    },
-    {
-        name: "Transmute to x perminantly",
-        complexity: 4,
-        originalName: "Magic Aversion"
-    },
-    {
-        name: "Gain mass",
-        complexity: 2,
-        originalName: "Fire Aversion"
-    },
-    {
-        name: "Shrink",
-        complexity: 3,
-        originalName: "Frost Aversion"
-    },
-    {
-        name: "Increase critical casting chance",
-        complexity: 3,
-        originalName: "Shock Aversion"
-    },
-    {
-        name: "Polymorph inanimate substance to x for y period",
-        complexity: 3,
-        originalName: "Fire Damage"
-    },
-    {
-        name: "Filling",
-        complexity: 1,
-        originalName: "Frost Damage"
-    },
-    {
-        name: "Polymorph living thing to x for y period",
-        complexity: 3,
-        originalName: "Shock Damage"
-    },
-    {
-        name: "Sleepless rest",
-        complexity: 1,
-        originalName: "Poison Aversion"
-    },
-    {
-        name: "Move the caster x mins back in time",
-        complexity: 4,
-        originalName: "Light"
-    },
-    {
-        name: "Gain luck",
-        complexity: 4,
-        originalName: "Etherialize"
-    },
-    {
-        name: "See visions of location x (scry)",
-        complexity: 3,
-        originalName: "Detect Life Potion - Exterior"
-    },
-    {
-        name: "Make inanimate living",
-        complexity: 4,
-        originalName: "Blood"
-    },
-    {
-        name: "Increase time speed",
-        complexity: 3,
-        originalName: "Hunter's Boon"
-    },
-    {
-        name: "Increase aging speed",
-        complexity: 4,
-        originalName: "Hircine's Sight"
-    },
-    {
-        name: "Increase stealth",
-        complexity: 1,
-        originalName: "Prowling"
-    },
-    {
-        name: "See real or fake visions of future",
-        complexity: 1,
-        originalName: "Thrill"
-    },
-    {
-        name: "Cause hunger",
-        complexity: 1,
-        originalName: "Consumption"
-    },
-    {
-        name: "Nothing",
-        complexity: 1,
-        originalName: "Exploit Weakness"
-    },
-    {
-        name: "Increase Strength",
-        complexity: 1,
-        originalName: "Fortify One-Handed"
-    },
-    {
-        name: "Increase Weapon Skill",
-        complexity: 1,
-        originalName: "Fortify Two-Handed"
-    },
-    {
-        name: "Increase Ballistic Skill",
-        complexity: 1,
-        originalName: "Fortify Marksman"
-    },
-    {
-        name: "Increase Resilience",
-        complexity: 1,
-        originalName: "Fortify Block"
-    },
-    {
-        name: "Increase Toughness",
-        complexity: 1,
-        originalName: "Fortify Heavy Armor"
-    },
-    {
-        name: "Increase Dexterity",
-        complexity: 1,
-        originalName: "Fortify Sneak"
-    },
-    {
-        name: "Increase Initiative",
-        complexity: 1,
-        originalName: "Fortify Lockpicking"
-    },
-    {
-        name: "Increase Agility",
-        complexity: 1,
-        originalName: "Fortify Pickpocket"
-    },
-    {
-        name: "Increase Fellowship",
-        complexity: 1,
-        originalName: "Fortify Speech"
-    },
-    {
-        name: "Powerful stimulent",
-        complexity: 1,
-        originalName: "Fortify Light Armor"
-    },
-    {
-        name: "Increase Wounds",
-        complexity: 2,
-        originalName: "Fortify Alteration"
-    },
-    {
-        name: "Increase Willpower",
-        complexity: 1,
-        originalName: "Fortify Conjuration"
-    },
-    {
-        name: "Increase crafting",
-        complexity: 2,
-        originalName: "Fortify Smithing"
-    },
-    {
-        name: "Increase Intelligence",
-        complexity: 1,
-        originalName: "Fortify Enchanting"
-    },
-    {
-        name: "Increase Movement",
-        complexity: 2,
-        originalName: "Speed"
-    },
-    {
-        name: "Restore vigor",
-        complexity: 1,
-        originalName: "Stamina"
-    },
-    {
-        name: "Regeneration",
-        complexity: 2,
-        originalName: "Health Regeneration"
-    },
-    {
-        name: "Stamina Regeneration",
-        complexity: 1,
-        originalName: "Stamina Regeneration"
-    },
-    {
-        name: "Wound",
-        complexity: 1,
-        originalName: "Damage Health"
-    },
-    {
-        name: "Cause infection",
-        complexity: 1,
-        originalName: "Damage Health Regen"
-    },
-    {
-        name: "Disfigure",
-        complexity: 1,
-        originalName: "Lingering Damage Health"
-    },
-    {
-        name: "Exhaust",
-        complexity: 1,
-        originalName: "Damage Stamina"
-    },
-    {
-        name: "Cripple",
-        complexity: 1,
-        originalName: "Damage Stamina Regen"
-    },
-    {
-        name: "Fatigue",
-        complexity: 1,
-        originalName: "Fatigue"
-    },
-    {
-        name: "Silence",
-        complexity: 1,
-        originalName: "Silence"
-    },
-    {
-        name: "Damage Undead",
-        complexity: 2,
-        originalName: "Damage Undead"
-    },
-    {
-        name: "Grant fate token",
-        complexity: 4,
-        originalName: "Shield"
-    },
-    {
-        name: "Resist Disease",
-        complexity: 1,
-        originalName: "Cure Disease"
-    },
-    {
-        name: "Resist Infection",
-        complexity: 1,
-        originalName: "Resist Disease"
-    },
-    {
-        name: "Resist Stat changes",
-        complexity: 2,
-        originalName: "Cure Poison"
-    },
-    {
-        name: "Resist Poison",
-        complexity: 2,
-        originalName: "Resist Poison"
-    },
-    {
-        name: "Paralysis",
-        complexity: 2,
-        originalName: "Paralysis"
-    },
-    {
-        name: "Resist Paralysis",
-        complexity: 3,
-        originalName: "Resist Paralysis"
-    },
-    {
-        name: "Slow",
-        complexity: 1,
-        originalName: "Slow"
-    },
-    {
-        name: "Feather",
-        complexity: 3,
-        originalName: "Feather"
-    },
-    {
-        name: "Invisibility",
-        complexity: 4,
-        originalName: "Invisibility"
-    },
-    {
-        name: "Night Eye",
-        complexity: 3,
-        originalName: "Night Eye"
-    },
-    {
-        name: "Detect Life",
-        complexity: 2,
-        originalName: "Detect Life"
-    },
-    {
-        name: "Fear",
-        complexity: 1,
-        originalName: "Fear"
-    },
-    {
-        name: "Frenzy",
-        complexity: 1,
-        originalName: "Frenzy"
-    },
-    {
-        name: "Waterbreathing",
-        complexity: 1,
-        originalName: "Waterbreathing"
-    },
-    {
-        name: "Waterwalking",
-        complexity: 3,
-        originalName: "Waterwalking"
-    },
-    {
-        name: "Protect Soul",
-        complexity: 3,
-        originalName: "Protect Soul"
-    },
-    {
-        name: "Chaotic effect",
-        complexity: 4,
-        originalName: "Discerning"
-    },
-    {
-        name: "Vomiting",
-        complexity: 1,
-        originalName: "Pathfinding"
-    },
-    {
-        name: "Ineptitude",
-        complexity: 1,
-        originalName: "Ineptitude"
-    },
-    {
-        name: "Confuse",
-        complexity: 1,
-        originalName: "Muddle"
-    }
-];
+//full effect list is too big to keep here
 
 var substanceProperties = [
     "Acidic",
@@ -532,11 +98,9 @@ var productionRequirements = [
     "chill",
     "Shake in a silver vessel",
     "stew for 3 nights",
-    "disolve in oil",
     "disolve in acid",
     "ferment for 1 session",
     "boil",
-    "evaporating",
     "freeze",
     "requires the presence of chaos",
     "stir under a full moon",
@@ -553,13 +117,17 @@ var defaults = {
 };
 
 class Component {
-    constructor(name, effects, colour, properties, type = "basic") {
+
+    constructor(name, effects, colour, properties, type = "basic", description) {
         this.effects = effects.map(e => ({
             ingredientName: name,
             active: false,
 
             ...e
         }));
+        // this.hello = arguments.
+
+        this.description = description
         this.name = name;
         this.complexity = 1;
         this.properties = properties;
@@ -605,7 +173,7 @@ class PotionMaster {
 
     memory(input) {
 
-// eyJkYXRhSGFzaCI6ImYyZmI0NTAxNGU5ZmM0MjQ4NWY2ZmRjNzBhMDU0OTBhMjI4YzRiYzgiLCJzZWVkIjoxLCJwb3Rpb25zIjpbXX0=
+        // eyJkYXRhSGFzaCI6ImYyZmI0NTAxNGU5ZmM0MjQ4NWY2ZmRjNzBhMDU0OTBhMjI4YzRiYzgiLCJzZWVkIjoxLCJwb3Rpb25zIjpbXX0=
 
         var newDataState = input && JSON.parse(atob(input))
 
@@ -667,6 +235,10 @@ class PotionMaster {
 
     productionEffects() {
         return this.data.productionRequirements;
+    }
+
+    effects() {
+        return this.data.effects;
     }
 
     findComponent(searchQuery) {
@@ -897,6 +469,10 @@ class PotionMaster {
         return this.registerComponent(m);
     }
 
+    findIngredientsWithEffect(effect) {
+        return this.components().filter(component => component.effects.find(e => e.name === effect))
+    }
+
     makeDataSet() {
         // console.log("makeDataSet");
         var generationMemory = {};
@@ -936,7 +512,6 @@ class PotionMaster {
             // .slice(0, 10)
             .map(ingredient => {
                 // console.log(ingredient)
-
                 ingredient.effects = ingredient.effects.map((effect, i, a) => {
                     //merge objects
                     effect = {
@@ -973,7 +548,7 @@ class PotionMaster {
                         .reduce((a, b) => a + b, 0)
                 }))
             }))
-            .map(i => this.registerComponent(new Component(i.name, i.effects)));
+            .map(i => this.registerComponent(new Component(i.name, i.effects,undefined,undefined, undefined, i.description)));
         delete this.data.ingredients;
         this.dataHash = hash(this.data)
         // console.log("makeDataSet complete", this.data.components.length);
@@ -1008,7 +583,12 @@ function tests(seed = 1) {
     return pm.createPotion(productionEffects, [invis, invis]);
 }
 
-var t1 = generateColour();
+
+
+require('fs').writeFileSync("rename-ingredients.json",JSON.stringify( originalDataSet.ingredients.map(e=>({name:e.name, description:"No desc needed"})), null, 2))
+
+// var t1 = generateColour();
+
 // var t2 = generateColour()
 // console.log("rgbToHexrgbToHexrgbToHexrgbToHex", )
 
