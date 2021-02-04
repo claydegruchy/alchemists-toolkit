@@ -1,0 +1,1586 @@
+[
+  {
+    "name": "Thistle Branch",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Snowberries",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Jarrin Root",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Pine Thrush Egg",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Chicken Egg",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Nightshade",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Bone Meal",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Salt Pile",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Garlic",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Elves Ear",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Frost Mirriam",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Chaurus Eggs",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Daedra Heart",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Falmer Ear",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Fire Salts",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Frost Salts",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Void Salts",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Briar Heart",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Ectoplasm",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Giant's Toe",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Hagraven Feathers",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Ice Wraith Teeth",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Skeever Tail",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Slaughterfish Scales",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Taproot",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Troll Fat",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Glow Dust",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Vampire Dust",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Tundra Cotton",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Lavender",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Wheat",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Fly Amanita",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Bleeding Crown",
+    "description": "No desc needed"
+  },
+  {
+    "name": "White Cap",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Imp Stool",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Namira's Rot",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blisterwort",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Torchbug Abdomen",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Juniper Berries",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Deathbell",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Charred Skeever Meat",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Hanging Moss",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Nirnroot",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Spriggan Sap",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Canis Root",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Jazbay Grapes",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Hagraven Claw",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Mudcrab Chitin",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Bear Claws",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Sabre Cat Tooth",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Sabre Cat Eye",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Large Antlers",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Small Antlers",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Wisp Wrapping",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Powdered Mammoth Tusk",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Scaly Pholiota",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blue Swallowtail",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Luna Moth",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Monarch Butterfly",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blue Mountain Flower",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Red Mountain Flower",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Purple Mountain Flower",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Swamp Fungal Pod",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Giant Lichen",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Slaughterfish Egg",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Rock Warbler Egg",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Nordic Barnacle",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Glowing Mushroom",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Grass Pod",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Mother of Pearl",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Pearl",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Dragon's Tongue",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Spider Egg",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Beehive Husk",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Bee",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Honeycomb",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Human Heart",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Creep Cluster",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Crimson Nirnroot",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Orange Dartwing",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Moon Sugar",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blue Dartwing",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Hawk Beak",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Hawk Feathers",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Mora Tapinella",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Dwarven Oil",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Human Flesh",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Histcarp",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Cryodiilic Spadetail",
+    "description": "No desc needed"
+  },
+  {
+    "name": "River Betty",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Abecean Longfin",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Silverside",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Amber",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Black Pearl",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Onyx",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Sulfur",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Spider Silk",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Dragon Tooth",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Chicken Feathers",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Horse Hair",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Ironwood Nuts",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Saltrice",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Fennel Seeds",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Flax Seeds",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Horker Tusk",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Soul Husk",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Bone Hawk Claw",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Bone Hawk Feathers",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Argonian Scales",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Putrefied Flesh",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Daedra Silk",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Dreugh Wax",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Gravetar",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Scrib Jelly",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Sload Soap",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Racer Plumes",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Bear Fat",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Fox Fat",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Yellow Mountain Flower",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Ancestor Moth",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Gleamblossom",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Chaurus Hunter Antennae",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Poison Bloom",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Salmon Roe",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Hawk Egg",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Ashen Grass Pod",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Trama Root",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Scathecraw",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Ash Salts",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Burnt Spriggan Wood",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Boar Tusk",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Ash Hopper Jelly",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Netch Jelly",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Ash Creep Cluster",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Emperor Parasol Moss",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Felsaad Tern Feathers",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Marshmerrow",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Mandrake Root",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Dragon Heartscales",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Daedroth Teeth",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Ogre's Teeth",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Daedra Venin",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Bergamot Seeds",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Foxglove Nectar",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Ginseng",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Imp Gall",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Sawtooth Butterfly",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Monkshod Root Pulp",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Morning Glory Root Pulp",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Mugwort Seeds",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Peony Seeds",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Lotus Seeds",
+    "description": "No desc needed"
+  },
+  {
+    "name": "St. Jahn's Wort Nectar",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Tiger Lily Nectar",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Water Hyacinth Nectar",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Gravedust",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blood of a Nord",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blood of a Breton",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blood of a Redguard",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blood of an Imperial",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blood of an Altmer",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blood of a Dunmer",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blood of a Bosmer",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blood of an Orc",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blood of an Argonian",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blood of a Khajiit",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Werebear Claws",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Troll's Blood",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Giant's Blood",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Falmer Blood",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Arrowroot",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Werewolf Blood",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Khajiit Eye",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Orc Liver",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Columbine Root Pulp",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Frogspawn",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Chokeberries",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Wolf Liver",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Goat Eye",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Stoneflower",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Akanet Flower",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Bear Bile",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blackbrow Bleak",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blind Betty",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Gudgeon",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Green Trench",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blue Orfe",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Cavefish",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Ceanothus Moth",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Cecropia Moth",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Common Blue Butterfly",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Comet Moth",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Common Shiner",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Crushed Ant Paste",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Ayleid Moon Moth",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Druadach Dart",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Warpaint Shiner",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Emperor Moth",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Falkreath Minnow",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Ghostfish",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Golden Rudd",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Orange Tip Butterfly",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Redbelly Dace",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Atlas Moth",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Emerald Swallowtail",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Mourning Cloak",
+    "description": "No desc needed"
+  },
+  {
+    "name": "White Witch Moth",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Nordic Swallowtail",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Oxgall",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Painted Lady",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Peacock Butterfly",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Pheasant Feathers",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Polyphemus Moth",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Red Cracker Butterfly",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Roobrush",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Ruby Shiner",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Padomaic Tigerfish",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Silverjaw Minnow",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Darkwater Minnow",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Swamp Betty",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Bitterling",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Akatosh Butterfly",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blue Clipper Butterfly",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Marsh Fritillary",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Red Admiral Butterfly",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Wheat Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Tundra Cotton Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Thistle Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Snowberry Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Saltrice Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Red Mountain Flower Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Purple Mountain Flower Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Nightshade Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Marshmerrow Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Lavender Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Juniper Berry Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Jazbay Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Ironwood Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Heather Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Hanging Moss Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Spiky Grass Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Glowing Mushroom Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Garlic Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Frost Mirriam Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Flax Seed Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Fennel Seed Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Elves Ear Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Dragon's Tongue Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Creep Cluster Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Columbine Root Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Canis Root Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blue Mountain Flower Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Fine-Cut Fire Salts",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Fine-Cut Frost Salts",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Fine-Cut Void Salts",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Fine Ground Bonemeal",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Fine-Cut Ash Salts",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Direnni's Dartwing",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Widow Skimmer",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Ebony Jewelwing",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Banded Pennant",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Crimson Marsh Glider",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Frost Skimmer",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Flame Skimmer",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Emperor Dartwing",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Golden-Ringed Darner",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Emerald Darner",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Golden Skimmer",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Barley",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Barley Extract",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Redwort Flower",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Tinder Polypore Cap",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Black Lichen",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blister Pod",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Clouded Funnel Cap",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Red Lichen",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Violet Coprinus",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Bloatspore",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Wisp Stalks",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Aloe Vera",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Fire Petals",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Heather",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Elven Heart",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Kwama Cuttle",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Kwama Egg",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Scamp Skin",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Wormwood Leaves",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Dawnshade",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Milk Thistle Branch",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Ash Salts",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blackberries",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Cairn Bolete",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Red Cinnabar Polypore",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Yellow Cinnabar Polypore",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Land Dreugh Wax",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Dryad Saddle Polypore",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Cold Fire Salts",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blueberries",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Emetic Russula",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Elf Cup",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blue Flax",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Domica Redwort",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Ginkgo Leaves",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Grapes",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Stinkhorn",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Somnalius Frond",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Green Stain Cup",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Summer Bolete",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Red Flax",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Yellow Flax",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Goblin Wax",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Rice",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Steel-Blue Entoloma",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Bog Beacon",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blue Entoloma",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Eltheric Grouper",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Bjoulsae Hake",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Blessed Thistle Branch",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Yellow Amanita",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Mort Flesh",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Minotaur Horn",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Motherwort Sprig",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Lady's Mantle Leaves",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Red Mudcrab Chitin",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Heartland Highfin",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Black Eagle Feathers",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Black Eagle Beak",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Wood Warbler Egg",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Goldengill",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Nibenese Silverbird Egg",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Rainbow Fish",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Golden Kingfisher Egg",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Colovian Nuthatch Egg",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Eastern Wallcreeper Egg",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Nibenay Snapper",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Swamp Sparrow Egg",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Buck Moth Wing",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Gypsy Moth Wing",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Magus Mint",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Motherwort",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Black Dartwing",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Green Dartwing",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Refined Frost Salts",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Mountain Lion Teeth",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Goat Eye",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Eye of Bear",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Eye of Fox",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Polished Hare Eye",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Polished Mammoth Eye",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Eye of Wolf",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Bear Heart",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Deer Heart",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Goat Heart",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Sabre Cat Heart",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Wolf Heart",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Mammoth Heart",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Bear Tooth",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Canine Tooth",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Sabre Cat Claws",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Wolf Claws",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Powdered Mudcrab Chitin",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Bull Horn",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Boiled Skeever Tail",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Polished Scales",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Cured Skeever Hide",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Large Mudcrab Chitin",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Large Bear Claws",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Flawless Sabre Cat Tooth",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Polished Sabre Cat Eye",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Great Antlers",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Doe Antlers",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Charred Hawk Beak",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Dyed Hawk Feathers",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Large Sabre Cat Claws",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Flawless Bear Tooth",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Polished Wolf Eye",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Polished Fox Eye",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Polished Bear Eye",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Eye of Hare",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Eye of Mammoth",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Eye of Troll",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Eye of Werewolf",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Eye of Dragon",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Werewolf Heart",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Troll Heart",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Dragon Heart",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Polished Troll Eye",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Polished Werewolf Eye",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Polished Dragon Eye",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Bonesap",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Bristleback Heart",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Eye of Bristleback",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Polished Bristleback Eye",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Oil of Vitriol",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Panacea",
+    "description": "No desc needed"
+  },
+  {
+    "name": "Polished Goat Eye",
+    "description": "No desc needed"
+  }
+]

@@ -1,1258 +1,350 @@
-var fs = require('fs');
-var randomColor = require('randomcolor'); // import the script
-var Color = require('color');
+window.addEventListener("load", e => {
+    var params = Object.fromEntries(
+        new URLSearchParams(window.location.search)
+    );
 
-var data = fs.readFileSync('caco-ingredients.json').toString();
+    const colourMod = require("./ColorGeneratorModule.js");
+    const PotionMaster = require("./potion-gen.js");
+    const Swal = require('sweetalert2')
 
+    var pm = new PotionMaster.PotionMaster((params.seed && +params.seed) || 1);
 
-var originalDataSet = JSON.parse(data)
-Array.prototype.unique = function() { return [...new Set(this)] }
-Array.prototype.average = function() { return this.reduce((p, c) => p + c, 0) / this.length }
+    // var explosivePotion = ["Beehive Husk", "Ash Creep Cluster"];
 
+    // var corruptionPotion = ["Nordic Barnacle", "Tinder Polypore Cap"];
 
-var options = {
-    minimumCommonEffects: 2,
-    // complexityBooster: 1
-    maxComponents: 4,
+    // var productionEffects = [
+    //     "Crushing",
+    //     "Disolve in water",
+    //     "philosophers stone"
+    // ];
 
-}
+    // var components = [
+    //     pm.createPotion(productionEffects, explosivePotion),
+    //     pm.createPotion(productionEffects, corruptionPotion)
+    // ];
 
+    console.log("seed", pm.seed);
 
+    var ingredientSelectorTemplate = `
 
+<select class="multiple production-selector" multiple>
+    <option data-placeholder="true"></option>
+    {{#each productionEffects}}
+    <option value="{{this}}">{{this}}</option>
+    {{/each}}
+</select>
+`;
+    var potionTemplate = `
+{{#ifEquals type 'potion'}}
+<div class="potion" id="{{potion.name}}">
+  <h3>
+    {{name}}
+  </h3>
 
-// var t = [
-//     ['Fortify Destruction', 'Explosive'],
-//     ['Fortify Restoration', 'berserk for x period'],
-//     ['Fortify Illusion', 'madness'],
-//     ['Fortify Unarmed', 'obsession for x period'],
-//     ['Fortify Barter', 'charm target x for y period'],
-//     ['Fortify Shouts', 'teleport/move location to x'],
-//     ['Health', ''],
-//     ['Magicka', 'sadness for x period'],
-//     ['Health Fortification', 'multiply duration of other effects of potion'],
-//     ['Stamina Fortification', 'multiply magnitude of other effects of potion'],
-//     ['Magicka Fortification', 'flip other effects of potion'],
-//     ['Magicka Regeneration', ''],
-//     ['Ravage Health', 'Great Wound'],
-//     ['Damage Magicka', 'chance to gain corruption'],
-//     ['Damage Magicka Regen', 'chance to gain sin'],
-//     ['Lingering Damage Undead', 'damage chaos and demons'],
-//     ['Drain Strength', 'reduce mass'],
-//     ['Drain Intelligence', 'grow'],
-//     ['Resist Magic', 'increased magic resistance'],
-//     ['Resist Fire', 'increased heat resistance'],
-//     ['Resist Frost', 'increased cold resistance'],
-//     ['Resist Shock', 'increased chaos resistance'],
-//     ['Magic Aversion', 'transmute to x perminantly'],
-//     ['Fire Aversion', 'gain mass'],
-//     ['Frost Aversion', 'shrink'],
-//     ['Shock Aversion', 'increase critical casting chance'],
-//     ['Fire Damage', 'polymorph inanimate substance to x for y period'],
-//     ['Frost Damage', 'shrink'],
-//     ['Shock Damage', 'polymorph living thing to x for y period'],
-//     ['Poison Aversion', ''],
-//     ['Light', 'move the caster x mins back in time'],
-//     ['Etherialize', 'gain luck'],
-//     ['Detect Life Potion - Exterior', 'see visions of location x (scry)'],
-//     ['Blood', 'make inanimate living'],
-//     ["Hunter's Boon", 'increase time speed'],
-//     ["Hircine's Sight", 'increase aging speed'],
-//     ['Prowling', 'increase stealth'],
-//     ['Thrill', 'see real or fake visions of future'],
-//     ['Consumption', 'cause hunger'],
-//     ['Exploit Weakness', ''],
-//     ['Fortify One-Handed', "Increase Strength"],
-//     ['Fortify Two-Handed', "Increase Weapon Skill"],
-//     ['Fortify Marksman', "Increase Ballistic Skill"],
-//     ['Fortify Block', "Increase Resilience"],
-//     ['Fortify Heavy Armor', "Increase Toughness"],
-//     ['Fortify Sneak', "Increase Dexterity"],
-//     ['Fortify Lockpicking', "Increase Initiative"],
-//     ['Fortify Pickpocket', "Increase Agility"],
-//     ['Fortify Speech', "Increase Fellowship"],
-//     ['Fortify Light Armor', "Increase Dexterity"],
-//     ['Fortify Destruction', "magical effect"],
-//     ['Fortify Alteration', "Increase Wounds"],
-//     ['Fortify Restoration', "magical effect"],
-//     ['Fortify Conjuration', "Increase Willpower"],
-//     ['Fortify Illusion', "magical effect"],
-//     ['Fortify Smithing', "Increase crafting"],
-//     ['Fortify Enchanting', "Increase Intelligence"],
-//     ['Fortify Unarmed', "magical effect"],
-//     ['Fortify Barter', "magical effect"],
-//     ['Fortify Shouts', "magical effect"],
-//     ['Speed', "Increase Movement"],
-//     ['Health', "magical effect"],
-//     ['Stamina', "Restore vigor"],
-//     ['Magicka', "magical effect"],
-//     ['Health Fortification', "magical effect"],
-//     ['Stamina Fortification', "magical effect"],
-//     ['Magicka Fortification', "magical effect"],
-//     ['Health Regeneration', "Regeneration"],
-//     ['Stamina Regeneration', "Stamina Regeneration"],
-//     ['Magicka Regeneration', "magical effect"],
-//     ['Damage Health', "Cause wound"],
-//     ['Damage Health Regen', "Cause infection"],
-//     ['Lingering Damage Health', "Disfigure"],
-//     ['Ravage Health', "magical effect"],
-//     ['Damage Stamina', "Exhaust"],
-//     ['Damage Stamina Regen', "Cripple"],
-//     ['Fatigue', "Fatigue"],
-//     ['Damage Magicka', "magical effect"],
-//     ['Damage Magicka Regen', "magical effect"],
-//     ['Silence', "Silence"],
-//     ['Damage Undead', "Damage Undead"],
-//     ['Lingering Damage Undead', "magical effect"],
-//     ['Drain Strength', "magical effect"],
-//     ['Drain Intelligence', "magical effect"],
-//     ['Resist Magic', "magical effect"],
-//     ['Resist Fire', "magical effect"],
-//     ['Resist Frost', "magical effect"],
-//     ['Resist Shock', "magical effect"],
-//     ['Shield', "Shield"],
-//     ['Magic Aversion', "magical effect"],
-//     ['Fire Aversion', "magical effect"],
-//     ['Frost Aversion', "magical effect"],
-//     ['Shock Aversion', "magical effect"],
-//     ['Fire Damage', "magical effect"],
-//     ['Frost Damage', "magical effect"],
-//     ['Shock Damage', "magical effect"],
-//     ['Cure Disease', "Cure Disease"],
-//     ['Resist Disease', "Resist Disease"],
-//     ['Cure Poison', "Cure Poison"],
-//     ['Resist Poison', "Resist Poison"],
-//     ['Poison Aversion', "magical effect"],
-//     ['Paralysis', "Paralysis"],
-//     ['Resist Paralysis', "Resist Paralysis"],
-//     ['Slow', "Slow"],
-//     ['Feather', "Feather"],
-//     ['Invisibility', "Invisibility"],
-//     ['Light', "magical effect"],
-//     ['Night Eye', "Night Eye"],
-//     ['Etherialize', "magical effect"],
-//     ['Detect Life', "Detect Life"],
-//     ['Detect Life Potion - Exterior', "magical effect"],
-//     ['Fear', "Fear"],
-//     ['Frenzy', "Frenzy"],
-//     ['Waterbreathing', "Waterbreathing"],
-//     ['Waterwalking', "Waterwalking"],
-//     ['Blood', "magical effect"],
-//     ['Protect Soul', "Protect Soul"],
-//     ['Discerning', "Discerning"],
-//     ['Pathfinding', "Pathfinding"],
-//     ["Hunter's Boon", "magical effect"],
-//     ["Hircine's Sight", "magical effect"],
-//     ['Prowling', "magical effect"],
-//     ['Thrill', "magical effect"],
-//     ['Consumption', "magical effect"],
-//     ['Exploit Weakness', "magical effect"],
-//     ['Ineptitude', "Ineptitude"],
-//     ['Muddle', "Confuse"],
+  <b>
+    Effects
+  </b>
+  <p>
+  {{#each effects}}
+    {{#if this.active}}
+      <div class="active effect list">
+        Active effect - {{this.strength}} {{this.name}}
+      </div>
+    {{/if}}
 
-// ]
+    {{#unless this.active}}
+      <div class="passive effect list">
+        Passive effect - {{this.name}}
+      </div>
+    {{/unless}}
+  {{else}}
+    This potion has no effects
+  {{/each}}
+</p>
+  <b>
+    Potion properties
+  </b>
+  <p>
+  {{#each properties}}
+    <div class="list">
+      {{this}}
+    </div>
+  {{else}}
+    This potion is just a liquid in a container
+  {{/each}}
+  </p>
+</div>
+{{else}}
+<div>
+    {{name}}
+    <div class="small">
+        {{#each effects}}
+        {{this.name}},
+        {{/each}}
+    </div>
+</div>
+{{/ifEquals}}
+`;
+        console.log(pm.types())
 
-String.prototype.capitalize = function() {
-    return this.charAt(0).toUpperCase() + this.slice(1)
-}
+    Handlebars.registerHelper("ifEquals", function(arg1, arg2, options) {
+        return arg1 == arg2 ? options.fn(this) : options.inverse(this);
+    });
 
+    var potionTemplate = Handlebars.compile(potionTemplate);
 
-var effects = [{
-        "name": "Explosive",
-        "complexity": 1,
-        "originalName": "Fortify Destruction"
-    },
-    {
-        "name": "Berserk for x period",
-        "complexity": 1,
-        "originalName": "Fortify Restoration"
-    },
-    {
-        "name": "Madness",
-        "complexity": 1,
-        "originalName": "Fortify Illusion"
-    },
-    {
-        "name": "Obsession for x period",
-        "complexity": 1,
-        "originalName": "Fortify Unarmed"
-    },
-    {
-        "name": "Charm target x for y period",
-        "complexity": 2,
-        "originalName": "Fortify Barter"
-    },
-    {
-        "name": "Teleport/move location to x",
-        "complexity": 4,
-        "originalName": "Fortify Shouts"
-    },
-    {
-        "name": "Queasiness",
-        "complexity": 1,
-        "originalName": "Health"
-    },
-    {
-        "name": "Sadness for x period",
-        "complexity": 1,
-        "originalName": "Magicka"
-    },
-    {
-        "name": "Multiply duration of other effects of potion",
-        "complexity": 3,
-        "originalName": "Health Fortification"
-    },
-    {
-        "name": "Multiply magnitude of other effects of potion",
-        "complexity": 3,
-        "originalName": "Stamina Fortification"
-    },
-    {
-        "name": "Flip other effects of potion",
-        "complexity": 3,
-        "originalName": "Magicka Fortification"
-    },
-    {
-        "name": "Diarrhea",
-        "complexity": 1,
-        "originalName": "Magicka Regeneration"
-    },
-    {
-        "name": "Great Wound",
-        "complexity": 3,
-        "originalName": "Ravage Health"
-    },
-    {
-        "name": "Corruption",
-        "complexity": 1,
-        "originalName": "Damage Magicka"
-    },
-    {
-        "name": "Gain Sin",
-        "complexity": 3,
-        "originalName": "Damage Magicka Regen"
-    },
-    {
-        "name": "Damage chaos and demons",
-        "complexity": 3,
-        "originalName": "Lingering Damage Undead"
-    },
-    {
-        "name": "Reduce mass",
-        "complexity": 2,
-        "originalName": "Drain Strength"
-    },
-    {
-        "name": "Grow",
-        "complexity": 1,
-        "originalName": "Drain Intelligence"
-    },
-    {
-        "name": "Increased magic resistance",
-        "complexity": 2,
-        "originalName": "Resist Magic"
-    },
-    {
-        "name": "Increased heat resistance",
-        "complexity": 2,
-        "originalName": "Resist Fire"
-    },
-    {
-        "name": "Increased cold resistance",
-        "complexity": 2,
-        "originalName": "Resist Frost"
-    },
-    {
-        "name": "Increased chaos resistance",
-        "complexity": 2,
-        "originalName": "Resist Shock"
-    },
-    {
-        "name": "Transmute to x perminantly",
-        "complexity": 4,
-        "originalName": "Magic Aversion"
-    },
-    {
-        "name": "Gain mass",
-        "complexity": 2,
-        "originalName": "Fire Aversion"
-    },
-    {
-        "name": "Shrink",
-        "complexity": 3,
-        "originalName": "Frost Aversion"
-    },
-    {
-        "name": "Increase critical casting chance",
-        "complexity": 3,
-        "originalName": "Shock Aversion"
-    },
-    {
-        "name": "Polymorph inanimate substance to x for y period",
-        "complexity": 3,
-        "originalName": "Fire Damage"
-    },
-    {
-        "name": "Filling",
-        "complexity": 1,
-        "originalName": "Frost Damage"
-    },
-    {
-        "name": "Polymorph living thing to x for y period",
-        "complexity": 3,
-        "originalName": "Shock Damage"
-    },
-    {
-        "name": "Sleepless rest",
-        "complexity": 1,
-        "originalName": "Poison Aversion"
-    },
-    {
-        "name": "Move the caster x mins back in time",
-        "complexity": 4,
-        "originalName": "Light"
-    },
-    {
-        "name": "Gain luck",
-        "complexity": 4,
-        "originalName": "Etherialize"
-    },
-    {
-        "name": "See visions of location x (scry)",
-        "complexity": 3,
-        "originalName": "Detect Life Potion - Exterior"
-    },
-    {
-        "name": "Make inanimate living",
-        "complexity": 4,
-        "originalName": "Blood"
-    },
-    {
-        "name": "Increase time speed",
-        "complexity": 3,
-        "originalName": "Hunter's Boon"
-    },
-    {
-        "name": "Increase aging speed",
-        "complexity": 4,
-        "originalName": "Hircine's Sight"
-    },
-    {
-        "name": "Increase stealth",
-        "complexity": 1,
-        "originalName": "Prowling"
-    },
-    {
-        "name": "See real or fake visions of future",
-        "complexity": 1,
-        "originalName": "Thrill"
-    },
-    {
-        "name": "Cause hunger",
-        "complexity": 1,
-        "originalName": "Consumption"
-    },
-    {
-        "name": "Nothing",
-        "complexity": 1,
-        "originalName": "Exploit Weakness"
-    },
-    {
-        "name": "Increase Strength",
-        "complexity": 1,
-        "originalName": "Fortify One-Handed"
-    },
-    {
-        "name": "Increase Weapon Skill",
-        "complexity": 1,
-        "originalName": "Fortify Two-Handed"
-    },
-    {
-        "name": "Increase Ballistic Skill",
-        "complexity": 1,
-        "originalName": "Fortify Marksman"
-    },
-    {
-        "name": "Increase Resilience",
-        "complexity": 1,
-        "originalName": "Fortify Block"
-    },
-    {
-        "name": "Increase Toughness",
-        "complexity": 1,
-        "originalName": "Fortify Heavy Armor"
-    },
-    {
-        "name": "Increase Dexterity",
-        "complexity": 1,
-        "originalName": "Fortify Sneak"
-    },
-    {
-        "name": "Increase Initiative",
-        "complexity": 1,
-        "originalName": "Fortify Lockpicking"
-    },
-    {
-        "name": "Increase Agility",
-        "complexity": 1,
-        "originalName": "Fortify Pickpocket"
-    },
-    {
-        "name": "Increase Fellowship",
-        "complexity": 1,
-        "originalName": "Fortify Speech"
-    },
-    {
-        "name": "Powerful stimulent",
-        "complexity": 1,
-        "originalName": "Fortify Light Armor"
-    },
-    {
-        "name": "Increase Wounds",
-        "complexity": 2,
-        "originalName": "Fortify Alteration"
-    },
-    {
-        "name": "Increase Willpower",
-        "complexity": 1,
-        "originalName": "Fortify Conjuration"
-    },
-    {
-        "name": "Increase crafting",
-        "complexity": 2,
-        "originalName": "Fortify Smithing"
-    },
-    {
-        "name": "Increase Intelligence",
-        "complexity": 1,
-        "originalName": "Fortify Enchanting"
-    },
-    {
-        "name": "Increase Movement",
-        "complexity": 2,
-        "originalName": "Speed"
-    },
-    {
-        "name": "Restore vigor",
-        "complexity": 1,
-        "originalName": "Stamina"
-    },
-    {
-        "name": "Regeneration",
-        "complexity": 2,
-        "originalName": "Health Regeneration"
-    },
-    {
-        "name": "Stamina Regeneration",
-        "complexity": 1,
-        "originalName": "Stamina Regeneration"
-    },
-    {
-        "name": "Wound",
-        "complexity": 1,
-        "originalName": "Damage Health"
-    },
-    {
-        "name": "Cause infection",
-        "complexity": 1,
-        "originalName": "Damage Health Regen"
-    },
-    {
-        "name": "Disfigure",
-        "complexity": 1,
-        "originalName": "Lingering Damage Health"
-    },
-    {
-        "name": "Exhaust",
-        "complexity": 1,
-        "originalName": "Damage Stamina"
-    },
-    {
-        "name": "Cripple",
-        "complexity": 1,
-        "originalName": "Damage Stamina Regen"
-    },
-    {
-        "name": "Fatigue",
-        "complexity": 1,
-        "originalName": "Fatigue"
-    },
-    {
-        "name": "Silence",
-        "complexity": 1,
-        "originalName": "Silence"
-    },
-    {
-        "name": "Damage Undead",
-        "complexity": 2,
-        "originalName": "Damage Undead"
-    },
-    {
-        "name": "Grant fate token",
-        "complexity": 4,
-        "originalName": "Shield"
-    },
-    {
-        "name": "Resist Disease",
-        "complexity": 1,
-        "originalName": "Cure Disease"
-    },
-    {
-        "name": "Resist Infection",
-        "complexity": 1,
-        "originalName": "Resist Disease"
-    },
-    {
-        "name": "Resist Stat changes",
-        "complexity": 2,
-        "originalName": "Cure Poison"
-    },
-    {
-        "name": "Resist Poison",
-        "complexity": 2,
-        "originalName": "Resist Poison"
-    },
-    {
-        "name": "Paralysis",
-        "complexity": 2,
-        "originalName": "Paralysis"
-    },
-    {
-        "name": "Resist Paralysis",
-        "complexity": 3,
-        "originalName": "Resist Paralysis"
-    },
-    {
-        "name": "Slow",
-        "complexity": 1,
-        "originalName": "Slow"
-    },
-    {
-        "name": "Feather",
-        "complexity": 3,
-        "originalName": "Feather"
-    },
-    {
-        "name": "Invisibility",
-        "complexity": 4,
-        "originalName": "Invisibility"
-    },
-    {
-        "name": "Night Eye",
-        "complexity": 3,
-        "originalName": "Night Eye"
-    },
-    {
-        "name": "Detect Life",
-        "complexity": 2,
-        "originalName": "Detect Life"
-    },
-    {
-        "name": "Fear",
-        "complexity": 1,
-        "originalName": "Fear"
-    },
-    {
-        "name": "Frenzy",
-        "complexity": 1,
-        "originalName": "Frenzy"
-    },
-    {
-        "name": "Waterbreathing",
-        "complexity": 1,
-        "originalName": "Waterbreathing"
-    },
-    {
-        "name": "Waterwalking",
-        "complexity": 3,
-        "originalName": "Waterwalking"
-    },
-    {
-        "name": "Protect Soul",
-        "complexity": 3,
-        "originalName": "Protect Soul"
-    },
-    {
-        "name": "Chaotic effect",
-        "complexity": 4,
-        "originalName": "Discerning"
-    },
-    {
-        "name": "Vomiting",
-        "complexity": 1,
-        "originalName": "Pathfinding"
-    },
-    {
-        "name": "Ineptitude",
-        "complexity": 1,
-        "originalName": "Ineptitude"
-    },
-    {
-        "name": "Confuse",
-        "complexity": 1,
-        "originalName": "Muddle"
-    }
-].map(i => ({ colour: Color(randomColor({ format: 'rgba' })), ...i }))
+    var ingredientsSelector;
+    var productionSelector;
 
+    function generateComponentOptions() {
+        var dropdownItemTemplate = Handlebars.compile(`
+{{component.name}}
+{{#if isPotion}}
+- {{strongestEffect.strength}} {{strongestEffect.name}} effect
+{{else}}
+{{/if}}
+`);
 
-var substanceProperties = [
-        'Acidic',
-        'Basic',
-        'Damaged by acid',
-        'Damaged by base',
-        'Removes effect X',
-        'Exothermic',
-        'Endothermic',
-        'Exomagic, never stops reacting',
-        'Endomagic, stops weaker effects from working',
-        'Chaotic/mutative',
-        'Oxadising',
-        'Expires quickly',
-        'Thick potion',
-        'Thin potion',
-        'Magnetic',
-        'Flamible',
-        'Vulnrable to light or fire'
-    ]
-    .map(e => e.capitalize())
-
-
-
-var productionRequirements = [
-    "Disolve in water",
-    "crunsh",
-    "grind",
-    "heat",
-    "chill",
-    "Shake in a silver vessel",
-    "stew for 3 nights",
-    "disolve in oil",
-    "disolve in acid",
-    "ferment for 1 session",
-    "boil",
-    "evaporating",
-    "freeze",
-    "requires the presence of chaos",
-    "stir under a full moon",
-    'Distil',
-
-].map(i => i.capitalize())
-
-
-/*
-todo
-add colours, odours and identification effects
-  phonic, loud
-  photonic, bright
-
-
-process
-replace shit effects
-shuffle strong effects high in the effect tree
-assign random requirements to 3rd  efffect
-add random advanced requirements to 4th effect
-add random 5th effects if needed with very advanced requirements
-
-
-effect ideas
-3 immunity to x
-1 hatred for x period
-1 love for x period
-1 sadness for x period
-2 see real or fake visions of future
-3 see visions of location x (scry)
-4 teleport/move location to x
-3 charm target x for y period
-3 damage chaos and demons
-3 increase aging speed
-3 increase time speed
-4 move the caster x mins back in time
-3 flip other effects of potion
-3 multiply magnitude of other effects of potion
-2 multiply duration of other effects of potion
-3 polymorph living thing to x for y period
-3 polymorph inanimate substance to x for y period
-2 shink
-2 grow
-2 reduce mass
-2 gain mass
-4 transmute to x perminantly
-4 gain luck
-
-
-
-
-meta effects:
-acid
-base
-damaged by acid
-damaged by base
-remove effect X
-exothermic
-endothermic
-exomagic, never stops reacting
-endomagic, stops other effects from working
-chaotic/mutative
-oxadising/rust making
-expires quickly
-thicken potion
-thin potion
-ferromagnetic liquid
-flamible
-vulnrable to light or fire
-
-production effects:
-crunshing
-grinding
-heating 
-chilling
-evaporating
-mixing
-stew for time
-disolve in water
-disolve in oil
-disolve in acid
-melt
-freeze
-requires the presence of chaos
-
-extra ingrediants
-warpstone
-starstone
-water
-sand/dirt
-
-
-
-*/
-
-
-// fs.writeFileSync('caco-asd.json',"ok")
-
-Array.prototype.randomElement = function() {
-    return this[Math.floor(Math.random() * this.length)]
-}
-
-
-function generateDataSet(data, effects, substanceProperties, productionRequirements) {
-
-    var generationMemory = {}
-
-    data.effects = effects
-    data.substanceProperties = substanceProperties
-    data.productionRequirements = productionRequirements
-    data.ingredients = data.ingredients
-        // .slice(0, 10)
-        .map(ingredient => {
-
-            ingredient.effects.forEach((effect, i) => {
-
-
-                var newEffect = effectLookup(effect.name)
-                ingredient.effects[i].name = newEffect.name
-
-                ingredient.effects[i].level = newEffect.complexity
-                ingredient.effects[i].colour = newEffect.colour
-                // console.log(newEffect.name, ingredient.effects[i].magnitude)
-                if (newEffect.name == "Explosive") console.log(ingredient.effects[i].magnitude)
-
-                if (!generationMemory[newEffect.name]) {
-                    generationMemory[effect.name] = [ingredient.effects[i].magnitude]
-
-                } else {
-                    generationMemory[newEffect.name].push(ingredient.effects[i].magnitude)
-                }
-
-                // console.log(generationMemory[effect.name])
-
-                if ((newEffect.complexity >= 2) && (newEffect.complexity < 4)) {
-                    ingredient.effects[i].production = data.productionRequirements.slice(0, 3 + newEffect.complexity).randomElement()
-
-                }
-                if (newEffect.complexity >= 3) {
-                    ingredient.effects[i].substanceProperty = data.substanceProperties.randomElement()
-                }
-
-                if (newEffect.complexity >= 4) {
-                    ingredient.effects[i].productionRequirement = data.productionRequirements.slice(2, data.productionRequirements.length).randomElement()
-                }
-
-
-
-            })
-
-
-
-            return ingredient
-
-        })
-        //calculate maximum strength
-        .map((ingredient, i, a) => ({ ...ingredient,
-            effects: ingredient.effects.map(e => ({ ...e,
-                maxMagnitude: generationMemory[e.name]
-                    .sort((a, b) => b - a, 0)
-                    .slice(0, options.maxComponents)
-                    .reduce((a, b) => a + b, 0)
-
+        return Object.keys(pm.types())
+            .map(o => ({
+                label: o,
+                options: pm.types()[o].map(component => ({
+                    innerHTML: potionTemplate({ ...component }),
+                    text: component.name,
+                    value: component.id
+                }))
             }))
-        }))
-        .map(i => new Component(i.name, i.effects))
-
-    return data
-}
-
-
-effectLookup = (effect) => effects.find(e => e.originalName == effect)
-
-class Component {
-    constructor(name, effects, colour, properties) {
-        this.effects = effects.map(e => ({
-            ingredientName: name,
-            active: false,
-
-            ...e
-        }))
-        this.name = name
-        this.complexity = 1
-        this.colour = colour
-        this.properties = properties
-        // this.complexity
-    }
-    effectsAdvanced() {
-        return this.effects
-        // .map(e => )
-    }
-    effectsBasic() {
-        return this.effects.map(e => e.name)
-        // .map(e => ({ active: false, ...e }))
+            .reverse();
     }
 
-    complexity(add) {
-        if (add) this.complexity += add
-        return this.complexity
+    function updateTemplate() {
+        ingredientsSelector = new SlimSelect({
+            select: ".ingredients-selector",
+            placeholder: "What will you add to this potion?",
+            limit: pm.options.maxComponents,
+            data: generateComponentOptions(),
+            showOptionTooltips: true,
+            // afterClose: function(t) {
+            //     this.open();
+            //     console.log('beforeClose' )
+            // },
+            // beforeClose: function(t) {
+            //     this.open();
+            //     console.log('beforeClose' )
+            // },
+            closeOnSelect: false,
+            onChange: info => {
+                console.log("info", info);
+            }
+        });
+        productionSelector = new SlimSelect({
+            select: ".production-selector",
+            placeholder: "How do you want to prepare these ingredients?",
+            limit: pm.options.maxProductionEffects,
+            data: pm.productionEffects().map(p => ({ text: p, value: p })),
+            closeOnSelect: false,
+            onChange: info => {
+                console.log(info);
+            }
+        });
     }
-}
 
+    function prefil(ingredients, production) {
+        var t = ingredients.map(i => pm.findComponent(i).id);
 
-
-
-//define dataset
-var data = generateDataSet(originalDataSet, effects, substanceProperties, productionRequirements)
-
-function strengthFinder(percent) {
-    var ratings = ["very weak",
-        "weak",
-        "mid-strength",
-        "strong",
-        "very strong",
-        "perfect"
-    ]
-    console.log("LMAO", ratings[Math.round(percent * ratings.length) - 1], Math.round(percent * ratings.length) - 1)
-    var index = Math.round(percent * ratings.length) - 1
-    if (index < 0) index = 0
-    return ratings[index].capitalize()
-}
-
-
-function effectFinder(effectName) {
-    return data.ingredients
-        .filter(ingredient => ingredient.effectsBasic().includes(effectName))
-        .map(ingredient => ingredient.effectsAdvanced())
-        .flat()
-        .filter(e => e.ingredientName)
-        .filter(e => e.name == effectName)
-        .sort((a, b) => b.magnitude - a.magnitude)
-        .map(e => e.ingredientName)
-}
-
-
-
-function ingredientFinder(...ingredientNames) {
-    console.log("running ingredientFinder")
-    // if (ingredientNames.length > 5) throw "perhaps you should try making a soup"
-    return ingredientNames
-        .map(ingredient => data.ingredients
-            .find(i => i._name == ingredient))
-        .filter(i => i)
-}
-
-
-function findCommonEffects(...ingredientObjects) {
-    console.log("running findCommonEffects", ingredientObjects.length)
-
-    // console.log(Math.max(...ingredientObjects.map(i => i.complexity())))
-    // console.log(ingredientObjects.map(i => i.complexity()))
-    var complexity = Math.max(...ingredientObjects.map(i => i.complexity()))
-
-    var effectArray = ingredientObjects
-        .map(i => i.effectsAdvanced())
-        .flat()
-
-    effectArray
-        .forEach((s, i, a) => a[i].active = false)
-
-    // effectArray
-    // .forEach((s, i, a) => a[i].active = false)
-
-    effectArray
-        .forEach((effect, i, array) => array[i].count = array
-            .filter(e => e.name == effect.name).length)
-
-
-    // console.log("effectArray", effectArray)
-    //activate effects
-    effectArray
-        .filter(e => e.count >= options.minimumCommonEffects)
-        .filter(e => e.level <= complexity)
-        .forEach((s, i, a) => a[i].active = true)
-
-    return effectArray
-    // return Object.assign({}, ...effectArray
-    //     .filter(e => e.count >= options.minimumCommonEffects)
-    // .map((s, i, a) => ({
-    //     [s.name]: [...a
-    //         .filter(e => e.name == s.name)
-    //         // .map(e => e.ingredientName)
-    //     ]
-    // })));
-}
-
-
-function validateEffects(productionModifiers = [], effectArray) {
-    console.log("running validateEffects",
-        "productionModifiers",
-        productionModifiers.length,
-        "effectArray",
-        effectArray.length)
-    // console.log(effectArray)
-    var conditions = {
-        hasNoProductionRequirements: (e) => !e.production,
-        includesProduction: (e) => productionModifiers.includes(e.production),
-        usingPhilosophersStone: (e) => productionModifiers.includes("philosophers stone"),
-
+        console.log("testfilling with", t);
+        ingredientsSelector.set(t);
+        productionSelector.set(production);
     }
-    //vlidate prodction
-    // remove junk
-    //keep high level
-    return effectArray
-        //filter production mods
-        .filter((e, i, a) => Object.keys(conditions).some(b => conditions[b](e)))
-        // console.log(t)
-        .filter(e => e.active || e.level >= 3)
 
-}
+    updateTemplate();
+
+    // console.log(
+    //     pm.memory(
+    //         // '{"dataHash":"2067c77906c9148e8515e27f4097bc2726b72b74","seed":1,"potions":[{"effects":[{"ingredientName":"Explosive Potion","active":true,"name":"Explosive","magnitude":3.6399999999999997,"complexity":1,"originalName":"Fortify Destruction","colour":{"r":92,"g":57,"b":70,"a":0.28},"maxMagnitude":13.72,"count":2,"strength":"Weak"},{"ingredientName":"Explosive Potion","active":false,"name":"Invisibility","magnitude":331,"complexity":4,"originalName":"Invisibility","production":"Ferment for 1 session","substanceProperty":"Damaged by acid","colour":{"r":210,"g":249,"b":126,"a":0.5},"maxMagnitude":1423,"count":1,"strength":"Weak"}],"name":"Explosive Potion","complexity":2,"properties":["Damaged by acid"],"type":"potion","id":"ff3e16502b5ed16525150c84375899d498c17d9e","colour":{"a":0.5,"r":44,"g":27,"b":34},"image":null}]}'
+    //     )
+    // );
 
 
-function calculateEffectPotency(effectArray) {
-    console.log("running calculateEffectPotency", effectArray.length)
-    effectArray.forEach((item) => {
-        delete item.ingredientName
-    })
+    // var w = pm.findIngredientsWithEffect("Grow")
+    // console.log(w)
 
-    // console.log({ ...effectArray[0], ...effectArray[2], magnitude: effectArray[0].magnitude * effectArray[2].magnitude })
+    document.getElementById("findEffect").onclick = e => {
 
-    var presentEffects = [...new Set(effectArray.map(e => e.name))]
-    // console.log(presentEffects)
 
-    presentEffects = presentEffects.map(effect => {
-            var thisEffectCollection = effectArray
-                .filter(e => e.name == effect)
-            return Object.assign({}, ...thisEffectCollection, {
-                magnitude: thisEffectCollection
-                    .map(e => e.magnitude)
-                    //this is voodoo
-                    .reduce((a, b) => a + b, 0)
+
+
+
+        Swal.fire({
+                title: 'My Title',
+                text: 'Please select an option',
+                input: 'select',
+                inputOptions: Object.assign({}, ...pm.effects().map(effect => ({
+                    [effect.name]: effect.name
+                }))),
+                showCancelButton: true,
+                inputPlaceholder: 'Please select'
             })
-        })
-        // .map(e => ({ ...e, strength: strengthFinder(e.magnitude / e.maxMagnitude) }))
-        .map(e => ({ ...e, strength: strengthFinder(e.magnitude / e.maxMagnitude) }))
+            .then((choice) => [pm.findIngredientsWithEffect(choice.value), choice.value])
+            .then(components => {
+                var componentSelector
+                Swal.fire({
+                        title: 'Ingredients containing ' + components[1],
+                        // '<input type="select" class="fuck">' + components[0].map(c => `<p>${c.name}</p>`).join("") + '</input>'
+                        html: '<select class="multiple ingredients-options" multiple>',
+                        customClass: {
+                            actions: 'vertical-buttons',
+                            cancelButton: 'top-margin'
+                        }
+                    })
+                    .then(result => {
 
-    //trim potion to remove excess effects
-    // if (presentEffects.length > 4) presentEffects = presentEffects.slice(0, 4)
-    return presentEffects
+                    })
+                componentSelector = new SlimSelect({
+                    select: ".ingredients-options",
+                    placeholder: "What will you add to this potion?",
+                    limit: pm.options.maxComponents,
+                    data: components[0].map(c => ({ text: c.name, innerHTML: c.name })),
+                    closeOnSelect: false,
+                })
 
-    // console.log(presentEffects)
-    // return Object.assign({}, ...effectArray
-    //     .filter(e => e.count > 1)
-    //     // .filter(e => e.count >= options.minimumCommonEffects)
-    //     .map((s, i, a) => ({
-    //         [s.name]: ({ ...Object.assign(s) })
-    //         // .filter(e => e.name == s.name)
-    //         // .map(e => e.ingredientName)
 
-    //     })));
+            })
 
-    // map(e => ({ ...e }))
-}
+        // prefil(["Nordic Barnacle", "Tinder Polypore Cap"], ["Philosophers stone"]);
 
+    };
+    // document.getElementById("findEffect").onclick()
 
-function finalisePotion(presentEffects, customJunkName = "Junk") {
-    console.log("running finalisePotion", presentEffects.length)
-    var potionName = "Precursor Liquid"
-    // var colour = Color("purple")
+    document.getElementById("export").onclick = e => {
 
 
-    var activeEffects = presentEffects.filter(e => e.active).slice(0, 3)
-    var inactiveEffects = presentEffects.filter(e => !e.active).slice(0, 3)
 
+        Swal.fire({
+                input: 'textarea',
+                title: 'Export data',
+                text: 'Copy your data string below',
+                inputValue: pm.memory(),
+                inputAttributes: {
+                    'aria-label': 'Type your message here',
+                },
+                showCancelButton: true,
+            })
+            .disableInput()
+        // .then(console.log)
 
+    };
 
-    if ((activeEffects.length + inactiveEffects.length) < 1) return new Component(customJunkName,
-        [], Color(randomColor({
-            format: 'rgba',
-            seed: customJunkName
-        })), ["Smells terrible"])
 
 
-    // console.log(inactiveEffects.length)
-    // console.log(activeEffects.length)
 
 
-    var strongestEffect = activeEffects
-        .filter(e => e.active)
-        .reduce((prev, current) => (prev.magnitude > current.magnitude) ? prev : current, 0);
+    document.getElementById("import").onclick = e => {
 
-    if (strongestEffect) potionName = strongestEffect.name + " Potion"
 
-    if (activeEffects.length > 1) potionName = "Mixed " + potionName
+        Swal.fire({
+                input: 'textarea',
+                inputPlaceholder: 'Enter your code...',
+                title: 'Import data',
+                text: 'Paste your data string below',
+                inputAttributes: {
+                    'aria-label': 'Type your message here',
+                },
+                showCancelButton: true,
+            })
+            .then(o => pm.memory(o.value))
+            .then(m => {
+                if (m != 'success') {
+                    return ""
+                } else {
+                    updateTemplate();
+                    return Swal.fire({
+                        icon: 'success',
+                        title: 'Success',
+                        text: 'Data set loaded',
+                        timer: 1300
+                    })
 
+                }
 
 
-    //find colours
-    var colour = activeEffects
-        .map(e => e.colour)
-        .filter(e => e)
-        .reduce((a, b) => Color(a).mix(Color(b)), 0)
 
-    if (!colour) colour = inactiveEffects
-        .map(e => e.colour)
-        .filter(e => e)
-        .reduce((a, b) => Color(a).mix(Color(b)), 0)
 
+            })
+            .catch(e => Swal.fire({
+                icon: 'error',
+                title: 'Import failed',
+                text: 'Something went wrong! ' + e,
+            }))
 
 
-    // console.log("colour", colour)
 
-    var properties = activeEffects.concat(inactiveEffects)
-        .map(e => e.substanceProperty)
-        .filter(e => e)
-        .sort()
-        .slice(0, 3)
-        .unique()
 
-    var newPotion = new Component(potionName,
-        activeEffects.concat(inactiveEffects),
-        colour,
-        properties
 
-    )
-    newPotion.complexity(Math.min.apply(Math, presentEffects.map(e => e.level)))
-    return newPotion
-}
-// ingredientFinder()
+    };
 
-
-
-function createPotion(productionModifiers, ingredientNames, t) {
-    console.log("running createPotion")
-
-    // if (t) {
-    //     console.log("potion mixing", ingredientNames)
-    //     // console.log( ingredientNames.map(e => e.effectsBasic()))
-    // }
-    // console.log(productionModifiers)
-    if (ingredientNames
-        .find(e => typeof e == "string") &&
-        ingredientNames
-        .find(e => typeof e == "object")) return finalisePotion([], "Unstable junk")
-
-
-    // console.log()
-    // console.log(ingredientNames[]typeof "string")
-
-
-    if (ingredientNames.every(e => typeof e == "string")) {
-
-        // var rawIngredientNames = ingredientNames.filter(e => typeof e == 'string')
-        var m = ingredientFinder(...ingredientNames)
-    } else {
-        var m = ingredientNames
-    }
-
-    // console.log(m)
-    m = findCommonEffects(...m)
-    // console.log(m)
-    m = validateEffects(productionModifiers, m)
-    // console.log(m)
-    m = calculateEffectPotency(m)
-    // console.log(m)
-    return finalisePotion(m)
-}
-
-
-// var everything = [
-//     // "Beehive Husk",
-//     // "Ash Creep Cluster",
-//     "Moon Sugar",
-//     "Silverside",
-//     // "dog food",
-//     // "Charred Hawk Beak",
-//     "Dyed Hawk Feathers",
-//     "Tundra Cotton",
-//     "Lavender",
-//     "Wheat",
-//     "Hagraven Claw",
-//     // "Mudcrab Chitin",
-//     // "Daedroth Teeth",
-// ]
-
-
-var explosivePotion = [
-    "Beehive Husk",
-    "Ash Creep Cluster",
-]
-
-var corruptionPotion = [
-    "Nordic Barnacle",
-    "Tinder Polypore Cap"
-]
-
-
-
-var productionEffects = [
-    "Crushing",
-    "Disolve in water",
-    "philosophers stone"
-]
-
-console.log(data.ingredients)
-
-// var components = [
-//     createPotion(productionEffects, explosivePotion),
-//     createPotion(productionEffects, corruptionPotion)
-// ]
-
-
-// console.log(components[0])
-// console.log(ingredientFinder("Beehive Husk"))
-
-
-// class potionMaster {
-//     constructor(baseData, effects, substanceProperties, productionRequirements, options = {}, seed = Math.random(), ) {
-//         // console.log(baseData, effects, substanceProperties, productionRequirements)
-//         this.data = baseData
-//         this.seed = seed
-//         this.options = options
-//         this.data.effects = effects
-//         this.data.substanceProperties = substanceProperties
-//         this.data.productionRequirements = productionRequirements
-//         return this.makeDataSet()
-
-
-//     }
-//     makeDataSet() {
-//         var generationMemory = {}
-
-
-//         var conditions = {
-//             a: (e) => {
-//                 if ((effect.complexity >= 2) && (effect.complexity < 4)) {
-//                     ingredient.effects[i].production = data.productionRequirements.slice(0, 3 + effect.complexity).randomElement()
-//                 }
-//             },
-
-//             two: (e) => {
-//                 if ((effect.complexity >= 2) && (effect.complexity < 4)) {
-//                     ingredient.effects[i].production = data.productionRequirements.slice(0, 3 + effect.complexity).randomElement()
-//                 }
-//             },
-
-//             three: (e) => {
-//                 if (effect.complexity >= 3) {
-//                     ingredient.effects[i].substanceProperty = data.substanceProperties.randomElement()
-//                 }
-//             },
-
-//             four: (e) => {
-//                 if (effect.complexity >= 4) {
-//                     ingredient.effects[i].productionRequirement = data.productionRequirements.slice(2, data.productionRequirements.length).randomElement()
-//                 }
-//             },
-
-
-
-
-//         }
-
-
-//         //update ingrediants 
-//         this.data.ingredients = this.data.ingredients
-//             // .slice(0, 1)
-//             .map(ingredient => {
-//                 console.log(ingredient)
-
-//                 ingredient.effects.map((effect, i, a) => {
-
-
-
-
-//                     var newEffect = this.data.effects
-//                         .find(e => e.originalName == effect.name)
-//                     console.log(newEffect,"newEffectnewEffectnewEffectnewEffectnewEffectnewEffect", effect.name)
-//                     ingredient.effects[i].name = newEffect.name
-
-//                     ingredient.effects[i].level = newEffect.complexity
-//                     ingredient.effects[i].colour = newEffect.colour
-//                     // console.log(newEffect.name, ingredient.effects[i].magnitude)
-
-//                     if (!generationMemory[newEffect.name]) {
-//                         generationMemory[effect.name] = [ingredient.effects[i].magnitude]
-
-//                     } else {
-//                         generationMemory[newEffect.name].push(ingredient.effects[i].magnitude)
-//                     }
-
-
-
-//                 })
-
-
-
-//                 return ingredient
-
-//             })
-//         //calculate maximum strength
-//         // .map((ingredient, i, a) => ({ ...ingredient,
-//         //     effects: ingredient.effects.map(e => ({ ...e,
-//         //         maxMagnitude: generationMemory[e.name]
-//         //             .sort((a, b) => b - a, 0)
-//         //             .slice(0, options.maxComponents)
-//         //             .reduce((a, b) => a + b, 0)
-
-//         //     }))
-//         // }))
-//         // .map(i => new Component(i.name, i.effects))
-
-
-//         return this
-//     }
-
-
-
-// }
-
-// var t1 = new potionMaster(originalDataSet, effects, substanceProperties, productionRequirements)
-
-// console.log(t1)
-// console.log(strengthFinder(0.10))
-
-// // console.log(createPotion([], [])._colour)
-// console.log(potion1,potion2)
-
-
-
-// var invisPotion = createPotion(productionEffects, components, true)
-// console.log(createPotion(productionEffects, [invisPotion,invisPotion]))
-
-
-
-// console.log(effectFinder("Explosive"))
+    document.getElementById("clear").onclick = e => {
+        ingredientsSelector.set([]);
+        productionSelector.set([]);
+    };
+
+    document.getElementById("explosive-test").onclick = e =>
+        prefil(["Beehive Husk", "Ash Creep Cluster"], ["Philosophers stone"]);
+
+    document.getElementById("corruption-test").onclick = e =>
+        prefil(["Nordic Barnacle", "Tinder Polypore Cap"], ["Philosophers stone"]);
+
+
+    document.getElementById("start").onclick = e => {
+        if (ingredientsSelector.selected().length < 1) return false;
+
+        document.getElementById("image-container").innerHTML = "";
+        document.getElementById("output").innerHTML = "";
+
+        var potion = pm.createPotion(
+            productionSelector.selected(),
+            ingredientsSelector.selected()
+        );
+
+        if (!potion.image)
+            potion.image = SVG(
+                `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M53.7,66.475c1.386,0,2.51,1.124,2.51,2.51c0,1.386-1.124,2.51-2.51,2.51  c-1.386,0-2.51-1.124-2.51-2.51C51.19,67.599,52.314,66.475,53.7,66.475L53.7,66.475z M52.636,81.146  c0.832,0,1.505,0.674,1.505,1.506c0,0.832-0.674,1.505-1.505,1.505c-0.832,0-1.506-0.674-1.506-1.505  C51.129,81.82,51.804,81.146,52.636,81.146L52.636,81.146z M43.273,72.278c1.109,0,2.007,0.899,2.007,2.008  c0,1.109-0.898,2.008-2.007,2.008s-2.007-0.899-2.007-2.008C41.266,73.178,42.164,72.278,43.273,72.278L43.273,72.278z   M40.556,60.87L30.113,77.885c-1.369,2.231-3.15,6.86-1.649,9.386c0.89,1.497,3.327,1.707,4.853,1.707H66.36  c1.492,0,4.392-0.209,5.283-1.71c1.445-2.433-0.809-7.309-2.08-9.382L59.179,60.87C52.971,64.886,46.764,56.854,40.556,60.87z"/><circle fill-rule="evenodd" clip-rule="evenodd" cx="51.773" cy="44.739" r="3.011"/><circle fill-rule="evenodd" clip-rule="evenodd" cx="53.368" cy="6.506" r="1.506"/><circle fill-rule="evenodd" clip-rule="evenodd" cx="52.57" cy="28.572" r="1.506"/><circle fill-rule="evenodd" clip-rule="evenodd" cx="47.325" cy="15.026" r="2.008"/><circle fill-rule="evenodd" clip-rule="evenodd" cx="48.022" cy="35.908" r="2.008"/><circle fill-rule="evenodd" clip-rule="evenodd" cx="46.859" cy="54.698" r="2.008"/><path fill-rule="evenodd" clip-rule="evenodd" d="M39.961,20.717h20.077c1.104,0,2.007,0.904,2.007,2.008s-0.903,2.008-2.007,2.008  c0,29.925-0.282,25.644,14.659,50.003C80.704,84.53,79.278,95,66.36,95H33.317c-12.916,0-13.611-11.667-8.337-20.265  C39.865,50.465,39.961,54.5,39.961,24.732c-1.104,0-2.008-0.904-2.008-2.008S38.857,20.717,39.961,20.717L39.961,20.717z   M42.973,24.732c0,5.706,0.077,11.54-0.258,17.234c-0.22,3.73-0.662,7.359-1.85,10.918c-1.14,3.414-2.885,6.548-4.734,9.621  c-2.79,4.637-5.753,9.188-8.584,13.805c-2.029,3.309-3.838,8.853-1.672,12.499c1.525,2.567,4.677,3.18,7.442,3.18H66.36  c2.786,0,6.313-0.558,7.873-3.183c2.165-3.645-0.125-9.271-2.103-12.495c-2.826-4.607-5.782-9.16-8.545-13.799  c-1.822-3.059-3.529-6.176-4.626-9.577c-1.146-3.555-1.542-7.185-1.732-10.899c-0.292-5.724-0.201-11.569-0.201-17.303H42.973z"/></svg>`
+            )
+            .size(100, 100)
+            .fill({
+                color: colourMod.rgbToHex(potion.colour),
+                opacity: potion.colour.a
+            })
+            .clone();
+
+        PotionMaster.logColour(potion.colour, potion.name);
+
+        document.getElementById("output").innerHTML = potionTemplate({
+            ...potion
+        });
+
+        potion.image.addTo(".image-container");
+
+
+
+        // if (potion.effects.length > 0) {
+        //     Swal.fire({
+        //         position: 'top-end',
+        //         icon: 'success',
+        //         title: 'Potion success!',
+        //         showConfirmButton: false,
+        //     })
+        // } else {
+        //     Swal.fire({
+        //         position: 'top-end',
+        //         icon: 'error',
+        //         title: 'Brewing failed',
+        //         showConfirmButton: false,
+        //         timer: 1300
+        //     })
+        // }
+
+        updateTemplate();
+    };
+});

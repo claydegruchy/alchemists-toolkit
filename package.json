@@ -1,17 +1,29 @@
 {
-  "name": "potion-gen",
+  "name": "alchemists-toolkit",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "faker": "^4.1.0",
+    "lodash": "^4.17.20",
+    "object-hash": "^2.0.1",
+    "sweetalert2": "^9.5.3"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.10"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "echo starting;reload -b & watchify index.js -o bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claydegruchy/alchemists-toolkit.git"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "color": "^3.1.2",
-    "faker": "^4.1.0",
-    "object-hash": "^2.0.1",
-    "randomcolor": "^0.5.4"
-  }
+  "bugs": {
+    "url": "https://github.com/claydegruchy/alchemists-toolkit/issues"
+  },
+  "homepage": "https://github.com/claydegruchy/alchemists-toolkit#readme"
 }

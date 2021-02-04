@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.23.0/slimselect.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@latest/dist/svg.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.23.0/slimselect.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    </link>
+    <title>PM</title>
+    <style type="text/css">
+    .list {
+        display: list-item;
+        margin-left: 1.3em;
+        list-style-type: square;
+    }
+
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .wrapper {
+        /*max-width: 90vw;*/
+        margin: 0 auto;
+        font: 1.2em Helvetica, arial, sans-serif;
+    }
+
+    .wrapper>* {
+        border: 0.5px solid #f08c00;
+        /*background-color: #ffec99;*/
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .content {
+        min-height: auto;
+    }
+
+    .wrapper {
+        height: 95vh;
+        display: grid;
+        grid-template-columns: repeat(12, [col-start] 1fr);
+        grid-template-rows: repeat(12, [row-start] 1fr);
+        grid-gap: 10px;
+    }
+
+    .wrapper>* {
+        grid-column: col-start / span 12;
+    }
+
+    .title {
+        /*margin: 10px;*/
+        text-align: center;
+    }
+
+
+    /*
+@media  and (min-device-width: 480px){
+
+}
+*/
+
+    @media (min-width: 900px) {
+
+        .side {
+            grid-column: col-start / span 4;
+        }
+
+        .ingredients {
+            grid-row: 2/span 5;
+        }
+
+        .production {
+            grid-row: 7/span 5;
+        }
+
+        .content {
+            grid-column: auto / span 8;
+            grid-row: 2 / span 10;
+        }
+
+        .main-head {
+            height: 10vh;
+
+        }
+
+        .main-footer {
+            /*height: 10vh;*/
+            grid-column: col-start / span auto;
+            grid-row: 12;
+        }
+
+
+
+        .vertical-buttons {
+            width: 850px !important;
+            height: 90% !important;
+            flex-direction: column;
+        }
+
+        .small {
+            font-size: x-small;
+        }
+
+        /*.ss-main .ss-content .ss-list {
+            max-height: 60vh;
+        }*/
+
+        .ingredients-selector  .ss-main {
+            max-height: 60vh !important;
+        }
+
+        .ingredients-selector  .ss-content {
+            max-height: 60vh !important;
+        }
+
+        .ingredients-selector  .ss-list {
+            max-height: 60vh !important;
+        }
+
+
+
+
+
+
+        nav ul {
+            flex-direction: column;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="main-head">
+            <h1 class="title">Potion Master</h1>
+        </div>
+        <nav class="ingredients side ">
+            <div class="title">Ingredients</div>
+            <select class="multiple ingredients-selector" multiple>
+            </select>
+        </nav>
+        <nav class="production side title">
+            <div class="title">Production steps</div>
+            <select class="multiple production-selector" multiple>
+            </select>
+        </nav>
+        <!-- </div> -->
+        <div class="content">
+            <button class="pure-button" id="start">start</button>
+            <button class="pure-button" id="clear">clear</button>
+            <button class="pure-button" id="explosive-test">explosive-test</button>
+            <button class="pure-button" id="corruption-test">corruption-test</button>
+            <button class="pure-button" id="findEffect">&#x1F50D; Find Effect</button>
+            <div class="image-container" id="image-container"></div>
+            <div id="output"></div>
+        </div>
+        <footer class="main-footer">
+            <button class="pure-button" id="export">export</button>
+            <button class="pure-button" id="import">import</button>
+            Made by CCMD</footer>
+    </div>
+    <pre id="json"></pre>
+    <script src="bundle.js"></script>
+</body>
+<!--  -->
+
+</html>

@@ -1,50 +1,8 @@
 {
-    "ussep_version": "4.1.6",
-    "caco_version": "2.0.6",
-    "bs_cyrodiil_version": "1.3.3",
-    "hunterborn_version": "1.6.2",
-
-    "effects": [
-        "Health", "Stamina", "Magicka",
-        "Health Fortification", "Stamina Fortification", "Magicka Fortification",
-        "Health Regeneration", "Stamina Regeneration", "Magicka Regeneration",
-        "Damage Health", "Damage Health Regen", "Lingering Damage Health", "Ravage Health",
-        "Damage Stamina", "Damage Stamina Regen", "Fatigue",
-        "Damage Magicka", "Damage Magicka Regen", "Silence",
-        "Damage Undead", "Lingering Damage Undead",
-
-        "Fortify One-Handed", "Fortify Two-Handed", "Fortify Marksman", "Fortify Block", "Fortify Heavy Armor",
-        "Fortify Sneak", "Fortify Lockpicking", "Fortify Pickpocket", "Fortify Speech", "Fortify Light Armor",
-        "Fortify Destruction", "Fortify Alteration", "Fortify Restoration", "Fortify Conjuration", "Fortify Illusion",
-        "Fortify Smithing", "Fortify Enchanting", "Fortify Unarmed", "Fortify Barter", "Fortify Shouts",
-        "Drain Strength", "Drain Intelligence",
-
-        "Resist Magic", "Resist Fire", "Resist Frost", "Resist Shock", "Shield",
-        "Magic Aversion", "Fire Aversion", "Frost Aversion", "Shock Aversion",
-        "Fire Damage", "Frost Damage", "Shock Damage",
-
-        "Cure Disease", "Resist Disease",
-        "Cure Poison", "Resist Poison", "Poison Aversion",
-        "Paralysis", "Resist Paralysis",
-        "Speed", "Slow", "Feather",
-
-        "Invisibility", "Light", "Night Eye", "Etherialize",
-        "Detect Life", "Detect Life Potion - Exterior",
-        "Fear", "Frenzy",
-        "Waterbreathing", "Waterwalking",
-        "Blood", "Protect Soul",
-
-        "Discerning", "Pathfinding",
-        "Hunter's Boon", "Hircine's Sight",
-        "Prowling", "Thrill",
-        "Consumption", "Exploit Weakness",
-        "Ineptitude", "Muddle"
-    ],
-
     "ingredients": [
     {
         "name": "Thistle Branch",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fatigue",
@@ -65,7 +23,7 @@
     },
     {
         "name": "Snowberries",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Enchanting",
@@ -86,7 +44,7 @@
     },
     {
         "name": "Jarrin Root",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Damage Health",
@@ -107,7 +65,7 @@
     },
     {
         "name": "Pine Thrush Egg",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Lockpicking",
@@ -128,7 +86,7 @@
     },
     {
         "name": "Chicken Egg",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Alteration",
@@ -149,7 +107,7 @@
     },
     {
         "name": "Nightshade",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Destruction",
@@ -170,7 +128,7 @@
     },
     {
         "name": "Bone Meal",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Damage Stamina",
@@ -191,7 +149,7 @@
     },
     {
         "name": "Salt Pile",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Unarmed",
@@ -212,7 +170,7 @@
     },
     {
         "name": "Garlic",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Resist Disease",
@@ -233,7 +191,7 @@
     },
     {
         "name": "Elves Ear",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Magicka",
@@ -254,7 +212,7 @@
     },
     {
         "name": "Frost Mirriam",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Resist Frost",
@@ -275,7 +233,7 @@
     },
     {
         "name": "Chaurus Eggs",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Poison Aversion",
@@ -296,7 +254,7 @@
     },
     {
         "name": "Daedra Heart",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Health",
@@ -317,7 +275,7 @@
     },
     {
         "name": "Falmer Ear",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Lockpicking",
@@ -338,7 +296,7 @@
     },
     {
         "name": "Fire Salts",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fire Aversion",
@@ -359,7 +317,7 @@
     },
     {
         "name": "Frost Salts",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Frost Aversion",
@@ -380,7 +338,7 @@
     },
     {
         "name": "Void Salts",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Shock Aversion",
@@ -401,7 +359,7 @@
     },
     {
         "name": "Briar Heart",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Health Fortification",
@@ -422,7 +380,7 @@
     },
     {
         "name": "Ectoplasm",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Etherialize",
@@ -443,7 +401,7 @@
     },
     {
         "name": "Giant's Toe",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Damage Stamina Regen",
@@ -464,7 +422,7 @@
     },
     {
         "name": "Hagraven Feathers",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Shock Aversion",
@@ -485,7 +443,7 @@
     },
     {
         "name": "Ice Wraith Teeth",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Frost Aversion",
@@ -506,7 +464,7 @@
     },
     {
         "name": "Skeever Tail",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Damage Stamina Regen",
@@ -527,7 +485,7 @@
     },
     {
         "name": "Slaughterfish Scales",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Block",
@@ -548,7 +506,7 @@
     },
     {
         "name": "Taproot",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Illusion",
@@ -569,7 +527,7 @@
     },
     {
         "name": "Troll Fat",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Resist Disease",
@@ -590,7 +548,7 @@
     },
     {
         "name": "Glow Dust",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Resist Shock",
@@ -611,7 +569,7 @@
     },
     {
         "name": "Vampire Dust",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Health Regeneration",
@@ -632,7 +590,7 @@
     },
     {
         "name": "Tundra Cotton",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Unarmed",
@@ -653,7 +611,7 @@
     },
     {
         "name": "Lavender",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Speech",
@@ -674,7 +632,7 @@
     },
     {
         "name": "Wheat",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Health",
@@ -695,7 +653,7 @@
     },
     {
         "name": "Fly Amanita",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Stamina",
@@ -716,7 +674,7 @@
     },
     {
         "name": "Bleeding Crown",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fire Aversion",
@@ -737,7 +695,7 @@
     },
     {
         "name": "White Cap",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Frost Aversion",
@@ -758,7 +716,7 @@
     },
     {
         "name": "Imp Stool",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Lingering Damage Health",
@@ -779,7 +737,7 @@
     },
     {
         "name": "Namira's Rot",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fear",
@@ -800,7 +758,7 @@
     },
     {
         "name": "Blisterwort",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Damage Stamina",
@@ -821,7 +779,7 @@
     },
     {
         "name": "Torchbug Abdomen",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Lingering Damage Undead",
@@ -842,7 +800,7 @@
     },
     {
         "name": "Juniper Berries",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Marksman",
@@ -863,7 +821,7 @@
     },
     {
         "name": "Deathbell",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Poison Aversion",
@@ -884,7 +842,7 @@
     },
     {
         "name": "Charred Skeever Meat",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Resist Poison",
@@ -905,7 +863,7 @@
     },
     {
         "name": "Hanging Moss",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Damage Magicka Regen",
@@ -926,7 +884,7 @@
     },
     {
         "name": "Nirnroot",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Damage Health",
@@ -947,7 +905,7 @@
     },
     {
         "name": "Spriggan Sap",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Alteration",
@@ -968,7 +926,7 @@
     },
     {
         "name": "Canis Root",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Damage Stamina",
@@ -989,7 +947,7 @@
     },
     {
         "name": "Jazbay Grapes",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Magicka Fortification",
@@ -1010,7 +968,7 @@
     },
     {
         "name": "Hagraven Claw",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Enchanting",
@@ -1031,7 +989,7 @@
     },
     {
         "name": "Mudcrab Chitin",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Resist Disease",
@@ -1052,7 +1010,7 @@
     },
     {
         "name": "Bear Claws",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Health Fortification",
@@ -1073,7 +1031,7 @@
     },
     {
         "name": "Sabre Cat Tooth",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Stamina Fortification",
@@ -1094,7 +1052,7 @@
     },
     {
         "name": "Sabre Cat Eye",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Night Eye",
@@ -1115,7 +1073,7 @@
     },
     {
         "name": "Large Antlers",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Stamina Fortification",
@@ -1136,7 +1094,7 @@
     },
     {
         "name": "Small Antlers",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Restoration",
@@ -1157,7 +1115,7 @@
     },
     {
         "name": "Wisp Wrapping",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Etherialize",
@@ -1178,7 +1136,7 @@
     },
     {
         "name": "Powdered Mammoth Tusk",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Block",
@@ -1199,7 +1157,7 @@
     },
     {
         "name": "Scaly Pholiota",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Feather",
@@ -1220,7 +1178,7 @@
     },
     {
         "name": "Blue Swallowtail",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Conjuration",
@@ -1241,7 +1199,7 @@
     },
     {
         "name": "Luna Moth",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Damage Magicka",
@@ -1262,7 +1220,7 @@
     },
     {
         "name": "Monarch Butterfly",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Damage Undead",
@@ -1283,7 +1241,7 @@
     },
     {
         "name": "Blue Mountain Flower",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Conjuration",
@@ -1304,7 +1262,7 @@
     },
     {
         "name": "Red Mountain Flower",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Drain Intelligence",
@@ -1325,7 +1283,7 @@
     },
     {
         "name": "Purple Mountain Flower",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Sneak",
@@ -1346,7 +1304,7 @@
     },
     {
         "name": "Swamp Fungal Pod",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Lingering Damage Undead",
@@ -1367,7 +1325,7 @@
     },
     {
         "name": "Giant Lichen",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Poison Aversion",
@@ -1388,7 +1346,7 @@
     },
     {
         "name": "Slaughterfish Egg",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Waterbreathing",
@@ -1409,7 +1367,7 @@
     },
     {
         "name": "Rock Warbler Egg",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Health",
@@ -1430,7 +1388,7 @@
     },
     {
         "name": "Nordic Barnacle",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Waterbreathing",
@@ -1451,7 +1409,7 @@
     },
     {
         "name": "Glowing Mushroom",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Etherialize",
@@ -1472,7 +1430,7 @@
     },
     {
         "name": "Grass Pod",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Drain Intelligence",
@@ -1493,7 +1451,7 @@
     },
     {
         "name": "Mother of Pearl",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Magicka",
@@ -1514,7 +1472,7 @@
     },
     {
         "name": "Pearl",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Waterwalking",
@@ -1535,7 +1493,7 @@
     },
     {
         "name": "Dragon's Tongue",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Speech",
@@ -1556,7 +1514,7 @@
     },
     {
         "name": "Spider Egg",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Marksman",
@@ -1577,7 +1535,7 @@
     },
     {
         "name": "Beehive Husk",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Light Armor",
@@ -1598,7 +1556,7 @@
     },
     {
         "name": "Bee",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Stamina",
@@ -1619,7 +1577,7 @@
     },
     {
         "name": "Honeycomb",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Magicka Regeneration",
@@ -1640,7 +1598,7 @@
     },
     {
         "name": "Human Heart",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Stamina Regeneration",
@@ -1661,7 +1619,7 @@
     },
     {
         "name": "Creep Cluster",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Feather",
@@ -1682,7 +1640,7 @@
     },
     {
         "name": "Crimson Nirnroot",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Damage Health",
@@ -1703,7 +1661,7 @@
     },
     {
         "name": "Orange Dartwing",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Pickpocket",
@@ -1724,7 +1682,7 @@
     },
     {
         "name": "Moon Sugar",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Magicka",
@@ -1745,7 +1703,7 @@
     },
     {
         "name": "Blue Dartwing",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Pickpocket",
@@ -1766,7 +1724,7 @@
     },
     {
         "name": "Hawk Beak",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Feather",
@@ -1787,7 +1745,7 @@
     },
     {
         "name": "Hawk Feathers",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Speed",
@@ -1808,7 +1766,7 @@
     },
     {
         "name": "Mora Tapinella",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Alteration",
@@ -1829,7 +1787,7 @@
     },
     {
         "name": "Dwarven Oil",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Sneak",
@@ -1850,7 +1808,7 @@
     },
     {
         "name": "Human Flesh",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Damage Health",
@@ -1871,7 +1829,7 @@
     },
     {
         "name": "Histcarp",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Damage Stamina Regen",
@@ -1892,7 +1850,7 @@
     },
     {
         "name": "Cryodiilic Spadetail",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Restoration",
@@ -1913,7 +1871,7 @@
     },
     {
         "name": "River Betty",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Damage Health",
@@ -1934,7 +1892,7 @@
     },
     {
         "name": "Abecean Longfin",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Frost Aversion",
@@ -1955,7 +1913,7 @@
     },
     {
         "name": "Silverside",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Damage Stamina Regen",
@@ -1976,7 +1934,7 @@
     },
     {
         "name": "Amber",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Health",
@@ -1997,7 +1955,7 @@
     },
     {
         "name": "Black Pearl",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Damage Undead",
@@ -2018,7 +1976,7 @@
     },
     {
         "name": "Onyx",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Block",
@@ -2039,7 +1997,7 @@
     },
     {
         "name": "Sulfur",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Resist Disease",
@@ -2060,7 +2018,7 @@
     },
     {
         "name": "Spider Silk",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Damage Stamina Regen",
@@ -2081,7 +2039,7 @@
     },
     {
         "name": "Dragon Tooth",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Magicka",
@@ -2102,7 +2060,7 @@
     },
     {
         "name": "Chicken Feathers",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Unarmed",
@@ -2123,7 +2081,7 @@
     },
     {
         "name": "Horse Hair",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Speed",
@@ -2144,7 +2102,7 @@
     },
     {
         "name": "Ironwood Nuts",
-        "modsrc": "caco,cyrodiil",
+        "description": "caco,cyrodiil",
         "effects": [
         {
             "name": "Health Fortification",
@@ -2165,7 +2123,7 @@
     },
     {
         "name": "Saltrice",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Stamina Regeneration",
@@ -2186,7 +2144,7 @@
     },
     {
         "name": "Fennel Seeds",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Magicka Fortification",
@@ -2207,7 +2165,7 @@
     },
     {
         "name": "Flax Seeds",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Feather",
@@ -2228,7 +2186,7 @@
     },
     {
         "name": "Horker Tusk",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Magicka Fortification",
@@ -2249,7 +2207,7 @@
     },
     {
         "name": "Soul Husk",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Protect Soul",
@@ -2270,7 +2228,7 @@
     },
     {
         "name": "Bone Hawk Claw",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Damage Stamina Regen",
@@ -2291,7 +2249,7 @@
     },
     {
         "name": "Bone Hawk Feathers",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Poison Aversion",
@@ -2312,7 +2270,7 @@
     },
     {
         "name": "Argonian Scales",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Resist Poison",
@@ -2333,7 +2291,7 @@
     },
     {
         "name": "Putrefied Flesh",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Ravage Health",
@@ -2354,7 +2312,7 @@
     },
     {
         "name": "Daedra Silk",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Slow",
@@ -2375,7 +2333,7 @@
     },
     {
         "name": "Dreugh Wax",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Waterbreathing",
@@ -2396,7 +2354,7 @@
     },
     {
         "name": "Gravetar",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fear",
@@ -2417,7 +2375,7 @@
     },
     {
         "name": "Scrib Jelly",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Restoration",
@@ -2438,7 +2396,7 @@
     },
     {
         "name": "Sload Soap",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Damage Undead",
@@ -2459,7 +2417,7 @@
     },
     {
         "name": "Racer Plumes",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Speed",
@@ -2480,7 +2438,7 @@
     },
     {
         "name": "Bear Fat",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Resist Poison",
@@ -2501,7 +2459,7 @@
     },
     {
         "name": "Fox Fat",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Lockpicking",
@@ -2522,7 +2480,7 @@
     },
     {
         "name": "Yellow Mountain Flower",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Restoration",
@@ -2543,7 +2501,7 @@
     },
     {
         "name": "Ancestor Moth",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Damage Magicka Regen",
@@ -2564,7 +2522,7 @@
     },
     {
         "name": "Gleamblossom",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Etherialize",
@@ -2585,7 +2543,7 @@
     },
     {
         "name": "Chaurus Hunter Antennae",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Conjuration",
@@ -2606,7 +2564,7 @@
     },
     {
         "name": "Poison Bloom",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Slow",
@@ -2627,7 +2585,7 @@
     },
     {
         "name": "Salmon Roe",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Waterbreathing",
@@ -2648,7 +2606,7 @@
     },
     {
         "name": "Hawk Egg",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Damage Undead",
@@ -2669,7 +2627,7 @@
     },
     {
         "name": "Ashen Grass Pod",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Resist Fire",
@@ -2690,7 +2648,7 @@
     },
     {
         "name": "Trama Root",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Shock Aversion",
@@ -2711,7 +2669,7 @@
     },
     {
         "name": "Scathecraw",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Ravage Health",
@@ -2732,7 +2690,7 @@
     },
     {
         "name": "Ash Salts",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Drain Strength",
@@ -2753,7 +2711,7 @@
     },
     {
         "name": "Burnt Spriggan Wood",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Damage Magicka Regen",
@@ -2774,7 +2732,7 @@
     },
     {
         "name": "Boar Tusk",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Block",
@@ -2795,7 +2753,7 @@
     },
     {
         "name": "Ash Hopper Jelly",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Health",
@@ -2816,7 +2774,7 @@
     },
     {
         "name": "Netch Jelly",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Stamina",
@@ -2837,7 +2795,7 @@
     },
     {
         "name": "Ash Creep Cluster",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Resist Fire",
@@ -2858,7 +2816,7 @@
     },
     {
         "name": "Emperor Parasol Moss",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Health Regeneration",
@@ -2879,7 +2837,7 @@
     },
     {
         "name": "Felsaad Tern Feathers",
-        "modsrc": "vanilla",
+        "description": "vanilla",
         "effects": [
         {
             "name": "Fortify Light Armor",
@@ -2900,7 +2858,7 @@
     },
     {
         "name": "Marshmerrow",
-        "modsrc": "caco,cyrodiil",
+        "description": "caco,cyrodiil",
         "effects": [
         {
             "name": "Health Regeneration",
@@ -2921,7 +2879,7 @@
     },
     {
         "name": "Mandrake Root",
-        "modsrc": "caco,cyrodiil",
+        "description": "caco,cyrodiil",
         "effects": [
         {
             "name": "Fear",
@@ -2942,7 +2900,7 @@
     },
     {
         "name": "Dragon Heartscales",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Alteration",
@@ -2963,7 +2921,7 @@
     },
     {
         "name": "Daedroth Teeth",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Stamina Fortification",
@@ -2984,7 +2942,7 @@
     },
     {
         "name": "Ogre's Teeth",
-        "modsrc": "caco,cyrodiil",
+        "description": "caco,cyrodiil",
         "effects": [
         {
             "name": "Frenzy",
@@ -3005,7 +2963,7 @@
     },
     {
         "name": "Daedra Venin",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Paralysis",
@@ -3026,7 +2984,7 @@
     },
     {
         "name": "Bergamot Seeds",
-        "modsrc": "caco,cyrodiil",
+        "description": "caco,cyrodiil",
         "effects": [
         {
             "name": "Resist Paralysis",
@@ -3047,7 +3005,7 @@
     },
     {
         "name": "Foxglove Nectar",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Resist Poison",
@@ -3068,7 +3026,7 @@
     },
     {
         "name": "Ginseng",
-        "modsrc": "caco,cyrodiil",
+        "description": "caco,cyrodiil",
         "effects": [
         {
             "name": "Magicka Fortification",
@@ -3089,7 +3047,7 @@
     },
     {
         "name": "Imp Gall",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Speech",
@@ -3110,7 +3068,7 @@
     },
     {
         "name": "Sawtooth Butterfly",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Marksman",
@@ -3131,7 +3089,7 @@
     },
     {
         "name": "Monkshod Root Pulp",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Unarmed",
@@ -3152,7 +3110,7 @@
     },
     {
         "name": "Morning Glory Root Pulp",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Illusion",
@@ -3173,7 +3131,7 @@
     },
     {
         "name": "Mugwort Seeds",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Health",
@@ -3194,7 +3152,7 @@
     },
     {
         "name": "Peony Seeds",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Stamina Fortification",
@@ -3215,7 +3173,7 @@
     },
     {
         "name": "Lotus Seeds",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Waterwalking",
@@ -3236,7 +3194,7 @@
     },
     {
         "name": "St. Jahn's Wort Nectar",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Waterbreathing",
@@ -3257,7 +3215,7 @@
     },
     {
         "name": "Tiger Lily Nectar",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Waterwalking",
@@ -3278,7 +3236,7 @@
     },
     {
         "name": "Water Hyacinth Nectar",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Waterbreathing",
@@ -3299,7 +3257,7 @@
     },
     {
         "name": "Gravedust",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Smithing",
@@ -3320,7 +3278,7 @@
     },
     {
         "name": "Blood of a Nord",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Blood",
@@ -3341,7 +3299,7 @@
     },
     {
         "name": "Blood of a Breton",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Blood",
@@ -3362,7 +3320,7 @@
     },
     {
         "name": "Blood of a Redguard",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Blood",
@@ -3383,7 +3341,7 @@
     },
     {
         "name": "Blood of an Imperial",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Blood",
@@ -3404,7 +3362,7 @@
     },
     {
         "name": "Blood of an Altmer",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Blood",
@@ -3425,7 +3383,7 @@
     },
     {
         "name": "Blood of a Dunmer",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Blood",
@@ -3446,7 +3404,7 @@
     },
     {
         "name": "Blood of a Bosmer",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Blood",
@@ -3467,7 +3425,7 @@
     },
     {
         "name": "Blood of an Orc",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Blood",
@@ -3488,7 +3446,7 @@
     },
     {
         "name": "Blood of an Argonian",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Blood",
@@ -3509,7 +3467,7 @@
     },
     {
         "name": "Blood of a Khajiit",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Blood",
@@ -3530,7 +3488,7 @@
     },
     {
         "name": "Werebear Claws",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Block",
@@ -3551,7 +3509,7 @@
     },
     {
         "name": "Troll's Blood",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Health Regeneration",
@@ -3572,7 +3530,7 @@
     },
     {
         "name": "Giant's Blood",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Unarmed",
@@ -3593,7 +3551,7 @@
     },
     {
         "name": "Falmer Blood",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Sneak",
@@ -3614,7 +3572,7 @@
     },
     {
         "name": "Arrowroot",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Slow",
@@ -3635,7 +3593,7 @@
     },
     {
         "name": "Werewolf Blood",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Detect Life",
@@ -3656,7 +3614,7 @@
     },
     {
         "name": "Khajiit Eye",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Night Eye",
@@ -3677,7 +3635,7 @@
     },
     {
         "name": "Orc Liver",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Smithing",
@@ -3698,7 +3656,7 @@
     },
     {
         "name": "Columbine Root Pulp",
-        "modsrc": "caco,cyrodiil",
+        "description": "caco,cyrodiil",
         "effects": [
         {
             "name": "Fortify Speech",
@@ -3719,7 +3677,7 @@
     },
     {
         "name": "Frogspawn",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Waterbreathing",
@@ -3740,7 +3698,7 @@
     },
     {
         "name": "Chokeberries",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Poison Aversion",
@@ -3761,7 +3719,7 @@
     },
     {
         "name": "Wolf Liver",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Unarmed",
@@ -3782,7 +3740,7 @@
     },
     {
         "name": "Goat Eye",
-        "modsrc": "caco,hunterborn",
+        "description": "caco,hunterborn",
         "effects": [
         {
             "name": "Damage Stamina",
@@ -3803,7 +3761,7 @@
     },
     {
         "name": "Stoneflower",
-        "modsrc": "caco,cyrodiil",
+        "description": "caco,cyrodiil",
         "effects": [
         {
             "name": "Lingering Damage Undead",
@@ -3824,7 +3782,7 @@
     },
     {
         "name": "Akanet Flower",
-        "modsrc": "caco,cyrodiil",
+        "description": "caco,cyrodiil",
         "effects": [
         {
             "name": "Resist Poison",
@@ -3845,7 +3803,7 @@
     },
     {
         "name": "Bear Bile",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Heavy Armor",
@@ -3866,7 +3824,7 @@
     },
     {
         "name": "Blackbrow Bleak",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Frost Aversion",
@@ -3887,7 +3845,7 @@
     },
     {
         "name": "Blind Betty",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Lingering Damage Undead",
@@ -3908,7 +3866,7 @@
     },
     {
         "name": "Gudgeon",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Resist Disease",
@@ -3929,7 +3887,7 @@
     },
     {
         "name": "Green Trench",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Poison Aversion",
@@ -3950,7 +3908,7 @@
     },
     {
         "name": "Blue Orfe",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Health",
@@ -3971,7 +3929,7 @@
     },
     {
         "name": "Cavefish",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Damage Undead",
@@ -3992,7 +3950,7 @@
     },
     {
         "name": "Ceanothus Moth",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Pickpocket",
@@ -4013,7 +3971,7 @@
     },
     {
         "name": "Cecropia Moth",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Ravage Health",
@@ -4034,7 +3992,7 @@
     },
     {
         "name": "Common Blue Butterfly",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Frost Aversion",
@@ -4055,7 +4013,7 @@
     },
     {
         "name": "Comet Moth",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Damage Stamina Regen",
@@ -4076,7 +4034,7 @@
     },
     {
         "name": "Common Shiner",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Resist Disease",
@@ -4097,7 +4055,7 @@
     },
     {
         "name": "Crushed Ant Paste",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Unarmed",
@@ -4118,7 +4076,7 @@
     },
     {
         "name": "Ayleid Moon Moth",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Drain Intelligence",
@@ -4139,7 +4097,7 @@
     },
     {
         "name": "Druadach Dart",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Lingering Damage Undead",
@@ -4160,7 +4118,7 @@
     },
     {
         "name": "Warpaint Shiner",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Damage Stamina Regen",
@@ -4181,7 +4139,7 @@
     },
     {
         "name": "Emperor Moth",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Magicka Fortification",
@@ -4202,7 +4160,7 @@
     },
     {
         "name": "Falkreath Minnow",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Light Armor",
@@ -4223,7 +4181,7 @@
     },
     {
         "name": "Ghostfish",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Resist Poison",
@@ -4244,7 +4202,7 @@
     },
     {
         "name": "Golden Rudd",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Unarmed",
@@ -4265,7 +4223,7 @@
     },
     {
         "name": "Orange Tip Butterfly",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fire Aversion",
@@ -4286,7 +4244,7 @@
     },
     {
         "name": "Redbelly Dace",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Restoration",
@@ -4307,7 +4265,7 @@
     },
     {
         "name": "Atlas Moth",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Damage Stamina Regen",
@@ -4328,7 +4286,7 @@
     },
     {
         "name": "Emerald Swallowtail",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Drain Intelligence",
@@ -4349,7 +4307,7 @@
     },
     {
         "name": "Mourning Cloak",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Damage Undead",
@@ -4370,7 +4328,7 @@
     },
     {
         "name": "White Witch Moth",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Poison Aversion",
@@ -4391,7 +4349,7 @@
     },
     {
         "name": "Nordic Swallowtail",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Health",
@@ -4412,7 +4370,7 @@
     },
     {
         "name": "Oxgall",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Damage Stamina",
@@ -4433,7 +4391,7 @@
     },
     {
         "name": "Painted Lady",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Damage Magicka Regen",
@@ -4454,7 +4412,7 @@
     },
     {
         "name": "Peacock Butterfly",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Block",
@@ -4475,7 +4433,7 @@
     },
     {
         "name": "Pheasant Feathers",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Pickpocket",
@@ -4496,7 +4454,7 @@
     },
     {
         "name": "Polyphemus Moth",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Illusion",
@@ -4517,7 +4475,7 @@
     },
     {
         "name": "Red Cracker Butterfly",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Pickpocket",
@@ -4538,7 +4496,7 @@
     },
     {
         "name": "Roobrush",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Pickpocket",
@@ -4559,7 +4517,7 @@
     },
     {
         "name": "Ruby Shiner",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Resist Disease",
@@ -4580,7 +4538,7 @@
     },
     {
         "name": "Padomaic Tigerfish",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Unarmed",
@@ -4601,7 +4559,7 @@
     },
     {
         "name": "Silverjaw Minnow",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Damage Undead",
@@ -4622,7 +4580,7 @@
     },
     {
         "name": "Darkwater Minnow",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fire Aversion",
@@ -4643,7 +4601,7 @@
     },
     {
         "name": "Swamp Betty",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Shock Aversion",
@@ -4664,7 +4622,7 @@
     },
     {
         "name": "Bitterling",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Waterbreathing",
@@ -4685,7 +4643,7 @@
     },
     {
         "name": "Akatosh Butterfly",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Restoration",
@@ -4706,7 +4664,7 @@
     },
     {
         "name": "Blue Clipper Butterfly",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Alteration",
@@ -4727,7 +4685,7 @@
     },
     {
         "name": "Marsh Fritillary",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Speed",
@@ -4748,7 +4706,7 @@
     },
     {
         "name": "Red Admiral Butterfly",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Magic Aversion",
@@ -4769,7 +4727,7 @@
     },
     {
         "name": "Wheat Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Health",
@@ -4790,7 +4748,7 @@
     },
     {
         "name": "Tundra Cotton Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Unarmed",
@@ -4811,7 +4769,7 @@
     },
     {
         "name": "Thistle Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fatigue",
@@ -4832,7 +4790,7 @@
     },
     {
         "name": "Snowberry Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Enchanting",
@@ -4853,7 +4811,7 @@
     },
     {
         "name": "Saltrice Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Stamina Regeneration",
@@ -4874,7 +4832,7 @@
     },
     {
         "name": "Red Mountain Flower Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Drain Intelligence",
@@ -4895,7 +4853,7 @@
     },
     {
         "name": "Purple Mountain Flower Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Sneak",
@@ -4916,7 +4874,7 @@
     },
     {
         "name": "Nightshade Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Destruction",
@@ -4937,7 +4895,7 @@
     },
     {
         "name": "Marshmerrow Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Health Regeneration",
@@ -4958,7 +4916,7 @@
     },
     {
         "name": "Lavender Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Speech",
@@ -4979,7 +4937,7 @@
     },
     {
         "name": "Juniper Berry Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Marksman",
@@ -5000,7 +4958,7 @@
     },
     {
         "name": "Jazbay Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Magicka Fortification",
@@ -5021,7 +4979,7 @@
     },
     {
         "name": "Ironwood Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Health Fortification",
@@ -5042,7 +5000,7 @@
     },
     {
         "name": "Heather Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Damage Stamina Regen",
@@ -5063,7 +5021,7 @@
     },
     {
         "name": "Hanging Moss Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Damage Magicka Regen",
@@ -5084,7 +5042,7 @@
     },
     {
         "name": "Spiky Grass Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Drain Intelligence",
@@ -5105,7 +5063,7 @@
     },
     {
         "name": "Glowing Mushroom Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Etherialize",
@@ -5126,7 +5084,7 @@
     },
     {
         "name": "Garlic Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Resist Disease",
@@ -5147,7 +5105,7 @@
     },
     {
         "name": "Frost Mirriam Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Resist Frost",
@@ -5168,7 +5126,7 @@
     },
     {
         "name": "Flax Seed Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Feather",
@@ -5189,7 +5147,7 @@
     },
     {
         "name": "Fennel Seed Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Magicka Fortification",
@@ -5210,7 +5168,7 @@
     },
     {
         "name": "Elves Ear Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Magicka",
@@ -5231,7 +5189,7 @@
     },
     {
         "name": "Dragon's Tongue Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Speech",
@@ -5252,7 +5210,7 @@
     },
     {
         "name": "Creep Cluster Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Feather",
@@ -5273,7 +5231,7 @@
     },
     {
         "name": "Columbine Root Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Speech",
@@ -5294,7 +5252,7 @@
     },
     {
         "name": "Canis Root Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Damage Stamina",
@@ -5315,7 +5273,7 @@
     },
     {
         "name": "Blue Mountain Flower Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Conjuration",
@@ -5336,7 +5294,7 @@
     },
     {
         "name": "Fine-Cut Fire Salts",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fire Aversion",
@@ -5357,7 +5315,7 @@
     },
     {
         "name": "Fine-Cut Frost Salts",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Frost Aversion",
@@ -5378,7 +5336,7 @@
     },
     {
         "name": "Fine-Cut Void Salts",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Shock Aversion",
@@ -5399,7 +5357,7 @@
     },
     {
         "name": "Fine Ground Bonemeal",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Damage Stamina",
@@ -5420,7 +5378,7 @@
     },
     {
         "name": "Fine-Cut Ash Salts",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Drain Strength",
@@ -5441,7 +5399,7 @@
     },
     {
         "name": "Direnni's Dartwing",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Conjuration",
@@ -5462,7 +5420,7 @@
     },
     {
         "name": "Widow Skimmer",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Waterwalking",
@@ -5483,7 +5441,7 @@
     },
     {
         "name": "Ebony Jewelwing",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Resist Paralysis",
@@ -5504,7 +5462,7 @@
     },
     {
         "name": "Banded Pennant",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Lingering Damage Undead",
@@ -5525,7 +5483,7 @@
     },
     {
         "name": "Crimson Marsh Glider",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Resist Paralysis",
@@ -5546,7 +5504,7 @@
     },
     {
         "name": "Frost Skimmer",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fire Aversion",
@@ -5567,7 +5525,7 @@
     },
     {
         "name": "Flame Skimmer",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Frost Aversion",
@@ -5588,7 +5546,7 @@
     },
     {
         "name": "Emperor Dartwing",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Restoration",
@@ -5609,7 +5567,7 @@
     },
     {
         "name": "Golden-Ringed Darner",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Lockpicking",
@@ -5630,7 +5588,7 @@
     },
     {
         "name": "Emerald Darner",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Waterwalking",
@@ -5651,7 +5609,7 @@
     },
     {
         "name": "Golden Skimmer",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Shock Aversion",
@@ -5672,7 +5630,7 @@
     },
     {
         "name": "Barley",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Magicka",
@@ -5693,7 +5651,7 @@
     },
     {
         "name": "Barley Extract",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Magicka",
@@ -5714,7 +5672,7 @@
     },
     {
         "name": "Redwort Flower",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fortify Destruction",
@@ -5735,7 +5693,7 @@
     },
     {
         "name": "Tinder Polypore Cap",
-        "modsrc": "caco,cyrodiil",
+        "description": "caco,cyrodiil",
         "effects": [
         {
             "name": "Fortify Alteration",
@@ -5756,7 +5714,7 @@
     },
     {
         "name": "Black Lichen",
-        "modsrc": "caco,cyrodiil",
+        "description": "caco,cyrodiil",
         "effects": [
         {
             "name": "Slow",
@@ -5777,7 +5735,7 @@
     },
     {
         "name": "Blister Pod",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Magicka",
@@ -5798,7 +5756,7 @@
     },
     {
         "name": "Clouded Funnel Cap",
-        "modsrc": "caco,cyrodiil",
+        "description": "caco,cyrodiil",
         "effects": [
         {
             "name": "Damage Magicka",
@@ -5819,7 +5777,7 @@
     },
     {
         "name": "Red Lichen",
-        "modsrc": "caco,cyrodiil",
+        "description": "caco,cyrodiil",
         "effects": [
         {
             "name": "Slow",
@@ -5840,7 +5798,7 @@
     },
     {
         "name": "Violet Coprinus",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Fatigue",
@@ -5861,7 +5819,7 @@
     },
     {
         "name": "Bloatspore",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Drain Intelligence",
@@ -5882,7 +5840,7 @@
     },
     {
         "name": "Wisp Stalks",
-        "modsrc": "caco,cyrodiil",
+        "description": "caco,cyrodiil",
         "effects": [
         {
             "name": "Waterwalking",
@@ -5903,7 +5861,7 @@
     },
     {
         "name": "Aloe Vera",
-        "modsrc": "caco,cyrodiil",
+        "description": "caco,cyrodiil",
         "effects": [
         {
             "name": "Health",
@@ -5924,7 +5882,7 @@
     },
     {
         "name": "Fire Petals",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Lingering Damage Health",
@@ -5945,7 +5903,7 @@
     },
     {
         "name": "Heather",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Damage Stamina Regen",
@@ -5966,7 +5924,7 @@
     },
     {
         "name": "Elven Heart",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Magicka Regeneration",
@@ -5987,7 +5945,7 @@
     },
     {
         "name": "Kwama Cuttle",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Waterwalking",
@@ -6008,7 +5966,7 @@
     },
     {
         "name": "Kwama Egg",
-        "modsrc": "caco",
+        "description": "caco",
         "effects": [
         {
             "name": "Health Fortification",
@@ -6029,7 +5987,7 @@
     },
     {
         "name": "Scamp Skin",
-        "modsrc": "caco,cyrodiil",
+        "description": "caco,cyrodiil",
         "effects": [
         {
             "name": "Lingering Damage Health",
@@ -6050,7 +6008,7 @@
     },
     {
         "name": "Wormwood Leaves",
-        "modsrc": "caco,cyrodiil",
+        "description": "caco,cyrodiil",
         "effects": [
         {
             "name": "Lingering Damage Health",
@@ -6071,7 +6029,7 @@
     },
     {
         "name": "Dawnshade",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Damage Magicka Regen",
@@ -6092,7 +6050,7 @@
     },
     {
         "name": "Milk Thistle Branch",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Light",
@@ -6113,7 +6071,7 @@
     },
     {
         "name": "Ash Salts",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Slow",
@@ -6134,7 +6092,7 @@
     },
     {
         "name": "Blackberries",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Health Regeneration",
@@ -6155,7 +6113,7 @@
     },
     {
         "name": "Cairn Bolete",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Health",
@@ -6176,7 +6134,7 @@
     },
     {
         "name": "Red Cinnabar Polypore",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Health",
@@ -6197,7 +6155,7 @@
     },
     {
         "name": "Yellow Cinnabar Polypore",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Health",
@@ -6218,7 +6176,7 @@
     },
     {
         "name": "Land Dreugh Wax",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Damage Stamina",
@@ -6239,7 +6197,7 @@
     },
     {
         "name": "Dryad Saddle Polypore",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Fortify Lockpicking",
@@ -6260,7 +6218,7 @@
     },
     {
         "name": "Cold Fire Salts",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Frost Aversion",
@@ -6281,7 +6239,7 @@
     },
     {
         "name": "Blueberries",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Health Regeneration",
@@ -6302,7 +6260,7 @@
     },
     {
         "name": "Emetic Russula",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Detect Life",
@@ -6323,7 +6281,7 @@
     },
     {
         "name": "Elf Cup",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Frenzy",
@@ -6344,7 +6302,7 @@
     },
     {
         "name": "Blue Flax",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Magicka",
@@ -6365,7 +6323,7 @@
     },
     {
         "name": "Domica Redwort",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Resist Frost",
@@ -6386,7 +6344,7 @@
     },
     {
         "name": "Ginkgo Leaves",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Stamina Fortification",
@@ -6407,7 +6365,7 @@
     },
     {
         "name": "Grapes",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Stamina",
@@ -6428,7 +6386,7 @@
     },
     {
         "name": "Stinkhorn",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Damage Health",
@@ -6449,7 +6407,7 @@
     },
     {
         "name": "Somnalius Frond",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Fortify Barter",
@@ -6470,7 +6428,7 @@
     },
     {
         "name": "Green Stain Cup",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Stamina Regeneration",
@@ -6491,7 +6449,7 @@
     },
     {
         "name": "Summer Bolete",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Fortify Marksman",
@@ -6512,7 +6470,7 @@
     },
     {
         "name": "Red Flax",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Damage Magicka Regen",
@@ -6533,7 +6491,7 @@
     },
     {
         "name": "Yellow Flax",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Fortify Pickpocket",
@@ -6554,7 +6512,7 @@
     },
     {
         "name": "Goblin Wax",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Resist Poison",
@@ -6575,7 +6533,7 @@
     },
     {
         "name": "Rice",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Health",
@@ -6596,7 +6554,7 @@
     },
     {
         "name": "Steel-Blue Entoloma",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Cure Poison",
@@ -6617,7 +6575,7 @@
     },
     {
         "name": "Bog Beacon",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Magicka",
@@ -6638,7 +6596,7 @@
     },
     {
         "name": "Blue Entoloma",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Silence",
@@ -6659,7 +6617,7 @@
     },
     {
         "name": "Eltheric Grouper",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Stamina",
@@ -6680,7 +6638,7 @@
     },
     {
         "name": "Bjoulsae Hake",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Frost Aversion",
@@ -6701,7 +6659,7 @@
     },
     {
         "name": "Blessed Thistle Branch",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Stamina",
@@ -6722,7 +6680,7 @@
     },
     {
         "name": "Yellow Amanita",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Poison Aversion",
@@ -6743,7 +6701,7 @@
     },
     {
         "name": "Mort Flesh",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Damage Stamina",
@@ -6764,7 +6722,7 @@
     },
     {
         "name": "Minotaur Horn",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Magicka Regeneration",
@@ -6785,7 +6743,7 @@
     },
     {
         "name": "Motherwort Sprig",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Resist Poison",
@@ -6806,7 +6764,7 @@
     },
     {
         "name": "Lady's Mantle Leaves",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Etherialize",
@@ -6827,7 +6785,7 @@
     },
     {
         "name": "Red Mudcrab Chitin",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Stamina",
@@ -6848,7 +6806,7 @@
     },
     {
         "name": "Heartland Highfin",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Health",
@@ -6869,7 +6827,7 @@
     },
     {
         "name": "Black Eagle Feathers",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Poison Aversion",
@@ -6890,7 +6848,7 @@
     },
     {
         "name": "Black Eagle Beak",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Stamina",
@@ -6911,7 +6869,7 @@
     },
     {
         "name": "Wood Warbler Egg",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Damage Stamina",
@@ -6932,7 +6890,7 @@
     },
     {
         "name": "Goldengill",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Shock Damage",
@@ -6953,7 +6911,7 @@
     },
     {
         "name": "Nibenese Silverbird Egg",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Damage Magicka Regen",
@@ -6974,7 +6932,7 @@
     },
     {
         "name": "Rainbow Fish",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Stamina",
@@ -6995,7 +6953,7 @@
     },
     {
         "name": "Golden Kingfisher Egg",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Speed",
@@ -7016,7 +6974,7 @@
     },
     {
         "name": "Colovian Nuthatch Egg",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Stamina Regeneration",
@@ -7037,7 +6995,7 @@
     },
     {
         "name": "Eastern Wallcreeper Egg",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Magicka Regeneration",
@@ -7058,7 +7016,7 @@
     },
     {
         "name": "Nibenay Snapper",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Magicka Fortification",
@@ -7079,7 +7037,7 @@
     },
     {
         "name": "Swamp Sparrow Egg",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Fortify Illusion",
@@ -7100,7 +7058,7 @@
     },
     {
         "name": "Buck Moth Wing",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Stamina",
@@ -7121,7 +7079,7 @@
     },
     {
         "name": "Gypsy Moth Wing",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Shock Damage",
@@ -7142,7 +7100,7 @@
     },
     {
         "name": "Magus Mint",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Night Eye",
@@ -7163,7 +7121,7 @@
     },
     {
         "name": "Motherwort",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Resist Poison",
@@ -7184,7 +7142,7 @@
     },
     {
         "name": "Black Dartwing",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Magicka",
@@ -7205,7 +7163,7 @@
     },
     {
         "name": "Green Dartwing",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Resist Fire",
@@ -7226,7 +7184,7 @@
     },
     {
         "name": "Refined Frost Salts",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Fire Aversion",
@@ -7247,7 +7205,7 @@
     },
     {
         "name": "Mountain Lion Teeth",
-        "modsrc": "cyrodiil",
+        "description": "cyrodiil",
         "effects": [
         {
             "name": "Health",
@@ -7268,7 +7226,7 @@
     },
     {
         "name": "Goat Eye",
-        "modsrc": "caco,hunterborn",
+        "description": "caco,hunterborn",
         "effects": [
         {
             "name": "Damage Stamina",
@@ -7289,7 +7247,7 @@
     },
     {
         "name": "Eye of Bear",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Detect Life",
@@ -7310,7 +7268,7 @@
     },
     {
         "name": "Eye of Fox",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Discerning",
@@ -7331,7 +7289,7 @@
     },
     {
         "name": "Polished Hare Eye",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Fortify Marksman",
@@ -7352,7 +7310,7 @@
     },
     {
         "name": "Polished Mammoth Eye",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Muddle",
@@ -7373,7 +7331,7 @@
     },
     {
         "name": "Eye of Wolf",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Night Eye",
@@ -7394,7 +7352,7 @@
     },
     {
         "name": "Bear Heart",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Fortify Heavy Armor",
@@ -7415,7 +7373,7 @@
     },
     {
         "name": "Deer Heart",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Resist Disease",
@@ -7436,7 +7394,7 @@
     },
     {
         "name": "Goat Heart",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Damage Stamina",
@@ -7457,7 +7415,7 @@
     },
     {
         "name": "Sabre Cat Heart",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Fortify Alteration",
@@ -7478,7 +7436,7 @@
     },
     {
         "name": "Wolf Heart",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Fortify Unarmed",
@@ -7499,7 +7457,7 @@
     },
     {
         "name": "Mammoth Heart",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Paralysis",
@@ -7520,7 +7478,7 @@
     },
     {
         "name": "Bear Tooth",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Magicka",
@@ -7541,7 +7499,7 @@
     },
     {
         "name": "Canine Tooth",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Damage Health",
@@ -7562,7 +7520,7 @@
     },
     {
         "name": "Sabre Cat Claws",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Fortify Light Armor",
@@ -7583,7 +7541,7 @@
     },
     {
         "name": "Wolf Claws",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Ravage Health",
@@ -7604,7 +7562,7 @@
     },
     {
         "name": "Powdered Mudcrab Chitin",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Waterwalking",
@@ -7625,7 +7583,7 @@
     },
     {
         "name": "Bull Horn",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Discerning",
@@ -7646,7 +7604,7 @@
     },
     {
         "name": "Boiled Skeever Tail",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Damage Health",
@@ -7667,7 +7625,7 @@
     },
     {
         "name": "Polished Scales",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Waterbreathing",
@@ -7688,7 +7646,7 @@
     },
     {
         "name": "Cured Skeever Hide",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Magicka",
@@ -7709,7 +7667,7 @@
     },
     {
         "name": "Large Mudcrab Chitin",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Health Fortification",
@@ -7730,7 +7688,7 @@
     },
     {
         "name": "Large Bear Claws",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Fortify Unarmed",
@@ -7751,7 +7709,7 @@
     },
     {
         "name": "Flawless Sabre Cat Tooth",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Drain Strength",
@@ -7772,7 +7730,7 @@
     },
     {
         "name": "Polished Sabre Cat Eye",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Etherialize",
@@ -7793,7 +7751,7 @@
     },
     {
         "name": "Great Antlers",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Fatigue",
@@ -7814,7 +7772,7 @@
     },
     {
         "name": "Doe Antlers",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Discerning",
@@ -7835,7 +7793,7 @@
     },
     {
         "name": "Charred Hawk Beak",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Pathfinding",
@@ -7856,7 +7814,7 @@
     },
     {
         "name": "Dyed Hawk Feathers",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Fortify Illusion",
@@ -7877,7 +7835,7 @@
     },
     {
         "name": "Large Sabre Cat Claws",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Damage Magicka Regen",
@@ -7898,7 +7856,7 @@
     },
     {
         "name": "Flawless Bear Tooth",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Damage Stamina",
@@ -7919,7 +7877,7 @@
     },
     {
         "name": "Polished Wolf Eye",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Fortify Sneak",
@@ -7940,7 +7898,7 @@
     },
     {
         "name": "Polished Fox Eye",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Pathfinding",
@@ -7961,7 +7919,7 @@
     },
     {
         "name": "Polished Bear Eye",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Stamina Fortification",
@@ -7982,7 +7940,7 @@
     },
     {
         "name": "Eye of Hare",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Pathfinding",
@@ -8003,7 +7961,7 @@
     },
     {
         "name": "Eye of Mammoth",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Health Regeneration",
@@ -8024,7 +7982,7 @@
     },
     {
         "name": "Eye of Troll",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Fortify One-Handed",
@@ -8045,7 +8003,7 @@
     },
     {
         "name": "Eye of Werewolf",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Speed",
@@ -8066,7 +8024,7 @@
     },
     {
         "name": "Eye of Dragon",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Detect Life",
@@ -8087,7 +8045,7 @@
     },
     {
         "name": "Werewolf Heart",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Frenzy",
@@ -8108,7 +8066,7 @@
     },
     {
         "name": "Troll Heart",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Health Regeneration",
@@ -8129,7 +8087,7 @@
     },
     {
         "name": "Dragon Heart",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Magicka",
@@ -8150,7 +8108,7 @@
     },
     {
         "name": "Polished Troll Eye",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Resist Fire",
@@ -8171,7 +8129,7 @@
     },
     {
         "name": "Polished Werewolf Eye",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Fortify Unarmed",
@@ -8192,7 +8150,7 @@
     },
     {
         "name": "Polished Dragon Eye",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Fortify Shouts",
@@ -8213,7 +8171,7 @@
     },
     {
         "name": "Bonesap",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Discerning",
@@ -8234,7 +8192,7 @@
     },
     {
         "name": "Bristleback Heart",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Drain Intelligence",
@@ -8255,7 +8213,7 @@
     },
     {
         "name": "Eye of Bristleback",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Stamina Regeneration",
@@ -8276,7 +8234,7 @@
     },
     {
         "name": "Polished Bristleback Eye",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Speed",
@@ -8297,7 +8255,7 @@
     },
     {
         "name": "Oil of Vitriol",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Damage Health",
@@ -8318,7 +8276,7 @@
     },
     {
         "name": "Panacea",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Cure Disease",
@@ -8339,7 +8297,7 @@
     },
     {
         "name": "Polished Goat Eye",
-        "modsrc": "hunterborn",
+        "description": "hunterborn",
         "effects": [
         {
             "name": "Poison Aversion",
