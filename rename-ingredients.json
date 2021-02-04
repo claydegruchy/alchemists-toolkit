@@ -9,7 +9,7 @@
   },
   {
     "name": "Gorbon's Root",
-    "description": "The root of a rare, poisonous plant found only on the island of Sartosa. Ingesting the root may lead to nearly instantaneous death."
+    "description": "The root of a rare, poisonous plant found only on the island of Sartosa."
   },
   {
     "name": "Pine Thrush Egg",
@@ -93,27 +93,27 @@
   },
   {
     "name": "Slaughterfish Scales",
-    "description": "No desc needed"
+    "description": "The scales of the female Slaughterfish are as razor-sharp as its teeth."
   },
   {
     "name": "Taproot",
-    "description": "No desc needed"
+    "description": "The dominant root of an Oak, Ash or Myrtoessal tree"
   },
   {
     "name": "Troll Fat",
-    "description": "No desc needed"
+    "description": "In the deepest corners of the darkest alchemy shops, you may find jars of rendered troll-fat."
   },
   {
     "name": "Glow Dust",
-    "description": "No desc needed"
+    "description": "A very fine, luminescent powder. Reminiscent of moonlight."
   },
   {
     "name": "Vampire Dust",
-    "description": "No desc needed"
+    "description": "Some say the nobles of Sylvania are not humans at all but a race of immortal fiends that feed on the blood of the innocent."
   },
   {
     "name": "Tundra Cotton",
-    "description": "No desc needed"
+    "description": "The soft, downy husk of the Tundra Cotton plant protects it's fragile shoots as they sprout beneath the snow."
   },
   {
     "name": "Lavender",
@@ -129,7 +129,7 @@
   },
   {
     "name": "Bleeding Crown",
-    "description": "No desc needed"
+    "description": "When cut, the flesh of this white mushroom turns red."
   },
   {
     "name": "White Cap",
@@ -140,8 +140,8 @@
     "description": "No desc needed"
   },
   {
-    "name": "Namira's Rot",
-    "description": "No desc needed"
+    "name": "Moshuru's Rot",
+    "description": "This grey-brown mushroom thrives in the dark hollows of rotted trees."
   },
   {
     "name": "Blisterwort",
@@ -149,7 +149,7 @@
   },
   {
     "name": "Torchbug Abdomen",
-    "description": "No desc needed"
+    "description": "Leave the bug alone."
   },
   {
     "name": "Juniper Berries",
@@ -160,7 +160,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Charred Skeever Meat",
+    "name": "Charred Wolfrat Meat",
     "description": "No desc needed"
   },
   {
@@ -168,11 +168,11 @@
     "description": "No desc needed"
   },
   {
-    "name": "Nirnroot",
-    "description": "No desc needed"
+    "name": "Imomvo Root",
+    "description": "A small prickly gorse plant found on the edges of the Eastern Steppes."
   },
   {
-    "name": "Spriggan Sap",
+    "name": "Dryad Sap",
     "description": "No desc needed"
   },
   {
@@ -180,15 +180,15 @@
     "description": "No desc needed"
   },
   {
-    "name": "Jazbay Grapes",
+    "name": "Gaulcazar Grapes",
     "description": "No desc needed"
   },
   {
-    "name": "Hagraven Claw",
+    "name": "Harpy Claw",
     "description": "No desc needed"
   },
   {
-    "name": "Mudcrab Chitin",
+    "name": "Swamp Crab Chitin",
     "description": "No desc needed"
   },
   {
@@ -196,11 +196,11 @@
     "description": "No desc needed"
   },
   {
-    "name": "Sabre Cat Tooth",
+    "name": "Sabertusk Tooth",
     "description": "No desc needed"
   },
   {
-    "name": "Sabre Cat Eye",
+    "name": "Sabertusk Eye",
     "description": "No desc needed"
   },
   {
@@ -212,7 +212,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Wisp Wrapping",
+    "name": "Frost Fernheads",
     "description": "No desc needed"
   },
   {
@@ -309,11 +309,11 @@
   },
   {
     "name": "Creep Cluster",
-    "description": "No desc needed"
+    "description": "A pervasive parasitic plant that slowly wraps the entire host tree with tiny vines."
   },
   {
-    "name": "Crimson Nirnroot",
-    "description": "No desc needed"
+    "name": "Crimson Imomvo",
+    "description": "A rare prickly gorse plant that grows only on the banks of the Lesser Tobol River"
   },
   {
     "name": "Orange Dartwing",
@@ -352,15 +352,15 @@
     "description": "No desc needed"
   },
   {
-    "name": "Cryodiilic Spadetail",
+    "name": "Ostland Spadetail",
     "description": "No desc needed"
   },
   {
-    "name": "River Betty",
-    "description": "No desc needed"
+    "name": "Manann's Bones",
+    "description": "A large shellfish whose white tube-like shells resemble bone fragments."
   },
   {
-    "name": "Abecean Longfin",
+    "name": "Deepsea Longfin",
     "description": "No desc needed"
   },
   {
@@ -405,7 +405,7 @@
   },
   {
     "name": "Saltrice",
-    "description": "No desc needed"
+    "description": "A delicious grain from the coasts of Cathay."
   },
   {
     "name": "Fennel Seeds",
@@ -416,7 +416,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Horker Tusk",
+    "name": "Rhinox Tusk",
     "description": "No desc needed"
   },
   {
@@ -440,7 +440,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Daedra Silk",
+    "name": "Merwyrm Silk",
     "description": "No desc needed"
   },
   {
@@ -448,7 +448,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Gravetar",
+    "name": "Grave Tar",
     "description": "No desc needed"
   },
   {
@@ -516,7 +516,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Burnt Spriggan Wood",
+    "name": "Burnt Dryad Wood",
     "description": "No desc needed"
   },
   {
@@ -556,7 +556,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Daedroth Teeth",
+    "name": "Merwyrm Teeth",
     "description": "No desc needed"
   },
   {
@@ -564,7 +564,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Daedra Venin",
+    "name": "Merwyrm Venin",
     "description": "No desc needed"
   },
   {
@@ -944,7 +944,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Jazbay Extract",
+    "name": "Gaulcazar Grape Extract",
     "description": "No desc needed"
   },
   {
@@ -1292,7 +1292,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Red Mudcrab Chitin",
+    "name": "Red Swamp Crab Chitin",
     "description": "No desc needed"
   },
   {
@@ -1412,7 +1412,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Sabre Cat Heart",
+    "name": "Sabertusk Heart",
     "description": "No desc needed"
   },
   {
@@ -1432,7 +1432,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Sabre Cat Claws",
+    "name": "Sabertusk Claws",
     "description": "No desc needed"
   },
   {
@@ -1440,7 +1440,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Powdered Mudcrab Chitin",
+    "name": "Powdered Swamp Crab Chitin",
     "description": "No desc needed"
   },
   {
@@ -1448,7 +1448,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Boiled Skeever Tail",
+    "name": "Boiled Wolfrat Tail",
     "description": "No desc needed"
   },
   {
@@ -1456,11 +1456,11 @@
     "description": "No desc needed"
   },
   {
-    "name": "Cured Skeever Hide",
+    "name": "Cured Wolfrat Hide",
     "description": "No desc needed"
   },
   {
-    "name": "Large Mudcrab Chitin",
+    "name": "Large Swamp Crab Chitin",
     "description": "No desc needed"
   },
   {
@@ -1468,11 +1468,11 @@
     "description": "No desc needed"
   },
   {
-    "name": "Flawless Sabre Cat Tooth",
+    "name": "Flawless Sabertusk Tooth",
     "description": "No desc needed"
   },
   {
-    "name": "Polished Sabre Cat Eye",
+    "name": "Polished Sabertusk Eye",
     "description": "No desc needed"
   },
   {
@@ -1492,7 +1492,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Large Sabre Cat Claws",
+    "name": "Large Sabertusk Claws",
     "description": "No desc needed"
   },
   {
