@@ -1484,7 +1484,7 @@
     "description": "No desc needed"
   },
   {
-    "name": "Charred Hawk Beak",
+    "name": "Bone Hawk Beak",
     "description": "No desc needed"
   },
   {
@@ -1492,95 +1492,95 @@
     "description": "No desc needed"
   },
   {
-    "name": "Large Sabertusk Claws",
+    "name": "Massive Sabertusk Claws",
     "description": "No desc needed"
   },
   {
-    "name": "Flawless Bear Tooth",
+    "name": "Massive Bear Tooth",
     "description": "No desc needed"
   },
   {
-    "name": "Polished Wolf Eye",
+    "name": "Wolf Skin",
     "description": "No desc needed"
   },
   {
-    "name": "Polished Fox Eye",
+    "name": "Fox Skin",
     "description": "No desc needed"
   },
   {
-    "name": "Polished Bear Eye",
+    "name": "Bear Skin",
     "description": "No desc needed"
   },
   {
     "name": "Eye of Hare",
-    "description": "No desc needed"
+    "description": ""
   },
   {
     "name": "Eye of Mammoth",
-    "description": "No desc needed"
+    "description": ""
   },
   {
     "name": "Eye of Troll",
-    "description": "No desc needed"
+    "description": ""
   },
   {
     "name": "Eye of Werewolf",
-    "description": "No desc needed"
+    "description": ""
   },
   {
     "name": "Eye of Dragon",
-    "description": "No desc needed"
+    "description": ""
   },
   {
     "name": "Werewolf Heart",
-    "description": "No desc needed"
+    "description": ""
   },
   {
-    "name": "Troll Heart",
-    "description": "No desc needed"
+    "name": "Ogre Heart",
+    "description": ""
   },
   {
     "name": "Dragon Heart",
-    "description": "No desc needed"
+    "description": "A massive, dark red heart the size of a wagon wheel. Even small slices of it feel unusually heavy."
   },
   {
-    "name": "Polished Troll Eye",
-    "description": "No desc needed"
+    "name": "Troll Skin",
+    "description": "Stinking flesh taken from a troll, covered in crags and parasites"
   },
   {
-    "name": "Polished Werewolf Eye",
-    "description": "No desc needed"
+    "name": "Warewolf Skin",
+    "description": "Flesh taken from a dead warewolf in its wolven form"
   },
   {
-    "name": "Polished Dragon Eye",
-    "description": "No desc needed"
+    "name": "Dragon Scales",
+    "description": "Large, serrated scales harder than any iron. Has a slight warmth to the touch."
   },
   {
     "name": "Bonesap",
-    "description": "No desc needed"
+    "description": ""
   },
   {
-    "name": "Bristleback Heart",
-    "description": "No desc needed"
+    "name": "Beastman Heart",
+    "description": "A dark heart the size of a man's fist."
   },
   {
-    "name": "Eye of Bristleback",
-    "description": "No desc needed"
+    "name": "Eye of Pig/Boar",
+    "description": "An eyeball extracted from a pig or wild boar"
   },
   {
-    "name": "Polished Bristleback Eye",
-    "description": "No desc needed"
+    "name": "Eye of Beastman",
+    "description": "An eyeball extracted from a beastman."
   },
   {
     "name": "Oil of Vitriol",
-    "description": "No desc needed"
+    "description": ""
   },
   {
-    "name": "Panacea",
-    "description": "No desc needed"
+    "name": "Spoilwart",
+    "description": "A small toadstool that grows in dank basements and caves"
   },
   {
-    "name": "Polished Goat Eye",
-    "description": "No desc needed"
+    "name": "Massive Eye of Beastman",
+    "description": "A huge eyeball extracted from a particularly large and fearsome beastman, big as a mans fist"
   }
 ]

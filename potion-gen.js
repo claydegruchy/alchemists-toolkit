@@ -548,7 +548,7 @@ class PotionMaster {
                         .reduce((a, b) => a + b, 0)
                 }))
             }))
-            .map(i => this.registerComponent(new Component(i.name, i.effects,undefined,undefined, undefined, i.description)));
+            .map(i => this.registerComponent(new Component(i.name, i.effects, undefined, undefined, undefined, i.description)));
         delete this.data.ingredients;
         this.dataHash = hash(this.data)
         // console.log("makeDataSet complete", this.data.components.length);
@@ -583,9 +583,17 @@ function tests(seed = 1) {
     return pm.createPotion(productionEffects, [invis, invis]);
 }
 
+var x = require('fs').readFileSync("rename-ingredients.json")
+x = JSON.parse(x)
+x = x.sort(function(a, b) {
+    if (a.name < b.name) { return -1; }
+    if (a.name > b.name) { return 1; }
+    return 0;
+})
 
+// console.log(x.map(y=>y.name))
 
-require('fs').writeFileSync("rename-ingredients.json",JSON.stringify( originalDataSet.ingredients.map(e=>({name:e.name, description:"No desc needed"})), null, 2))
+// require('fs').writeFileSync("rename-ingredients.json",JSON.stringify( originalDataSet.ingredients.map(e=>({name:e.name, description:"No desc needed"})), null, 2))
 
 // var t1 = generateColour();
 
