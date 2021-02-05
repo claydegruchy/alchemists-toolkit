@@ -82923,7 +82923,6 @@ var mixColour = (a, b) => {
 };
 
 
-
 var logColour = (colour, message = "{}{}{Colour message}{}{}") => console.log(`%c ${message} `, `background: ${colourMod.rgbToHex(colour)}; color: #fff`);
 
 var options = {
@@ -83172,6 +83171,7 @@ class PotionMaster {
     }
 
     validateEffects(productionModifiers = [], effectArray) {
+
         console.log(
             "running validateEffects",
             "productionModifiers",

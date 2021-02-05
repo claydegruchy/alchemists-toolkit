@@ -294,7 +294,6 @@ class PotionMaster {
 
     validateEffects(productionModifiers = [], effectArray) {
 
-console.log(name())
         console.log(
             "running validateEffects",
             "productionModifiers",
