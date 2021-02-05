@@ -35,7 +35,7 @@
         "originalName": "Health"
     },
     {
-        "name": "Sadness",
+        "name": "Vomiting",
         "complexity": 1,
         "originalName": "Magicka"
     },
@@ -72,7 +72,7 @@
     {
         "name": "Gain Sin",
         "complexity": 3,
-        "originalName": "Damage Magicka Regen"
+        "originalName": "Discerning"
     },
     {
         "name": "Damage chaos and demons",
@@ -417,10 +417,10 @@
     {
         "name": "Thins the walls of reality (more warp)",
         "complexity": 4,
-        "originalName": "Discerning"
+        "originalName": "Damage Magicka Regen"
     },
     {
-        "name": "Vomiting",
+        "name": "Sadness",
         "complexity": 1,
         "originalName": "Pathfinding"
     },
