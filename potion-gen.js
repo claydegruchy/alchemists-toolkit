@@ -591,9 +591,9 @@ x = x.sort(function(a, b) {
     return 0;
 })
 
-// console.log(x.map(y=>y.name))
+// console.log(x)
 
-// require('fs').writeFileSync("rename-ingredients.json",JSON.stringify( originalDataSet.ingredients.map(e=>({name:e.name, description:"No desc needed"})), null, 2))
+require('fs').writeFileSync("rename-ingredients.json", JSON.stringify(x, null, 2))
 
 // var t1 = generateColour();
 
