@@ -645,6 +645,42 @@ function tests(seed = 1) {
 // tests()
 // console.log(x)
 
+
+// var effectTemplate = {
+//     "name": "Exploit Weakness",
+//     "magnitude": 0.1
+// }
+
+// effectTemplate = [effectTemplate, effectTemplate, effectTemplate, effectTemplate, ]
+
+
+// var newIng = [
+//     "dirt",
+//     "iron",
+//     "gold",
+//     "silver",
+//     "copper",
+//     "mercury",
+//     "coal",
+//     "wood",
+// ].map(e => e.charAt(0).toUpperCase() + e.slice(1))
+
+// newIng.forEach(e => {
+//     var o = {
+//         "name": e,
+//         "description": "clay",
+//         "effects": effectTemplate
+//     }
+
+//     og.ingredients.push(o)
+//     // console.log(o)
+
+// })
+
+// require('fs').writeFileSync("caco-ingredients2.json", JSON.stringify(og, null, 2))
+
+
+
 // var x = require('fs').readFileSync("rename-ingredients.json")
 // x = JSON.parse(x)
 
