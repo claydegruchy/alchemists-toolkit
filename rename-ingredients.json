@@ -1,1586 +1,1982 @@
 [
   {
     "name": "Akanet Flower",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Thistle Branch"
   },
   {
     "name": "Akatosh Butterfly",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Snowberries"
   },
   {
     "name": "Aloe Vera",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Jarrin Root"
   },
   {
     "name": "Amber",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Pine Thrush Egg"
   },
   {
     "name": "Ancestor Moth",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Chicken Egg"
   },
   {
     "name": "Argonian Scales",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Nightshade"
   },
   {
     "name": "Arrowroot",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Bone Meal"
   },
   {
     "name": "Ash Creep Cluster",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Salt Pile"
   },
   {
     "name": "Ash Hopper Jelly",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Garlic"
   },
   {
     "name": "Ash Salts",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Elves Ear"
   },
   {
     "name": "Ash Salts",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Frost Mirriam"
   },
   {
     "name": "Ashen Grass Pod",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Chaurus Eggs"
   },
   {
     "name": "Atlas Moth",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Daedra Heart"
   },
   {
     "name": "Ayleid Moon Moth",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Falmer Ear"
   },
   {
     "name": "Banded Pennant",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Fire Salts"
   },
   {
     "name": "Barley",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Frost Salts"
   },
   {
     "name": "Barley Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Void Salts"
   },
   {
     "name": "Bear Bile",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Briar Heart"
   },
   {
     "name": "Bear Claws",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Ectoplasm"
   },
   {
     "name": "Bear Fat",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Giant's Toe"
   },
   {
     "name": "Bear Heart",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Hagraven Feathers"
   },
   {
     "name": "Bear Skin",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Ice Wraith Teeth"
   },
   {
     "name": "Bear Tooth",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Skeever Tail"
   },
   {
     "name": "Beastman Heart",
-    "description": "A dark heart the size of a man's fist."
+    "description": "A dark heart the size of a man's fist.",
+    "originalName": "Slaughterfish Scales"
   },
   {
     "name": "Bee",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Taproot"
   },
   {
     "name": "Beehive Husk",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Troll Fat"
   },
   {
     "name": "Bergamot Seeds",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Glow Dust"
   },
   {
     "name": "Bitterling",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Vampire Dust"
   },
   {
     "name": "Black Dartwing",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Tundra Cotton"
   },
   {
     "name": "Black Eagle Beak",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Lavender"
   },
   {
     "name": "Black Eagle Feathers",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Wheat"
   },
   {
     "name": "Black Lichen",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Fly Amanita"
   },
   {
     "name": "Black Pearl",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Bleeding Crown"
   },
   {
     "name": "Blackberries",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "White Cap"
   },
   {
     "name": "Blackbrow Bleak",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Imp Stool"
   },
   {
     "name": "Bleeding Crown",
-    "description": "When cut, the flesh of this white mushroom turns red."
+    "description": "When cut, the flesh of this white mushroom turns red.",
+    "originalName": "Namira's Rot"
   },
   {
     "name": "Blessed Thistle Branch",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blisterwort"
   },
   {
     "name": "Blind Betty",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Torchbug Abdomen"
   },
   {
     "name": "Blister Pod",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Juniper Berries"
   },
   {
     "name": "Blisterwort",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Deathbell"
   },
   {
     "name": "Bloatspore",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Charred Skeever Meat"
   },
   {
     "name": "Blood Vulture Heart",
-    "description": "Blood Vultures are large scavengers found high in the Mountains of Mourn. In times of hardship, they will take live prey."
+    "description": "Blood Vultures are large scavengers found high in the Mountains of Mourn. In times of hardship, they will take live prey.",
+    "originalName": "Hanging Moss"
   },
   {
     "name": "Blood of a Bosmer",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Nirnroot"
   },
   {
     "name": "Blood of a Breton",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Spriggan Sap"
   },
   {
     "name": "Blood of a Dunmer",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Canis Root"
   },
   {
     "name": "Blood of a Khajiit",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Jazbay Grapes"
   },
   {
     "name": "Blood of a Nord",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Hagraven Claw"
   },
   {
     "name": "Blood of a Redguard",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Mudcrab Chitin"
   },
   {
     "name": "Blood of an Altmer",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Bear Claws"
   },
   {
     "name": "Blood of an Argonian",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Sabre Cat Tooth"
   },
   {
     "name": "Blood of an Imperial",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Sabre Cat Eye"
   },
   {
     "name": "Blood of an Orc",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Large Antlers"
   },
   {
     "name": "Bloodwasp Egg",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Small Antlers"
   },
   {
     "name": "Bloodwasp Larvae",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Wisp Wrapping"
   },
   {
     "name": "Blue Clipper Butterfly",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Powdered Mammoth Tusk"
   },
   {
     "name": "Blue Dartwing",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Scaly Pholiota"
   },
   {
     "name": "Blue Entoloma",
-    "description": "A stunningly blue, pointed mushroom."
+    "description": "A stunningly blue, pointed mushroom.",
+    "originalName": "Blue Swallowtail"
   },
   {
     "name": "Blue Flax",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Luna Moth"
   },
   {
     "name": "Blue Mountain Flower",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Monarch Butterfly"
   },
   {
     "name": "Blue Mountain Flower Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blue Mountain Flower"
   },
   {
     "name": "Blue Orfe",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Red Mountain Flower"
   },
   {
     "name": "Blue Swallowtail",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Purple Mountain Flower"
   },
   {
     "name": "Blueberries",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Swamp Fungal Pod"
   },
   {
     "name": "Boar Tusk",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Giant Lichen"
   },
   {
     "name": "Bog Beacon",
-    "description": "A tall, thin, bioluminescent mushroom that is found in marshy or swampy land. More than one unlucky traveller has been drawn to their death by its comforting light."
+    "description": "A tall, thin, bioluminescent mushroom that is found in marshy or swampy land. More than one unlucky traveller has been drawn to their death by its comforting light.",
+    "originalName": "Slaughterfish Egg"
   },
   {
     "name": "Boiled Wolfrat Tail",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Rock Warbler Egg"
   },
   {
     "name": "Bone Hawk Beak",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Nordic Barnacle"
   },
   {
     "name": "Bone Hawk Claw",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Glowing Mushroom"
   },
   {
     "name": "Bone Hawk Feathers",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Grass Pod"
   },
   {
     "name": "Bone Meal",
-    "description": "We found the hag at her millstone appearing for all the world like a housewife preparing flour for her family's bread. But her grain of choice was neither corn nor wheat but the bones of the young and the old. The millstone we tied about her neck and flung into the sea. - From an account by Mattias Thulmann on the witch purge of Wissenland."
+    "description": "We found the hag at her millstone appearing for all the world like a housewife preparing flour for her family's bread. But her grain of choice was neither corn nor wheat but the bones of the young and the old. The millstone we tied about her neck and flung into the sea. - From an account by Mattias Thulmann on the witch purge of Wissenland.",
+    "originalName": "Mother of Pearl"
   },
   {
     "name": "Bonesap",
-    "description": ""
+    "description": "",
+    "originalName": "Pearl"
   },
   {
     "name": "Bretonnian Banded Hake",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Dragon's Tongue"
   },
   {
     "name": "Buck Moth Wing",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Spider Egg"
   },
   {
     "name": "Bull Horn",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Beehive Husk"
   },
   {
     "name": "Burnt Dryad Wood",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Bee"
   },
   {
     "name": "Cairn Bolete",
-    "description": "A type of mushroom that grows in damp soil around rotted flesh."
+    "description": "A type of mushroom that grows in damp soil around rotted flesh.",
+    "originalName": "Honeycomb"
   },
   {
     "name": "Canine Tooth",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Human Heart"
   },
   {
     "name": "Canis Root",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Creep Cluster"
   },
   {
     "name": "Canis Root Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Crimson Nirnroot"
   },
   {
     "name": "Cavefish",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Orange Dartwing"
   },
   {
     "name": "Ceanothus Moth",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Moon Sugar"
   },
   {
     "name": "Cecropia Moth",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blue Dartwing"
   },
   {
     "name": "Charred Wolfrat Meat",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Hawk Beak"
   },
   {
     "name": "Chaurus Hunter Antennae",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Hawk Feathers"
   },
   {
     "name": "Chicken Egg",
-    "description": "An egg that came from a chicken or will create a chicken, depending on your point of view."
+    "description": "An egg that came from a chicken or will create a chicken, depending on your point of view.",
+    "originalName": "Mora Tapinella"
   },
   {
     "name": "Chicken Feathers",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Dwarven Oil"
   },
   {
     "name": "Chokeberries",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Human Flesh"
   },
   {
     "name": "Clouded Funnel Cap",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Histcarp"
   },
   {
     "name": "Cold Fire Salts",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Cryodiilic Spadetail"
   },
   {
     "name": "Columbine Root Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "River Betty"
   },
   {
     "name": "Columbine Root Pulp",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Abecean Longfin"
   },
   {
     "name": "Comet Moth",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Silverside"
   },
   {
     "name": "Common Blue Butterfly",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Amber"
   },
   {
     "name": "Common Shiner",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Black Pearl"
   },
   {
     "name": "Creep Cluster",
-    "description": "A pervasive parasitic plant that slowly wraps the entire host tree with tiny vines."
+    "description": "A pervasive parasitic plant that slowly wraps the entire host tree with tiny vines.",
+    "originalName": "Onyx"
   },
   {
     "name": "Creep Cluster Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Sulfur"
   },
   {
     "name": "Crimson Imomvo",
-    "description": "A rare prickly gorse plant that grows only on the banks of the Lesser Tobol River"
+    "description": "A rare prickly gorse plant that grows only on the banks of the Lesser Tobol River",
+    "originalName": "Spider Silk"
   },
   {
     "name": "Crimson Marsh Glider",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Dragon Tooth"
   },
   {
     "name": "Crushed Ant Paste",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Chicken Feathers"
   },
   {
     "name": "Cured Wolfrat Hide",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Horse Hair"
   },
   {
     "name": "Darkwater Minnow",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Ironwood Nuts"
   },
   {
     "name": "Dartwing Moth",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Saltrice"
   },
   {
     "name": "Dawnshade",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Fennel Seeds"
   },
   {
     "name": "Deathbell",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Flax Seeds"
   },
   {
     "name": "Deepsea Longfin",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Horker Tusk"
   },
   {
     "name": "Deer Heart",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Soul Husk"
   },
   {
     "name": "Doe Antlers",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Bone Hawk Claw"
   },
   {
     "name": "Domica Redwort",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Bone Hawk Feathers"
   },
   {
     "name": "Dragon Heart",
-    "description": "A massive, dark red heart the size of a wagon wheel. Even small slices of it feel unusually heavy."
+    "description": "A massive, dark red heart the size of a wagon wheel. Even small slices of it feel unusually heavy.",
+    "originalName": "Argonian Scales"
   },
   {
     "name": "Dragon Heartscales",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Putrefied Flesh"
   },
   {
     "name": "Dragon Scales",
-    "description": "Large, serrated scales harder than any iron. Has a slight warmth to the touch."
+    "description": "Large, serrated scales harder than any iron. Has a slight warmth to the touch.",
+    "originalName": "Daedra Silk"
   },
   {
     "name": "Dragon Tooth",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Dreugh Wax"
   },
   {
     "name": "Dragon's Tongue",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Gravetar"
   },
   {
     "name": "Dragon's Tongue Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Scrib Jelly"
   },
   {
     "name": "Dreadbloom Flower",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Sload Soap"
   },
   {
     "name": "Dreugh Wax",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Racer Plumes"
   },
   {
     "name": "Druadach Dart",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Bear Fat"
   },
   {
     "name": "Dryad Saddle Polypore",
-    "description": "A shelf mushroom cultivated by wood elves."
+    "description": "A shelf mushroom cultivated by wood elves.",
+    "originalName": "Fox Fat"
   },
   {
     "name": "Dryad Sap",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Yellow Mountain Flower"
   },
   {
     "name": "Dwarven Oil",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Ancestor Moth"
   },
   {
     "name": "Dyed Hawk Feathers",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Gleamblossom"
   },
   {
     "name": "Eastern Wallcreeper Egg",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Chaurus Hunter Antennae"
   },
   {
     "name": "Ebony Jewelwing",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Poison Bloom"
   },
   {
     "name": "Ectoplasm",
-    "description": "A thick, translucent goo, similar to snail slime. It is found in areas of high ghost activity."
+    "description": "A thick, translucent goo, similar to snail slime. It is found in areas of high ghost activity.",
+    "originalName": "Salmon Roe"
   },
   {
     "name": "Elf Cup",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Hawk Egg"
   },
   {
     "name": "Elven Heart",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Ashen Grass Pod"
   },
   {
     "name": "Elves Ear",
-    "description": "A common, fragrant, herb that can be dried and kept for long periods."
+    "description": "A common, fragrant, herb that can be dried and kept for long periods.",
+    "originalName": "Trama Root"
   },
   {
     "name": "Elves Ear Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Scathecraw"
   },
   {
     "name": "Emerald Darner",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Ash Salts"
   },
   {
     "name": "Emerald Swallowtail",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Burnt Spriggan Wood"
   },
   {
     "name": "Emetic Russula",
-    "description": "A red and white mushroom that causes severe vomiting and diarrhea."
+    "description": "A red and white mushroom that causes severe vomiting and diarrhea.",
+    "originalName": "Boar Tusk"
   },
   {
     "name": "Emperor Dartwing",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Ash Hopper Jelly"
   },
   {
     "name": "Emperor Moth",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Netch Jelly"
   },
   {
     "name": "Emperor Parasol Moss",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Ash Creep Cluster"
   },
   {
     "name": "Eye of Bear",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Emperor Parasol Moss"
   },
   {
     "name": "Eye of Beastman",
-    "description": "An eyeball extracted from a beastman."
+    "description": "An eyeball extracted from a beastman.",
+    "originalName": "Felsaad Tern Feathers"
   },
   {
     "name": "Eye of Dragon",
-    "description": ""
+    "description": "",
+    "originalName": "Marshmerrow"
   },
   {
     "name": "Eye of Fox",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Mandrake Root"
   },
   {
     "name": "Eye of Hare",
-    "description": ""
+    "description": "",
+    "originalName": "Dragon Heartscales"
   },
   {
     "name": "Eye of Mammoth",
-    "description": ""
+    "description": "",
+    "originalName": "Daedroth Teeth"
   },
   {
     "name": "Eye of Pig/Boar",
-    "description": "An eyeball extracted from a pig or wild boar"
+    "description": "An eyeball extracted from a pig or wild boar",
+    "originalName": "Ogre's Teeth"
   },
   {
     "name": "Eye of Troll",
-    "description": ""
+    "description": "",
+    "originalName": "Daedra Venin"
   },
   {
     "name": "Eye of Werewolf",
-    "description": ""
+    "description": "",
+    "originalName": "Bergamot Seeds"
   },
   {
     "name": "Eye of Wolf",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Foxglove Nectar"
   },
   {
     "name": "Falkreath Minnow",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Ginseng"
   },
   {
     "name": "Falmer Blood",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Imp Gall"
   },
   {
     "name": "Felsaad Tern Feathers",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Sawtooth Butterfly"
   },
   {
     "name": "Fennel Seed Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Monkshod Root Pulp"
   },
   {
     "name": "Fennel Seeds",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Morning Glory Root Pulp"
   },
   {
     "name": "Fine Ground Bonemeal",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Mugwort Seeds"
   },
   {
     "name": "Fine-Cut Ash Salts",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Peony Seeds"
   },
   {
     "name": "Fine-Cut Fire Salts",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Lotus Seeds"
   },
   {
     "name": "Fine-Cut Frost Salts",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "St. Jahn's Wort Nectar"
   },
   {
     "name": "Fine-Cut Void Salts",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Tiger Lily Nectar"
   },
   {
     "name": "Fire Petals",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Water Hyacinth Nectar"
   },
   {
     "name": "Fire Salts",
-    "description": "Residue left behind by concentrated elemental fire."
+    "description": "Residue left behind by concentrated elemental fire.",
+    "originalName": "Gravedust"
   },
   {
     "name": "Flame Skimmer",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blood of a Nord"
   },
   {
     "name": "Flawless Sabertusk Tooth",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blood of a Breton"
   },
   {
     "name": "Flax Seed Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blood of a Redguard"
   },
   {
     "name": "Flax Seeds",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blood of an Imperial"
   },
   {
     "name": "Fly Amanita",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blood of an Altmer"
   },
   {
     "name": "Fox Fat",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blood of a Dunmer"
   },
   {
     "name": "Fox Skin",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blood of a Bosmer"
   },
   {
     "name": "Foxglove Nectar",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blood of an Orc"
   },
   {
     "name": "Frogspawn",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blood of an Argonian"
   },
   {
     "name": "Frost Fernheads",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blood of a Khajiit"
   },
   {
     "name": "Frost Mirriam",
-    "description": "A hardy herb that grows late into the winter."
+    "description": "A hardy herb that grows late into the winter.",
+    "originalName": "Werebear Claws"
   },
   {
     "name": "Frost Mirriam Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Troll's Blood"
   },
   {
     "name": "Frost Salts",
-    "description": "Residue left behind by concentrated elemental frost."
+    "description": "Residue left behind by concentrated elemental frost.",
+    "originalName": "Giant's Blood"
   },
   {
     "name": "Frost Skimmer",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Falmer Blood"
   },
   {
     "name": "Garlic",
-    "description": "A potent, edible bulb popular in Bretonnian cooking."
+    "description": "A potent, edible bulb popular in Bretonnian cooking.",
+    "originalName": "Arrowroot"
   },
   {
     "name": "Garlic Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Werewolf Blood"
   },
   {
     "name": "Gaulcazar Grape Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Khajiit Eye"
   },
   {
     "name": "Gaulcazar Grapes",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Orc Liver"
   },
   {
     "name": "Ghostfish",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Columbine Root Pulp"
   },
   {
     "name": "Giant Lichen",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Frogspawn"
   },
   {
     "name": "Giant's Blood",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Chokeberries"
   },
   {
     "name": "Giant's Toe",
-    "description": "Now rare, Giants are the terrestrial descendants of the ancient Skytitans."
+    "description": "Now rare, Giants are the terrestrial descendants of the ancient Skytitans.",
+    "originalName": "Wolf Liver"
   },
   {
     "name": "Ginkgo Leaves",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Goat Eye"
   },
   {
     "name": "Ginseng",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Stoneflower"
   },
   {
     "name": "Gleamblossom",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Akanet Flower"
   },
   {
     "name": "Glow Dust",
-    "description": "A very fine, luminescent powder. Reminiscent of moonlight."
+    "description": "A very fine, luminescent powder. Reminiscent of moonlight.",
+    "originalName": "Bear Bile"
   },
   {
     "name": "Glowing Mushroom",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blackbrow Bleak"
   },
   {
     "name": "Glowing Mushroom Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blind Betty"
   },
   {
     "name": "Goat Eye",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Gudgeon"
   },
   {
     "name": "Goat Eye",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Green Trench"
   },
   {
     "name": "Goat Heart",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blue Orfe"
   },
   {
     "name": "Goblin Wax",
-    "description": "Despite it's name, Goblin wax is actually derived from beetle secretions."
+    "description": "Despite it's name, Goblin wax is actually derived from beetle secretions.",
+    "originalName": "Cavefish"
   },
   {
     "name": "Golden Kingfisher Egg",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Ceanothus Moth"
   },
   {
     "name": "Golden Rudd",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Cecropia Moth"
   },
   {
     "name": "Golden Skimmer",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Common Blue Butterfly"
   },
   {
     "name": "Golden-Ringed Darner",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Comet Moth"
   },
   {
     "name": "Goldengill",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Common Shiner"
   },
   {
     "name": "Gorbon's Root",
-    "description": "The root of a rare, poisonous plant found only on the island of Sartosa."
+    "description": "The root of a rare, poisonous plant found only on the island of Sartosa.",
+    "originalName": "Crushed Ant Paste"
   },
   {
     "name": "Grapes",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Ayleid Moon Moth"
   },
   {
     "name": "Grass Pod",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Druadach Dart"
   },
   {
     "name": "Grave Tar",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Warpaint Shiner"
   },
   {
     "name": "Gravedust",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Emperor Moth"
   },
   {
     "name": "Great Antlers",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Falkreath Minnow"
   },
   {
     "name": "Green Dartwing",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Ghostfish"
   },
   {
     "name": "Green Stain Cup",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Golden Rudd"
   },
   {
     "name": "Green Trench",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Orange Tip Butterfly"
   },
   {
     "name": "Gudgeon",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Redbelly Dace"
   },
   {
     "name": "Gypsy Moth Wing",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Atlas Moth"
   },
   {
     "name": "Hanging Moss",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Emerald Swallowtail"
   },
   {
     "name": "Hanging Moss Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Mourning Cloak"
   },
   {
     "name": "Harpy Claw",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "White Witch Moth"
   },
   {
     "name": "Harpy Leather",
-    "description": "The finest Harpy Leather is produced from the thin wing membranes of elder Harpies."
+    "description": "The finest Harpy Leather is produced from the thin wing membranes of elder Harpies.",
+    "originalName": "Nordic Swallowtail"
   },
   {
     "name": "Hawk Beak",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Oxgall"
   },
   {
     "name": "Hawk Egg",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Painted Lady"
   },
   {
     "name": "Hawk Feathers",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Peacock Butterfly"
   },
   {
     "name": "Heather",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Pheasant Feathers"
   },
   {
     "name": "Heather Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Polyphemus Moth"
   },
   {
     "name": "Histcarp",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Red Cracker Butterfly"
   },
   {
     "name": "Honeycomb",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Roobrush"
   },
   {
     "name": "Horse Hair",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Ruby Shiner"
   },
   {
     "name": "Human Flesh",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Padomaic Tigerfish"
   },
   {
     "name": "Human Heart",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Silverjaw Minnow"
   },
   {
     "name": "Ice Tiger Teeth",
-    "description": "We noticed the Ice Tiger only when it was practically upon us. No sooner had it darted from the shadows of the forest's edge than it took down the first of the horses. It was only thanks to the speed and strength of our guides that we survived. - Smosskeirn Loth's Travels in Norsca"
+    "description": "We noticed the Ice Tiger only when it was practically upon us. No sooner had it darted from the shadows of the forest's edge than it took down the first of the horses. It was only thanks to the speed and strength of our guides that we survived. - Smosskeirn Loth's Travels in Norsca",
+    "originalName": "Darkwater Minnow"
   },
   {
     "name": "Imomvo Root",
-    "description": "A small prickly gorse plant found on the edges of the Eastern Steppes."
+    "description": "A small prickly gorse plant found on the edges of the Eastern Steppes.",
+    "originalName": "Swamp Betty"
   },
   {
     "name": "Imp Gall",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Bitterling"
   },
   {
     "name": "Imp Stool",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Akatosh Butterfly"
   },
   {
     "name": "Ironwood Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blue Clipper Butterfly"
   },
   {
     "name": "Ironwood Nuts",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Marsh Fritillary"
   },
   {
     "name": "Juniper Berries",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Red Admiral Butterfly"
   },
   {
     "name": "Juniper Berry Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Wheat Extract"
   },
   {
     "name": "Khajiit Eye",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Tundra Cotton Extract"
   },
   {
     "name": "Lady's Mantle Leaves",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Thistle Extract"
   },
   {
     "name": "Large Antlers",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Snowberry Extract"
   },
   {
     "name": "Large Bear Claws",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Saltrice Extract"
   },
   {
     "name": "Large Swamp Crab Chitin",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Red Mountain Flower Extract"
   },
   {
     "name": "Lavender",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Purple Mountain Flower Extract"
   },
   {
     "name": "Lavender Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Nightshade Extract"
   },
   {
     "name": "Lotus Seeds",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Marshmerrow Extract"
   },
   {
     "name": "Luna Moth",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Lavender Extract"
   },
   {
     "name": "Madcap Mushroom",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Juniper Berry Extract"
   },
   {
     "name": "Mages' Mint",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Jazbay Extract"
   },
   {
     "name": "Mammoth Heart",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Ironwood Extract"
   },
   {
     "name": "Manann's Bones",
-    "description": "A large shellfish whose white tube-like shells resemble bone fragments."
+    "description": "A large shellfish whose white tube-like shells resemble bone fragments.",
+    "originalName": "Heather Extract"
   },
   {
     "name": "Mandrake Root",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Hanging Moss Extract"
   },
   {
     "name": "Marsh Fritillary",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Spiky Grass Extract"
   },
   {
     "name": "Marshmerrow",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Glowing Mushroom Extract"
   },
   {
     "name": "Marshmerrow Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Garlic Extract"
   },
   {
     "name": "Massive Bear Tooth",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Frost Mirriam Extract"
   },
   {
     "name": "Massive Eye of Beastman",
-    "description": "A huge eyeball extracted from a particularly large and fearsome beastman, big as a mans fist"
+    "description": "A huge eyeball extracted from a particularly large and fearsome beastman, big as a mans fist",
+    "originalName": "Flax Seed Extract"
   },
   {
     "name": "Massive Sabertusk Claws",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Fennel Seed Extract"
   },
   {
     "name": "Medusae Ear",
-    "description": "The Medusea are said to be hideous servants of Morathi. Half woman, half snake, they are usually only found on the coasts of Naggaroth."
+    "description": "The Medusea are said to be hideous servants of Morathi. Half woman, half snake, they are usually only found on the coasts of Naggaroth.",
+    "originalName": "Elves Ear Extract"
   },
   {
     "name": "Merwyrm Silk",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Dragon's Tongue Extract"
   },
   {
     "name": "Merwyrm Teeth",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Creep Cluster Extract"
   },
   {
     "name": "Merwyrm Venin",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Columbine Root Extract"
   },
   {
     "name": "Milk Thistle Branch",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Canis Root Extract"
   },
   {
     "name": "Minotaur Beetle Eggs",
-    "description": "A large insect egg with a thick shell."
+    "description": "A large insect egg with a thick shell.",
+    "originalName": "Blue Mountain Flower Extract"
   },
   {
     "name": "Minotaur Horn",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Fine-Cut Fire Salts"
   },
   {
     "name": "Monarch Butterfly",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Fine-Cut Frost Salts"
   },
   {
     "name": "Monkshod Root Pulp",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Fine-Cut Void Salts"
   },
   {
     "name": "Moon Sugar",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Fine Ground Bonemeal"
   },
   {
     "name": "Mora Tapinella",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Fine-Cut Ash Salts"
   },
   {
     "name": "Morbid Flesh",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Direnni's Dartwing"
   },
   {
     "name": "Morning Glory Root Pulp",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Widow Skimmer"
   },
   {
     "name": "Moshuru's Rot",
-    "description": "This grey-brown mushroom thrives in the dark hollows of rotted trees."
+    "description": "This grey-brown mushroom thrives in the dark hollows of rotted trees.",
+    "originalName": "Ebony Jewelwing"
   },
   {
     "name": "Mother of Pearl",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Banded Pennant"
   },
   {
     "name": "Motherwort",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Crimson Marsh Glider"
   },
   {
     "name": "Motherwort Sprig",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Frost Skimmer"
   },
   {
     "name": "Mountain Lion Teeth",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Flame Skimmer"
   },
   {
     "name": "Mourning Cloak",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Emperor Dartwing"
   },
   {
     "name": "Mugwort Seeds",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Golden-Ringed Darner"
   },
   {
     "name": "Netch Jelly",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Emerald Darner"
   },
   {
     "name": "Nightshade",
-    "description": "An attractive but deadly relative of the common tomato."
+    "description": "An attractive but deadly relative of the common tomato.",
+    "originalName": "Golden Skimmer"
   },
   {
     "name": "Nightshade Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Barley"
   },
   {
     "name": "Nordic Barnacle",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Barley Extract"
   },
   {
     "name": "Nordic Swallowtail",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Redwort Flower"
   },
   {
     "name": "Nordland Grouper",
-    "description": "A small, common fish."
+    "description": "A small, common fish.",
+    "originalName": "Tinder Polypore Cap"
   },
   {
     "name": "Ogre Heart",
-    "description": ""
+    "description": "",
+    "originalName": "Black Lichen"
   },
   {
     "name": "Ogre's Teeth",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blister Pod"
   },
   {
     "name": "Oil of Vitriol",
-    "description": ""
+    "description": "",
+    "originalName": "Clouded Funnel Cap"
   },
   {
     "name": "Onyx",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Red Lichen"
   },
   {
     "name": "Orange Dartwing",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Violet Coprinus"
   },
   {
     "name": "Orange Tip Butterfly",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Bloatspore"
   },
   {
     "name": "Orc Liver",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Wisp Stalks"
   },
   {
     "name": "Ostland Spadetail",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Aloe Vera"
   },
   {
     "name": "Oxgall",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Fire Petals"
   },
   {
     "name": "Padomaic Tigerfish",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Heather"
   },
   {
     "name": "Painted Lady",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Elven Heart"
   },
   {
     "name": "Peacock Butterfly",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Kwama Cuttle"
   },
   {
     "name": "Pearl",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Kwama Egg"
   },
   {
     "name": "Peony Seeds",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Scamp Skin"
   },
   {
     "name": "Pheasant Feathers",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Wormwood Leaves"
   },
   {
     "name": "Pine Thrush Egg",
-    "description": "The Pine Thrush is notoriously shy. Though its eggs may be found often in the forests of Nordland and Middenland, the bird itself is rarely seen or heard."
+    "description": "The Pine Thrush is notoriously shy. Though its eggs may be found often in the forests of Nordland and Middenland, the bird itself is rarely seen or heard.",
+    "originalName": "Dawnshade"
   },
   {
     "name": "Poison Bloom",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Milk Thistle Branch"
   },
   {
     "name": "Polished Hare Eye",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Ash Salts"
   },
   {
     "name": "Polished Mammoth Eye",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blackberries"
   },
   {
     "name": "Polished Sabertusk Eye",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Cairn Bolete"
   },
   {
     "name": "Polished Scales",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Red Cinnabar Polypore"
   },
   {
     "name": "Polyphemus Moth",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Yellow Cinnabar Polypore"
   },
   {
     "name": "Powdered Mammoth Tusk",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Land Dreugh Wax"
   },
   {
     "name": "Powdered Swamp Crab Chitin",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Dryad Saddle Polypore"
   },
   {
     "name": "Purple Mountain Flower",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Cold Fire Salts"
   },
   {
     "name": "Purple Mountain Flower Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blueberries"
   },
   {
     "name": "Putrefied Flesh",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Emetic Russula"
   },
   {
     "name": "Racer Plumes",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Elf Cup"
   },
   {
     "name": "Rainbow Fish",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blue Flax"
   },
   {
     "name": "Red Admiral Butterfly",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Domica Redwort"
   },
   {
     "name": "Red Cinnabar Polypore",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Ginkgo Leaves"
   },
   {
     "name": "Red Cracker Butterfly",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Grapes"
   },
   {
     "name": "Red Flax",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Stinkhorn"
   },
   {
     "name": "Red Lichen",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Somnalius Frond"
   },
   {
     "name": "Red Mountain Flower",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Green Stain Cup"
   },
   {
     "name": "Red Mountain Flower Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Summer Bolete"
   },
   {
     "name": "Red Swamp Crab Chitin",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Red Flax"
   },
   {
     "name": "Redbelly Dace",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Yellow Flax"
   },
   {
     "name": "Refined Frost Salts",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Goblin Wax"
   },
   {
     "name": "Rhinox Tusk",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Rice"
   },
   {
     "name": "Rice",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Steel-Blue Entoloma"
   },
   {
     "name": "Rock Warbler Egg",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Bog Beacon"
   },
   {
     "name": "Roobrush",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blue Entoloma"
   },
   {
     "name": "Ruby Shiner",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Eltheric Grouper"
   },
   {
     "name": "Sabertusk Claws",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Bjoulsae Hake"
   },
   {
     "name": "Sabertusk Eye",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Blessed Thistle Branch"
   },
   {
     "name": "Sabertusk Heart",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Yellow Amanita"
   },
   {
     "name": "Sabertusk Tooth",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Mort Flesh"
   },
   {
     "name": "Salmon Roe",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Minotaur Horn"
   },
   {
     "name": "Salt Pile",
-    "description": "More than a pinch, less than a casket."
+    "description": "More than a pinch, less than a casket.",
+    "originalName": "Motherwort Sprig"
   },
   {
     "name": "Saltrice",
-    "description": "A delicious grain from the coasts of Cathay."
+    "description": "A delicious grain from the coasts of Cathay.",
+    "originalName": "Lady's Mantle Leaves"
   },
   {
     "name": "Saltrice Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Red Mudcrab Chitin"
   },
   {
     "name": "Sawtooth Butterfly",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Heartland Highfin"
   },
   {
     "name": "Scaly Pholiota",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Black Eagle Feathers"
   },
   {
     "name": "Scathecraw",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Black Eagle Beak"
   },
   {
     "name": "Scrib Jelly",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Wood Warbler Egg"
   },
   {
     "name": "Shadow Salts",
-    "description": "residue left behind by concentrated elemental shadows."
+    "description": "residue left behind by concentrated elemental shadows.",
+    "originalName": "Goldengill"
   },
   {
     "name": "Silverbird Egg",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Nibenese Silverbird Egg"
   },
   {
     "name": "Silverjaw Minnow",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Rainbow Fish"
   },
   {
     "name": "Silverside",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Golden Kingfisher Egg"
   },
   {
     "name": "Slaughterfish Egg",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Colovian Nuthatch Egg"
   },
   {
     "name": "Slaughterfish Scales",
-    "description": "The scales of the female Slaughterfish are as razor-sharp as its teeth."
+    "description": "The scales of the female Slaughterfish are as razor-sharp as its teeth.",
+    "originalName": "Eastern Wallcreeper Egg"
   },
   {
     "name": "Sload Soap",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Nibenay Snapper"
   },
   {
     "name": "Small Antlers",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Swamp Sparrow Egg"
   },
   {
     "name": "Snowberries",
-    "description": "A small shrub berry that primarily grows in Kislev and the Northern Wastes."
+    "description": "A small shrub berry that primarily grows in Kislev and the Northern Wastes.",
+    "originalName": "Buck Moth Wing"
   },
   {
     "name": "Snowberry Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Gypsy Moth Wing"
   },
   {
     "name": "Somnalius Frond",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Magus Mint"
   },
   {
     "name": "Soul Husk",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Motherwort"
   },
   {
     "name": "Spider Egg",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Black Dartwing"
   },
   {
     "name": "Spider Silk",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Green Dartwing"
   },
   {
     "name": "Spiky Grass Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Refined Frost Salts"
   },
   {
     "name": "Spoilwart",
-    "description": "A small toadstool that grows in dank basements and caves"
+    "description": "A small toadstool that grows in dank basements and caves",
+    "originalName": "Mountain Lion Teeth"
   },
   {
     "name": "Squig Skin",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Goat Eye"
   },
   {
     "name": "St. Jahn's Wort Nectar",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Eye of Bear"
   },
   {
     "name": "Steel-Blue Entoloma",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Eye of Fox"
   },
   {
     "name": "Stinkhorn",
-    "description": "A large grey mushroom whose delicate flavours are overshadowed by their stench"
+    "description": "A large grey mushroom whose delicate flavours are overshadowed by their stench",
+    "originalName": "Polished Hare Eye"
   },
   {
     "name": "Stir  Snapper",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Polished Mammoth Eye"
   },
   {
     "name": "Stirland Nuthatch Egg",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Eye of Wolf"
   },
   {
     "name": "Stoneflower",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Bear Heart"
   },
   {
     "name": "Sulfur",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Deer Heart"
   },
   {
     "name": "Summer Bolete",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Goat Heart"
   },
   {
     "name": "Swamp Betty",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Sabre Cat Heart"
   },
   {
     "name": "Swamp Crab Chitin",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Wolf Heart"
   },
   {
     "name": "Swamp Fungal Pod",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Mammoth Heart"
   },
   {
     "name": "Swamp Sparrow Egg",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Bear Tooth"
   },
   {
     "name": "Talabec Highfin",
-    "description": "A small, silvery fish with a large dorsal fin."
+    "description": "A small, silvery fish with a large dorsal fin.",
+    "originalName": "Canine Tooth"
   },
   {
     "name": "Taproot",
-    "description": "The dominant root of an Oak, Ash or Myrtoessal tree"
+    "description": "The dominant root of an Oak, Ash or Myrtoessal tree",
+    "originalName": "Sabre Cat Claws"
   },
   {
     "name": "Thistle Branch",
-    "description": "A green-brown branch with spiked purple blooms."
+    "description": "A green-brown branch with spiked purple blooms.",
+    "originalName": "Wolf Claws"
   },
   {
     "name": "Thistle Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Powdered Mudcrab Chitin"
   },
   {
     "name": "Tiger Lily Nectar",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Bull Horn"
   },
   {
     "name": "Tinder Polypore Cap",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Boiled Skeever Tail"
   },
   {
     "name": "Tomb Wasp Wax",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Polished Scales"
   },
   {
     "name": "Torchbug Abdomen",
-    "description": "Leave the bug alone."
+    "description": "Leave the bug alone.",
+    "originalName": "Cured Skeever Hide"
   },
   {
     "name": "Trama Root",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Large Mudcrab Chitin"
   },
   {
     "name": "Troll Fat",
-    "description": "In the deepest corners of the darkest alchemy shops, you may find jars of rendered troll-fat."
+    "description": "In the deepest corners of the darkest alchemy shops, you may find jars of rendered troll-fat.",
+    "originalName": "Large Bear Claws"
   },
   {
     "name": "Troll Heart",
-    "description": "A thick heart the size of a man's head. Best not to ask where it was acquired."
+    "description": "A thick heart the size of a man's head. Best not to ask where it was acquired.",
+    "originalName": "Flawless Sabre Cat Tooth"
   },
   {
     "name": "Troll Skin",
-    "description": "Stinking flesh taken from a troll, covered in crags and parasites"
+    "description": "Stinking flesh taken from a troll, covered in crags and parasites",
+    "originalName": "Polished Sabre Cat Eye"
   },
   {
-    "name": "Troll Blood",
-    "description": "An extremely thin, greeny-red, and distinctly vile smelling liquid"
+    "name": "Troll's Blood",
+    "description": "No desc needed",
+    "originalName": "Great Antlers"
   },
   {
     "name": "Tundra Cotton",
-    "description": "The soft, downy husk of the Tundra Cotton plant protects it's fragile shoots as they sprout beneath the snow."
+    "description": "The soft, downy husk of the Tundra Cotton plant protects it's fragile shoots as they sprout beneath the snow.",
+    "originalName": "Doe Antlers"
   },
   {
     "name": "Tundra Cotton Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Charred Hawk Beak"
   },
   {
     "name": "Vampire Dust",
-    "description": "Some say the nobles of Sylvania are not humans at all but a race of immortal fiends that feed on the blood of the innocent."
+    "description": "Some say the nobles of Sylvania are not humans at all but a race of immortal fiends that feed on the blood of the innocent.",
+    "originalName": "Dyed Hawk Feathers"
   },
   {
     "name": "Violet Coprinus",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Large Sabre Cat Claws"
   },
   {
     "name": "Warewolf Skin",
-    "description": "Flesh taken from a dead warewolf in its wolven form"
+    "description": "Flesh taken from a dead warewolf in its wolven form",
+    "originalName": "Flawless Bear Tooth"
   },
   {
     "name": "Warpaint Shiner",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Polished Wolf Eye"
   },
   {
     "name": "Water Hyacinth Nectar",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Polished Fox Eye"
   },
   {
     "name": "Werebear Claws",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Polished Bear Eye"
   },
   {
     "name": "Werewolf Blood",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Eye of Hare"
   },
   {
     "name": "Werewolf Heart",
-    "description": ""
+    "description": "",
+    "originalName": "Eye of Mammoth"
   },
   {
     "name": "Wheat",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Eye of Troll"
   },
   {
     "name": "Wheat Extract",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Eye of Werewolf"
   },
   {
     "name": "White Cap",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Eye of Dragon"
   },
   {
     "name": "White Witch Moth",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Werewolf Heart"
   },
   {
     "name": "Widow Skimmer",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Troll Heart"
   },
   {
     "name": "Wisp Stalks",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Dragon Heart"
   },
   {
     "name": "Wolf Claws",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Polished Troll Eye"
   },
   {
     "name": "Wolf Heart",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Polished Werewolf Eye"
   },
   {
     "name": "Wolf Liver",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Polished Dragon Eye"
   },
   {
     "name": "Wolf Skin",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Bonesap"
   },
   {
     "name": "Wolfrat Tail",
-    "description": "An unholy bastard of Skaven and Kislev wolves, the Wolfrat is a vicious and cunning beast."
+    "description": "An unholy bastard of Skaven and Kislev wolves, the Wolfrat is a vicious and cunning beast.",
+    "originalName": "Bristleback Heart"
   },
   {
     "name": "Wood Warbler Egg",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Eye of Bristleback"
   },
   {
     "name": "Wormwood Leaves",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Polished Bristleback Eye"
   },
   {
     "name": "Yellow Cinnabar Polypore",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Oil of Vitriol"
   },
   {
     "name": "Yellow Flax",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Panacea"
   },
   {
     "name": "Yellow Mountain Flower",
-    "description": "No desc needed"
+    "description": "No desc needed",
+    "originalName": "Polished Goat Eye"
   }
 ]

@@ -645,17 +645,24 @@ function tests(seed = 1) {
 // tests()
 // console.log(x)
 
-// var x = require('fs').readFileSync("rename-ingredients.json")
-// x = JSON.parse(x)
-// x = x.sort(function(a, b) {
-//     if (a.name < b.name) { return -1; }
-//     if (a.name > b.name) { return 1; }
-//     return 0;
-// })
+var x = require('fs').readFileSync("rename-ingredients.json")
+x = JSON.parse(x)
 
+console.log(og.ingredients.length)
+console.log(x.length)
+
+x.map((ing, i) => {
+    ing.originalName = og.ingredients[i].name
+    return ing
+})
+
+x = x.sort(function(a, b) {
+    if (a.name < b.name) { return -1; }
+    if (a.name > b.name) { return 1; }
+    return 0;
+})
 // console.log(x)
-
-// require('fs').writeFileSync("rename-ingredients.json", JSON.stringify(x, null, 2))
+require('fs').writeFileSync("rename-ingredients.json", JSON.stringify(x, null, 2))
 
 
 
