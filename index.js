@@ -41,35 +41,28 @@ window.addEventListener("load", e => {
   <h3>
     {{name}}
   </h3>
-
-  <b>
-    Effects
-  </b>
   <p>
+    <h4>
+    Effects
+  </h4>
   {{#each effects}}
     {{#if this.active}}
-      <div class="active effect list">
+      <div class="list">
         Active effect - {{this.strength}} {{this.name}}
       </div>
     {{/if}}
-
-{{#each effects}}
-    Key: {{@key}} Value = {{this}}
-{{/each}}
-
     {{#unless this.active}}
-      <div class="passive effect list">
+      <div class="list">
         Passive effect - {{this.name}}
       </div>
     {{/unless}}
   {{else}}
     This potion has no effects
   {{/each}}
-</p>
-  <b>
+    
+    <h4>
     Potion properties
-  </b>
-  <p>
+  </h4>
   {{#each properties}}
     <div class="list">
       {{this}}
@@ -78,6 +71,18 @@ window.addEventListener("load", e => {
     This potion is just a liquid in a container
   {{/each}}
   </p>
+
+  <p>
+    <h5>
+    Potion ingredients
+  </h5>
+  {{#each ingredients}}
+    <div class="list">
+      {{this}}
+    </div>
+  {{/each}}
+  </p>
+
 </div>
 {{else}}
 <div>
@@ -102,13 +107,13 @@ window.addEventListener("load", e => {
     var productionSelector;
 
     function generateComponentOptions() {
-        var dropdownItemTemplate = Handlebars.compile(`
-{{component.name}}
-{{#if isPotion}}
-- {{strongestEffect.strength}} {{strongestEffect.name}} effect
-{{else}}
-{{/if}}
-`);
+//         var dropdownItemTemplate = Handlebars.compile(`
+// {{component.name}}
+// {{#if isPotion}}
+// - {{strongestEffect.strength}} {{strongestEffect.name}} effect
+// {{else}}
+// {{/if}}
+// `);
 
         return Object.keys(pm.types())
             .map(o => ({

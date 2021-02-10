@@ -9474,35 +9474,28 @@ window.addEventListener("load", e => {
   <h3>
     {{name}}
   </h3>
-
-  <b>
-    Effects
-  </b>
   <p>
+    <h4>
+    Effects
+  </h4>
   {{#each effects}}
     {{#if this.active}}
-      <div class="active effect list">
+      <div class="list">
         Active effect - {{this.strength}} {{this.name}}
       </div>
     {{/if}}
-
-{{#each effects}}
-    Key: {{@key}} Value = {{this}}
-{{/each}}
-
     {{#unless this.active}}
-      <div class="passive effect list">
+      <div class="list">
         Passive effect - {{this.name}}
       </div>
     {{/unless}}
   {{else}}
     This potion has no effects
   {{/each}}
-</p>
-  <b>
+    
+    <h4>
     Potion properties
-  </b>
-  <p>
+  </h4>
   {{#each properties}}
     <div class="list">
       {{this}}
@@ -9511,6 +9504,18 @@ window.addEventListener("load", e => {
     This potion is just a liquid in a container
   {{/each}}
   </p>
+
+  <p>
+    <h5>
+    Potion ingredients
+  </h5>
+  {{#each ingredients}}
+    <div class="list">
+      {{this}}
+    </div>
+  {{/each}}
+  </p>
+
 </div>
 {{else}}
 <div>
@@ -9535,13 +9540,13 @@ window.addEventListener("load", e => {
     var productionSelector;
 
     function generateComponentOptions() {
-        var dropdownItemTemplate = Handlebars.compile(`
-{{component.name}}
-{{#if isPotion}}
-- {{strongestEffect.strength}} {{strongestEffect.name}} effect
-{{else}}
-{{/if}}
-`);
+//         var dropdownItemTemplate = Handlebars.compile(`
+// {{component.name}}
+// {{#if isPotion}}
+// - {{strongestEffect.strength}} {{strongestEffect.name}} effect
+// {{else}}
+// {{/if}}
+// `);
 
         return Object.keys(pm.types())
             .map(o => ({
@@ -83521,6 +83526,15 @@ var options = {
 
 //full effect list is too big to keep here
 
+
+var physicalProperties = [
+"Thin potion, floats on water",
+"Thick potion, sinks in water",
+"Gooey, extremely thick jelly",
+"Solid, light and brittle",
+"Solid, hard and chalky",
+]
+
 var substanceProperties = [
     // "Acidic",
     // "Basic",
@@ -83528,11 +83542,8 @@ var substanceProperties = [
     // "Damaged by base",
     "Expires quickly",
     // "Exothermic",
-    "Thick potion",
-    "Thin potion",
-    "Solid, light and brittle",
-    "Solid, hard and chalky",
-    "Gooey, extremely thick jelly",
+    "Glows",
+    "Iridescent",
     // "Endothermic",
     "Flamible",
     "Oxadising",
@@ -83567,27 +83578,47 @@ var defaults = {
     effects: effects,
     substanceProperties: substanceProperties,
     productionRequirements: productionRequirements,
-    options: options
+    options: options,
+    componentProperties: {
+        name: "No potion name",
+        effects: [],
+        colour: null,
+        properties: "No properties",
+        type: "basic",
+        description: "No description",
+        ingredients: []
+    }
 };
 
 class Component {
 
-    constructor(name, effects, colour, properties, type = "basic", description) {
-        this.effects = effects.map(e => ({
-            ingredientName: name,
-            active: false,
+    constructor(prop = defaults.componentProperties) {
+        //assign defaults
+        Object.entries(defaults.componentProperties).map(p => {
 
+            if (!prop[p[0]]) {
+                console.log("prop", p[0], "missing")
+                console.log(prop)
+                prop[p[0]] = defaults.componentProperties[p[0]]
+            }
+        })
+
+        this.effects = prop.effects.map(e => ({
+            ingredientName: prop.name,
+            active: false,
             ...e
         }));
-        // this.hello = arguments.
 
-        this.description = description
-        this.name = name;
+        this.description = prop.description
+        this.name = prop.name;
         this.complexity = 1;
-        this.properties = properties;
-        this.type = type;
+        this.properties = prop.properties;
+        this.type = prop.type;
         this.id = hash(this);
-        this.colour = colour;
+        this.colour = prop.colour;
+        this.ingredients = prop.ingredients;
+
+console.log("this.ingredients",this.ingredients)
         // this.complexity
     }
     effectsAdvanced() {
@@ -83645,12 +83676,18 @@ class PotionMaster {
 
             newDataState.potions.forEach(p => {
                 // registerComponent
-                console.log(p.colour)
-                var newPotion = new Component(p.name,
-                    p.effects,
-                    p.colour,
-                    p.properties,
-                    p.type)
+                // console.log(p.colour)
+
+
+
+
+                var newPotion = new Component({
+                    name: p.name,
+                    effects: p.effects,
+                    colour: p.colour,
+                    properties: p.properties,
+                    type: p.type,
+                })
 
                 newPotion.image = p.image
                 newPotion.complexity = p.complexity
@@ -83734,6 +83771,7 @@ class PotionMaster {
                 e => e.name === effect.name
             ).length)
         );
+        console.log("effectArray", effectArray)
         //activate effects
         effectArray
             .filter(e => e.count >= this.options.minimumCommonEffects)
@@ -83789,6 +83827,7 @@ class PotionMaster {
     }
 
     strengthFinder(percent) {
+        console.log("percent", percent)
         // console.log("LMAO", this.options.ratings[Math.round(percent * this.options.ratings.length) - 1], Math.round(percent * this.options.ratings.length) - 1)
         var index = Math.round(percent * this.options.ratings.length) - 1;
         if (index < 0) index = 0;
@@ -83803,13 +83842,13 @@ class PotionMaster {
         });
 
         var presentEffects = [...new Set(effectArray.map(e => e.name))];
-        // console.log("presentEffect1s", presentEffects);
-
         presentEffects = presentEffects
             .map(effect => {
                 var thisEffectCollection = effectArray.filter(
                     e => e.name === effect
                 );
+
+                console.log(effect)
                 return Object.assign({}, ...thisEffectCollection, {
                     magnitude: thisEffectCollection
                         .map(e => e.magnitude)
@@ -83817,9 +83856,13 @@ class PotionMaster {
                         .reduce((a, b) => a + b, 0)
                 });
             })
+            .map(e => {
+                console.log(e.magnitude)
+                return e
+            })
             .map(e => ({
                 ...e,
-                strength: this.strengthFinder(e.magnitude / e.maxMagnitude)
+                strength: this.strengthFinder(e.magnitude / e.maxMagnitude, e)
             }));
 
         // console.log("presentEffect2s", presentEffects);
@@ -83829,7 +83872,7 @@ class PotionMaster {
         return presentEffects;
     }
 
-    finalisePotion(presentEffects, customJunkName = "Junk") {
+    finalisePotion(presentEffects, ingredients, customJunkName = "Junk") {
         console.log("running finalisePotion", presentEffects.length);
         var potionName = "Precursor Liquid";
         var colour = this.options.precursorColour;
@@ -83840,16 +83883,14 @@ class PotionMaster {
         // console.log("presentEffects", presentEffects);
 
         if (activeEffects.length + inactiveEffects.length < 1)
-            return new Component(
-                customJunkName,
-                [],
-                generateColour(),
-                ["Smells terrible"],
-                "potion"
-            );
-
-        // console.log(inactiveEffects.length)
-        // console.log(activeEffects.length)
+            return new Component({
+                name: customJunkName,
+                colour: generateColour(),
+                properties: ["Smells terrible"],
+                type: "potion",
+                description: "Does not look very appealing",
+                ingredients: ingredients.map(e => e.name),
+            })
 
         var strongestEffect = activeEffects
             .filter(e => e.active)
@@ -83870,6 +83911,8 @@ class PotionMaster {
         //     "fuck",
         //     activeEffects.map(e => e.colour)
         // );
+
+
 
         var colour = activeEffects
             .map(e => e.colour)
@@ -83893,10 +83936,6 @@ class PotionMaster {
                 0
             );
 
-
-        console.log(colour)
-
-
         var properties = activeEffects
             .concat(inactiveEffects)
             .map(e => e.substanceProperty)
@@ -83905,13 +83944,17 @@ class PotionMaster {
             .slice(0, 3)
             .unique();
 
-        var newPotion = new Component(
-            potionName,
-            activeEffects.concat(inactiveEffects),
-            colour,
-            properties,
-            "potion"
-        );
+
+
+        var newPotion = new Component({
+            name: potionName,
+            effects: activeEffects.concat(inactiveEffects),
+            colour: colour,
+            properties: properties,
+            type: "potion",
+            ingredients: ingredients.map(e => e.name),
+        })
+
         newPotion.updateComplexity(
             Math.min.apply(
                 Math,
@@ -83922,11 +83965,11 @@ class PotionMaster {
     }
 
     createPotion(productionModifiers, ingredientNames) {
-        var m = ingredientNames.map(i => this.findComponent(i));
-        m = this.findCommonEffects(...m);
+        var ingredients = ingredientNames.map(i => this.findComponent(i));
+        var m = this.findCommonEffects(...ingredients);
         m = this.validateEffects(productionModifiers, m);
         m = this.calculateEffectPotency(m);
-        m = this.finalisePotion(m);
+        m = this.finalisePotion(m, ingredients);
         return this.registerComponent(m);
     }
 
@@ -83950,7 +83993,6 @@ class PotionMaster {
                         .slice(2, this.data.productionRequirements.length)
                         .randomElement();
                 }
-
                 return effect;
             },
 
@@ -83992,7 +84034,6 @@ class PotionMaster {
                     generationMemory[effect.name] = generationMemory[
                         effect.name
                     ] ? [...generationMemory[effect.name], effect.magnitude] : [effect.magnitude];
-                    // console.log(effect)
                     return effect;
                 });
 
@@ -84009,7 +84050,12 @@ class PotionMaster {
                         .reduce((a, b) => a + b, 0)
                 }))
             }))
-            .map(i => this.registerComponent(new Component(i.name, i.effects, undefined, undefined, undefined, i.description)));
+
+            .map(i => this.registerComponent(new Component({
+                name: i.name,
+                effects: i.effects,
+                description: i.description
+            })));
         delete this.data.ingredients;
         this.dataHash = hash(this.data)
         // console.log("makeDataSet complete", this.data.components.length);
@@ -84020,12 +84066,21 @@ class PotionMaster {
 function tests(seed = 1) {
     var pm = new PotionMaster(seed);
 
-    // var explosivePotion = ["Beehive Husk", "Ash Creep Cluster"];
 
-    // var corruptionPotion = ["Nordic Barnacle", "Tinder Polypore Cap"];
-    var waterwalkingPotion = ["Slaughterfish Scales", "Kwama Cuttle", "Bee"];
-    var x = pm.createPotion(['Chill', ], waterwalkingPotion)
-    console.log(x)
+    var explosivePotion = pm.createPotion(["philosophers stone"], ["Beehive Husk", "Ash Creep Cluster"])
+    var corruptionPotion = pm.createPotion(["philosophers stone"], ["Nordic Barnacle", "Tinder Polypore Cap"])
+    // var waterwalkingPotion = pm.createPotion(['Chill', ],["Slaughterfish Scales", "Kwama Cuttle", "Bee"])
+
+    var pot = pm.createPotion(["philosophers stone"], [corruptionPotion, explosivePotion])
+
+    console.log(pot)
+
+
+
+    // var x = pm.findComponent("Slaughterfish Scales")
+    // var x = pm.components()
+    // x.map(e => e.effects.length)
+    // console.log(x)
 
     // ### section for figuring out if there are effects that are unrepresented in the list
     // var ef = []
@@ -84103,7 +84158,6 @@ function tests(seed = 1) {
 // }
 
 // effectTemplate = [effectTemplate, effectTemplate, effectTemplate, effectTemplate, ]
-
 
 // var newIng = [
 //     "dirt",
