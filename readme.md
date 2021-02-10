@@ -5,8 +5,9 @@ go to https://claydegruchy.github.io/alchemists-toolkit/ for live demo
 ## Usage
 This tool is intended for use by GMs only (for now, see todo). The system is ulimtately similar to the TES alchemy system, with "like helping like". To make potions, simple combine ingredients that have the same effect and keep within the production requirements. Each effect needs at least two ingredients that contain it to be added for the potion to take on the effect.
 - On behalf of the player, add ingredients to the potion mix
-- Each ingredient has a number of effects, with powerful effects requiring special production requirements that are selected below the ingredients. ingredient Production
-	- Production steps apply to all ingredients
+- Each ingredient has a number of effects, the general goal being to maximise the number of the same effect to garantee success and potency.
+- Some effects on particular ingredients need to be 'engaged' using the matching production step (in brackets beside the effect)
+	- Note: Production steps apply to all ingredients, I usually apply a small penalty or cost for using each beyond the first two, to prevent spam.
 - The more powerful effects cannot be brewed directly, and must use `alchemical precursors` and passive effects.
 	- When a potion is being brewed with powerful effects in its ingredient, those effects will not be active in the resulting potion but will be passive. A potion can have a mix of active and passive effects and a potion with only passive effects is a `precursor` potion.
 	- Passive effects in potions cannot be used directly by the players and require additional steps before they can be put to use.
