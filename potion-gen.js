@@ -2,9 +2,11 @@ var hash = require("object-hash");
 var faker = require("faker");
 var colourMod = require("./ColorGeneratorModule.js");
 
-var og = require("./caco-ingredients.json");
-var originalDataSet = JSON.parse(JSON.stringify(og))
-
+var og = require("./ingredients.json");
+var originalDataSet = 
+{
+    ingredients: JSON.parse(JSON.stringify(og))
+}
 var effects = require("./effects.json")
 
 // var originalDataSet = JSON.parse(data)
@@ -731,40 +733,40 @@ function tests(seed = 1) {
 
 
 // var x = require('fs').readFileSync("mid.json")
-var x = require('fs').readFileSync("rename-ingredients.json")
-x = JSON.parse(x)
+// var x = require('fs').readFileSync("rename-ingredients.json")
+// x = JSON.parse(x)
 
-console.log(og.ingredients.length)
-console.log(x.length)
-
-
+// console.log(og.ingredients.length)
+// console.log(x.length)
 
 
 
-og.ingredients = og.ingredients.map((ing, i) => {
 
 
-    return { ...ing, ...x[i] }
-        // if (i > x.length - 1) {
-        //     x.push({
-        //         "name": og.ingredients[i].name,
-        //         "description": og.ingredients[i].description,
-        //         "originalName": og.ingredients[i].name,
+// og.ingredients = og.ingredients.map((ing, i) => {
 
-        //     }, )
-        // } else {
-        //     x[i].originalName = og.ingredients[i].name
 
-        // }
-        // return ing
-})
-.filter(e=>e.name != e.originalName)
-// console.log(og.ingredients)
-x = og.ingredients
+//         return { ...ing, ...x[i] }
+//         // if (i > x.length - 1) {
+//         //     x.push({
+//         //         "name": og.ingredients[i].name,
+//         //         "description": og.ingredients[i].description,
+//         //         "originalName": og.ingredients[i].name,
 
-// require('fs').writeFileSync("rename-ingredients.json", JSON.stringify(x, null, 2))
+//         //     }, )
+//         // } else {
+//         //     x[i].originalName = og.ingredients[i].name
 
-console.log(x.slice(Math.max(x.length - 10, 1))[0])
+//         // }
+//         // return ing
+//     })
+//     // .filter(e => e.name != e.originalName)
+// // console.log(og.ingredients)
+// x = og.ingredients
+
+// require('fs').writeFileSync("ingredients.json", JSON.stringify(x, null, 2))
+
+// console.log(x.slice(Math.max(x.length - 10, 1))[0])
 // og = x.sort(function(a, b) {
 //     if (a.name < b.name) { return -1; }
 //     if (a.name > b.name) { return 1; }

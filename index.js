@@ -76,22 +76,25 @@ window.addEventListener("load", e => {
     <h5>
     Potion ingredients
   </h5>
+  <div class="small">
   {{#each ingredients}}
     <div class="list">
       {{this}}
     </div>
   {{/each}}
+  </div>
   </p>
 
 </div>
 {{else}}
 <div>
-    {{name}}
-    <div class="small">
+    {{name}} - <div class="small">{{this.description}}</div>
+    <p><div class="small">
         {{#each effects}}
         {{this.name}} {{#if this.production}}({{this.production}}){{/if}},
         {{/each}}
-    </div>
+
+    </div></p>
 </div>
 {{/ifEquals}}
 `;
