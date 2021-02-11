@@ -2185,7 +2185,7 @@
     "originalName": "Onyx"
   },
   {
-    "name": "Sulfur",
+    "name": "Rotten Egg",
     "description": "No desc needed",
     "effects": [
       {
@@ -2599,15 +2599,15 @@
     "originalName": "Gravetar"
   },
   {
-    "name": "Scrib Jelly",
-    "description": "No desc needed",
+    "name": "Saltpeter",
+    "description": "A dry stone, often a byproduct of mining and occasionally found in the sand of some deserts",
     "effects": [
       {
         "name": "Fortify Restoration",
         "magnitude": 2.48
       },
       {
-        "name": "Cure Poison",
+        "name": "Resist Poison",
         "magnitude": 1
       },
       {
@@ -2615,8 +2615,8 @@
         "magnitude": 1
       },
       {
-        "name": "Fortify Alteration",
-        "magnitude": 2.49
+        "name": "Fortify Destruction",
+        "magnitude": 200
       }
     ],
     "originalName": "Scrib Jelly"
