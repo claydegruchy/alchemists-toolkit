@@ -72,11 +72,11 @@ var options = {
 
 
 var physicalProperties = [
-"Thin potion, floats on water",
-"Thick potion, sinks in water",
-"Gooey, extremely thick jelly",
-"Solid, light and brittle",
-"Solid, hard and chalky",
+    "Thin potion, floats on water",
+    "Thick potion, sinks in water",
+    "Gooey, extremely thick jelly",
+    "Solid, light and brittle",
+    "Solid, hard and chalky",
 ]
 
 var substanceProperties = [
@@ -162,7 +162,7 @@ class Component {
         this.colour = prop.colour;
         this.ingredients = prop.ingredients;
 
-console.log("this.ingredients",this.ingredients)
+        console.log("this.ingredients", this.ingredients)
         // this.complexity
     }
     effectsAdvanced() {
@@ -730,23 +730,47 @@ function tests(seed = 1) {
 
 
 
-// var x = require('fs').readFileSync("rename-ingredients.json")
-// x = JSON.parse(x)
+// var x = require('fs').readFileSync("mid.json")
+var x = require('fs').readFileSync("rename-ingredients.json")
+x = JSON.parse(x)
 
-// console.log(og.ingredients.length)
-// console.log(x.length)
+console.log(og.ingredients.length)
+console.log(x.length)
 
-// x.map((ing, i) => {
-//     ing.originalName = og.ingredients[i].name
-//     return ing
-// })
 
-// x = x.sort(function(a, b) {
+
+
+
+og.ingredients = og.ingredients.map((ing, i) => {
+
+
+    return { ...ing, ...x[i] }
+        // if (i > x.length - 1) {
+        //     x.push({
+        //         "name": og.ingredients[i].name,
+        //         "description": og.ingredients[i].description,
+        //         "originalName": og.ingredients[i].name,
+
+        //     }, )
+        // } else {
+        //     x[i].originalName = og.ingredients[i].name
+
+        // }
+        // return ing
+})
+.filter(e=>e.name != e.originalName)
+// console.log(og.ingredients)
+x = og.ingredients
+
+// require('fs').writeFileSync("rename-ingredients.json", JSON.stringify(x, null, 2))
+
+console.log(x.slice(Math.max(x.length - 10, 1))[0])
+// og = x.sort(function(a, b) {
 //     if (a.name < b.name) { return -1; }
 //     if (a.name > b.name) { return 1; }
 //     return 0;
 // })
-// // console.log(x)
+// console.log(x)
 // require('fs').writeFileSync("rename-ingredients.json", JSON.stringify(x, null, 2))
 
 
